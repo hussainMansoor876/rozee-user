@@ -1,6 +1,7 @@
 /*eslint-disable */
 
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom';
 
 class Footer extends Component {
     render() {
@@ -18,15 +19,15 @@ class Footer extends Component {
                             <div className="col-md-6">
                                 <h3 className="footer-heading mb-4 text-white">Quick Menu</h3>
                                 <ul className="list-unstyled">
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Search Job</a></li>
+                                    <li><Link to="/about" >About</Link></li>
+                                    <li><Link to="/wantJob" >Search Job</Link></li>
                                 </ul>
                             </div>
                             <div className="col-md-6">
                                 <h3 className="footer-heading mb-4 text-white">Categories</h3>
                                 <ul className="list-unstyled">
-                                    <li><a href="#">Freelancer</a></li>
-                                    <li><a href="#">Permanent</a></li>
+                                    <li><a >Freelancer</a></li>
+                                    <li><a >Permanent</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -46,7 +47,7 @@ class Footer extends Component {
                 <div className="row pt-5 mt-5 text-center">
                     <div className="col-md-12">
                         <p>
-                            Copyright ©  All Rights Reserved | This template is made with <i className="icon-heart text-warning" aria-hidden="true" /> by <a target="_blank">Panacloud</a>
+                            Copyright ©  All Rights Reserved | This Website is made with <i className="icon-heart text-warning" aria-hidden="true" /> by <a target="_blank">Panacloud collaboration</a>
                         </p>
                     </div>
                 </div>

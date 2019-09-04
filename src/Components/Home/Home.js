@@ -188,6 +188,7 @@ class Home extends Component {
                                 <span className="flaticon-calculator display-3 mb-3 d-block text-primary" />
                                 <h2 className="h4">Finance &amp; Accounting</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+                                <p><a href="#">Read More <span className="icon-arrow-right small" /></a></p>
                             </div>
                         </div>
                     </div>
