@@ -1,1 +1,5 @@
-export const ADD_USER = 'ADD_USER';
+export const GET_ALL_JOBS = "GET_ALL_JOBS";
+export const GET_ALL_JOBS_SUCCESS = "GET_ALL_JOBS_SUCCESS";
+export const GET_ALL_JOBS_FAIL = "GET_ALL_JOBS_FAIL";
+
+
