@@ -1,9 +1,51 @@
 /*eslint-disable */
 
 import React, { Component } from 'react'
+import JobCard from '../JobCard/JobCard';
+import { connect } from 'react-redux';
+import * as JobMiddleware from '../../Store/middlewares/jobMiddleware';
 
 class WantJob extends Component {
+
+
+  state = {
+    isError: false,
+    isLoading: false,
+    successMessage: "",
+    errorMessage: "",
+    allJobs: []
+}
+
+componentDidMount() {
+    this.setState({ isLoading: true })
+    this.props.getJobs();
+}
+
+
+componentWillReceiveProps(nextProps) {
+    if (nextProps.isError && nextProps.errorMessage.length > 1) {
+        return this.setState({
+            isLoading: false,
+            isError: nextProps.isError,
+            errorMessage: nextProps.errorMessage
+        })
+    }
+
+    this.setState({
+        isLoading: false,
+        isError: false,
+        errorMessage: "",
+        allJobs: nextProps.allJobs,
+    })
+
+
+
+
+}
+
     render() {
+      const { isError, isLoading, successMessage, errorMessage, allJobs, } = this.state
+
         return (
             <div className="site-wrap">
             <div style={{height: '113px'}} />
@@ -103,119 +145,104 @@ class WantJob extends Component {
                 </div>
               </div>
             </div>
+
+
             <div className="site-section bg-light">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-12 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay={100}>
-                    <h2 className="mb-5 h3">Recent Jobs</h2>
-                    <div className="rounded border jobs-wrap">
-                      <a href="#" className="job-item d-block d-md-flex align-items-center  border-bottom fulltime">
-                        <div className="company-logo blank-logo text-center text-md-left pl-3">
-                          <img src="images/company_logo_blank.png" alt="Image" className="img-fluid mx-auto" />
-                        </div>
-                        <div className="job-details h-100">
-                          <div className="p-3 align-self-center">
-                            <h3>Restaurant Crew</h3>
-                            <div className="d-block d-lg-flex">
-                              <div className="mr-3"><span className="icon-suitcase mr-1" /> Resto Bar</div>
-                              <div className="mr-3"><span className="icon-room mr-1" /> Florida</div>
-                              <div><span className="icon-money mr-1" /> $55000 — 70000</div>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay={100}>
+                                <h2 className="mb-5 h3">All jobs for you</h2>
+                                <div className="rounded border jobs-wrap">
+
+                                    {allJobs.map(job => (
+                                        <JobCard title={job.jobTitle} location={job.location} role={job.role} />
+                                    ))}
+                                    {/* <a href="#" className="job-item d-block d-md-flex align-items-center freelance">
+                                        <div className="company-logo blank-logo text-center text-md-left pl-3">
+                                            <img src="images/logo_1.png" alt="Image" className="img-fluid mx-auto" />
+                                        </div>
+                                        <div className="job-details h-100">
+                                            <div className="p-3 align-self-center">
+                                                <h3>JavaScript Fullstack Developer</h3>
+                                                <div className="d-block d-lg-flex">
+                                                    <div className="mr-3"><span className="icon-suitcase mr-1" /> Cooper</div>
+                                                    <div className="mr-3"><span className="icon-room mr-1" /> Anywhere</div>
+                                                    <div><span className="icon-money mr-1" /> $55000 — 70000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="job-category align-self-center">
+                                            <div className="p-3">
+                                                <span className="text-warning p-2 rounded border border-warning">Freelance</span>
+                                            </div>
+                                        </div>
+                                    </a> */}
+                                    {/* <a href="#" className="job-item d-block d-md-flex align-items-center freelance">
+                                        <div className="company-logo blank-logo text-center text-md-left pl-3">
+                                            <img src="images/logo_1.png" alt="Image" className="img-fluid mx-auto" />
+                                        </div>
+                                        <div className="job-details h-100">
+                                            <div className="p-3 align-self-center">
+                                                <h3>ReactJS Fullstack Developer</h3>
+                                                <div className="d-block d-lg-flex">
+                                                    <div className="mr-3"><span className="icon-suitcase mr-1" /> Cooper</div>
+                                                    <div className="mr-3"><span className="icon-room mr-1" /> Anywhere</div>
+                                                    <div><span className="icon-money mr-1" /> $55000 — 70000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="job-category align-self-center">
+                                            <div className="p-3">
+                                                <span className="text-warning p-2 rounded border border-warning">Freelance</span>
+                                            </div>
+                                        </div>
+                                    </a> */}
+                                    {/* <a href="#" className="job-item d-block d-md-flex align-items-center fulltime">
+                                        <div className="company-logo blank-logo text-center text-md-left pl-3">
+                                            <img src="images/company_logo_blank.png" alt="Image" className="img-fluid mx-auto" />
+                                        </div>
+                                        <div className="job-details h-100">
+                                            <div className="p-3 align-self-center">
+                                                <h3>Assistant Brooker, Real Estate</h3>
+                                                <div className="d-block d-lg-flex">
+                                                    <div className="mr-3"><span className="icon-suitcase mr-1" /> RealState</div>
+                                                    <div className="mr-3"><span className="icon-room mr-1" /> New York</div>
+                                                    <div><span className="icon-money mr-1" /> $55000 — 70000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="job-category align-self-center">
+                                            <div className="p-3">
+                                                <span className="text-info p-2 rounded border border-info">Full Time</span>
+                                            </div>
+                                        </div>
+                                    </a> */}
+                                    {/* <a href="#" className="job-item d-block d-md-flex align-items-center partime">
+                                        <div className="company-logo blank-logo text-center text-md-left pl-3">
+                                            <img src="images/logo_2.png" alt="Image" className="img-fluid mx-auto" />
+                                        </div>
+                                        <div className="job-details h-100">
+                                            <div className="p-3 align-self-center">
+                                                <h3>Telecommunication Manager</h3>
+                                                <div className="d-block d-lg-flex">
+                                                    <div className="mr-3"><span className="icon-suitcase mr-1" /> Think</div>
+                                                    <div className="mr-3"><span className="icon-room mr-1" /> London</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="job-category align-self-center">
+                                            <div className="p-3">
+                                                <span className="text-danger p-2 rounded border border-danger">Par Time</span>
+                                            </div>
+                                        </div>
+                                    </a> */}
+                                </div>
                             </div>
-                          </div>
                         </div>
-                        <div className="job-category align-self-center">
-                          <div className="p-3">
-                            <span className="text-info p-2 rounded border border-info">Full Time</span>
-                          </div>
-                        </div>  
-                      </a>
-                      <a href="#" className="job-item d-block d-md-flex align-items-center freelance">
-                        <div className="company-logo blank-logo text-center text-md-left pl-3">
-                          <img src="images/logo_1.png" alt="Image" className="img-fluid mx-auto" />
-                        </div>
-                        <div className="job-details h-100">
-                          <div className="p-3 align-self-center">
-                            <h3>JavaScript Fullstack Developer</h3>
-                            <div className="d-block d-lg-flex">
-                              <div className="mr-3"><span className="icon-suitcase mr-1" /> Cooper</div>
-                              <div className="mr-3"><span className="icon-room mr-1" /> Anywhere</div>
-                              <div><span className="icon-money mr-1" /> $55000 — 70000</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="job-category align-self-center">
-                          <div className="p-3">
-                            <span className="text-warning p-2 rounded border border-warning">Freelance</span>
-                          </div>
-                        </div>  
-                      </a>
-                      <a href="#" className="job-item d-block d-md-flex align-items-center freelance">
-                        <div className="company-logo blank-logo text-center text-md-left pl-3">
-                          <img src="images/logo_1.png" alt="Image" className="img-fluid mx-auto" />
-                        </div>
-                        <div className="job-details h-100">
-                          <div className="p-3 align-self-center">
-                            <h3>ReactJS Fullstack Developer</h3>
-                            <div className="d-block d-lg-flex">
-                              <div className="mr-3"><span className="icon-suitcase mr-1" /> Cooper</div>
-                              <div className="mr-3"><span className="icon-room mr-1" /> Anywhere</div>
-                              <div><span className="icon-money mr-1" /> $55000 — 70000</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="job-category align-self-center">
-                          <div className="p-3">
-                            <span className="text-warning p-2 rounded border border-warning">Freelance</span>
-                          </div>
-                        </div>  
-                      </a>
-                      <a href="#" className="job-item d-block d-md-flex align-items-center fulltime">
-                        <div className="company-logo blank-logo text-center text-md-left pl-3">
-                          <img src="images/company_logo_blank.png" alt="Image" className="img-fluid mx-auto" />
-                        </div>
-                        <div className="job-details h-100">
-                          <div className="p-3 align-self-center">
-                            <h3>Assistant Brooker, Real Estate</h3>
-                            <div className="d-block d-lg-flex">
-                              <div className="mr-3"><span className="icon-suitcase mr-1" /> RealState</div>
-                              <div className="mr-3"><span className="icon-room mr-1" /> New York</div>
-                              <div><span className="icon-money mr-1" /> $55000 — 70000</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="job-category align-self-center">
-                          <div className="p-3">
-                            <span className="text-info p-2 rounded border border-info">Full Time</span>
-                          </div>
-                        </div>  
-                      </a>
-                      <a href="#" className="job-item d-block d-md-flex align-items-center partime">
-                        <div className="company-logo blank-logo text-center text-md-left pl-3">
-                          <img src="images/logo_2.png" alt="Image" className="img-fluid mx-auto" />
-                        </div>
-                        <div className="job-details h-100">
-                          <div className="p-3 align-self-center">
-                            <h3>Telecommunication Manager</h3>
-                            <div className="d-block d-lg-flex">
-                              <div className="mr-3"><span className="icon-suitcase mr-1" /> Think</div>
-                              <div className="mr-3"><span className="icon-room mr-1" /> London</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="job-category align-self-center">
-                          <div className="p-3">
-                            <span className="text-danger p-2 rounded border border-danger">Par Time</span>
-                          </div>
-                        </div>  
-                      </a>
                     </div>
-                    <div className="col-md-12 text-center mt-5">
-                      <a href="#" className="btn btn-primary rounded py-3 px-5"><span className="icon-plus-circle" /> Show More Jobs</a>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </div>
+
+
             <div className="site-blocks-cover overlay inner-page" style={{backgroundImage: 'url("images/hero_1.jpg")'}} data-aos="fade" data-stellar-background-ratio="0.5">
               <div className="container">
                 <div className="row align-items-center justify-content-center">
@@ -232,4 +259,23 @@ class WantJob extends Component {
     }
 }
 
-export default WantJob
+
+const mapStateToProps = state => {
+  return {
+      isError: state.jobs.isError,
+      isLoading: state.jobs.isLoading,
+      successMessage: state.jobs.successMessage,
+      errorMessage: state.jobs.errorMessage,
+      allJobs: state.jobs.allJobs,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+      getJobs: () => {
+          dispatch(JobMiddleware.getJobMiddleware())
+      }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(WantJob)

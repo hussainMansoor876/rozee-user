@@ -1,12 +1,15 @@
+
 /*eslint-disable */
 
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Path from '../../Config/path';
-import JobCard from './JobCard';
+import JobCard from '../JobCard/JobCard';
 import { connect } from 'react-redux';
 import * as JobMiddleware from '../../Store/middlewares/jobMiddleware';
+import Slider from 'react-slick';
+
 
 class Home extends Component {
 
@@ -46,6 +49,15 @@ class Home extends Component {
     }
 
     render() {
+
+        const settings = {
+            className: "center",
+            centerMode: true,
+            infinite: true,
+            centerPadding: "60px",
+            slidesToShow: 3,
+            speed: 500
+        }
         const { isError, isLoading, successMessage, errorMessage, allJobs, } = this.state
         return (
             <div className="site-wrap">
@@ -79,6 +91,48 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
+
+
+                <div className="site-section">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-6 mx-auto text-center mb-5 section-heading">
+                                <h2 className="mb-5">ALL AVAILABLE JOBS</h2>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay={100}>
+                                <a href="#" className="h-100 feature-item">
+                                    <span className="d-block icon flaticon-calculator mb-3 text-primary" />
+                                    <h2>Accounting / Finanace</h2>
+                                    <span className="counting">10,391</span>
+                                </a>
+                            </div>
+                            <div className="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay={200}>
+                                <a href="#" className="h-100 feature-item">
+                                    <span className="d-block icon flaticon-wrench mb-3 text-primary" />
+                                    <h2>Automotive Jobs</h2>
+                                    <span className="counting">192</span>
+                                </a>
+                            </div>
+                            <div className="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay={300}>
+                                <a href="#" className="h-100 feature-item">
+                                    <span className="d-block icon flaticon-worker mb-3 text-primary" />
+                                    <h2>Construction / Facilities</h2>
+                                    <span className="counting">1,021</span>
+                                </a>
+                            </div>
+                            <div className="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay={400}>
+                                <a href="#" className="h-100 feature-item">
+                                    <span className="d-block icon flaticon-telecommunications mb-3 text-primary" />
+                                    <h2>Telecommunications</h2>
+                                    <span className="counting">1,219</span>
+                                </a>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
                 <div className="site-section bg-light">
                     <div className="container">
                         <div className="row">
@@ -87,7 +141,7 @@ class Home extends Component {
                                 <div className="rounded border jobs-wrap">
 
                                     {allJobs.map(job => (
-                                    <JobCard title = {job.jobTitle} location = {job.location} role = {job.role}/>
+                                        <JobCard title={job.jobTitle} location={job.location} role={job.role} />
                                     ))}
                                     {/* <a href="#" className="job-item d-block d-md-flex align-items-center freelance">
                                         <div className="company-logo blank-logo text-center text-md-left pl-3">
@@ -170,7 +224,7 @@ class Home extends Component {
                                     </a> */}
                                 </div>
                                 <div className="col-md-12 text-center mt-5">
-                                    <a href="#" className="btn btn-primary rounded py-3 px-5"><span className="icon-plus-circle" /> Show More Jobs</a>
+                                    <Link to="/wantJob" className="btn btn-primary rounded py-3 px-5"><span className="icon-plus-circle" /> Show More Jobs</Link>
                                 </div>
                             </div>
                         </div>

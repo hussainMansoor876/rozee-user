@@ -1,8 +1,17 @@
+/*eslint-disable */
+
+    
 import React from 'react'
 
 const JobCard = ({title, location, role}) => {
+    
+    const roles = {
+        FREELANCE: "Freelance",
+        PERMANENT: 'Permanent'
+    }
+
     return (
-        <a href="#" className="job-item d-block d-md-flex align-items-center  border-bottom fulltime">
+        <a href="#" className={`job-item d-block d-md-flex align-items-center  border-bottom ${role === roles.FREELANCE ? 'fulltime' : 'partime' } `}>
             <div className="company-logo blank-logo text-center text-md-left pl-3">
                 <img src="images/company_logo_blank.png" alt="Image" className="img-fluid mx-auto" />
             </div>
@@ -18,7 +27,9 @@ const JobCard = ({title, location, role}) => {
             </div>
             <div className="job-category align-self-center">
                 <div className="p-3">
-                    <span className="text-info p-2 rounded border border-info">{role}</span>
+                   {role === roles.FREELANCE ? <span className="text-info p-2 rounded border border-info">{role}</span> : 
+                    <span className="text-danger p-2 rounded border border-danger">{role}</span>
+                } 
                 </div>
             </div>
         </a>

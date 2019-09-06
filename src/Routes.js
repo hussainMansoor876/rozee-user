@@ -6,6 +6,7 @@ import ContactUs from './Components/ContactUs/ContactUs';
 import WantJob from './Components/WantJob/WantJob';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import ApplyJob from './Components/ApplyJob/ApplyJob';
 
 class Routes extends Component {
   render() {
@@ -17,6 +18,7 @@ class Routes extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/contactUs" component={ContactUs} />
             <Route exact path="/wantjob" component={WantJob} />
+            <Route exact path="/applyJob" component={ApplyJob} />
         </Switch>
         <Footer />
     </Router>
