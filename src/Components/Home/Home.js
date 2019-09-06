@@ -1,6 +1,3 @@
-
-/*eslint-disable */
-
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -9,7 +6,6 @@ import JobCard from '../JobCard/JobCard';
 import { connect } from 'react-redux';
 import * as JobMiddleware from '../../Store/middlewares/jobMiddleware';
 import Slider from 'react-slick';
-import './home.css'
 import ApplyJob from '../ApplyJob/ApplyJob';
 
 class Home extends Component {
@@ -51,23 +47,21 @@ class Home extends Component {
 
     }
 
-
     render() {
         var settings = {
             dots: true,
-            className: 'slider',
             infinite: false,
             speed: 500,
             arrows: false,
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
             initialSlide: 1,
             responsive: [
                 {
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 3,
+                        slidesToScroll: 1,
                         infinite: true,
                         dots: true
                     }
@@ -76,7 +70,7 @@ class Home extends Component {
                     breakpoint: 600,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 2,
+                        slidesToScroll: 1,
                         initialSlide: 1,
                         dots: true
                     }
@@ -85,7 +79,8 @@ class Home extends Component {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        dots: true
                     }
                 }
             ]
@@ -131,8 +126,8 @@ class Home extends Component {
                             <div className="col-md-6 mx-auto text-center mb-5 section-heading">
                                 <h2 className="mb-5">ALL AVAILABLE JOBS</h2>
                             </div>
-                        </div>
-                        <div className="row">
+
+                            {/* <div className="row"> */}
                             <div className="col-lg-12 col-md-12 col-sm-12">
                                 <Slider  {...settings}>
                                     {allJobs.map(job => (
@@ -146,8 +141,8 @@ class Home extends Component {
                                     ))}
                                 </Slider>
                             </div>
+                            {/* </div> */}
                         </div>
-
                     </div>
                 </div>
                 <div className="site-section bg-light">
