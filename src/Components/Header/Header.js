@@ -30,7 +30,7 @@ class Header extends Component {
                                                     <li><Link to="/">Home</Link></li>
                                                     <li><Link to="/about" >About</Link></li>
                                                     <li><Link to="/contactUs" >Contact</Link></li>
-                                                    <li><Link to="/wantJob" ><span className="bg-primary text-white py-3 px-4 rounded"><span className="icon-plus mr-3" />Want New Job</span></Link></li>
+                                                    <li><Link to="/wantJob" ><span className="bg-primary text-white py-3 px-4 rounded"><span className="icon-plus mr-3" />Want Job</span></Link></li>
                                                 </ul>
                                             </div>
                                         </nav>

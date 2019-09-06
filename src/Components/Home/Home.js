@@ -9,7 +9,8 @@ import JobCard from '../JobCard/JobCard';
 import { connect } from 'react-redux';
 import * as JobMiddleware from '../../Store/middlewares/jobMiddleware';
 import Slider from 'react-slick';
-
+import './home.css'
+import ApplyJob from '../ApplyJob/ApplyJob';
 
 class Home extends Component {
 
@@ -42,22 +43,53 @@ class Home extends Component {
             errorMessage: "",
             allJobs: nextProps.allJobs,
         })
+    }
 
-
-
+    handleApplyJob = (job) => {
+        console.log(job)
+        this.props.history.push('/applyJob', job )
 
     }
 
-    render() {
 
-        const settings = {
-            className: "center",
-            centerMode: true,
-            infinite: true,
-            centerPadding: "60px",
+    render() {
+        var settings = {
+            dots: true,
+            className: 'slider',
+            infinite: false,
+            speed: 500,
+            arrows: false,
             slidesToShow: 3,
-            speed: 500
-        }
+            slidesToScroll: 3,
+            initialSlide: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 2,
+                        initialSlide: 1,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
         const { isError, isLoading, successMessage, errorMessage, allJobs, } = this.state
         return (
             <div className="site-wrap">
@@ -101,36 +133,23 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay={100}>
-                                <a href="#" className="h-100 feature-item">
-                                    <span className="d-block icon flaticon-calculator mb-3 text-primary" />
-                                    <h2>Accounting / Finanace</h2>
-                                    <span className="counting">10,391</span>
-                                </a>
+
+
+                            <div className="col-lg-12 col-md-12 col-sm-12">
+                                <Slider  {...settings}>
+                                    {allJobs.map(job => (
+                                        <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100} onClick={() => this.handleApplyJob(job)} >
+                                            <a className="h-100 feature-item" style={{ height: '500px', border: "solid 1px green", cursor:'pointer' }}>
+                                                <span className="d-block icon flaticon-calculator mb-3 text-primary" />
+                                                <h2>{job.jobTitle}</h2>
+                                                <span className="counting">{job.role}</span>
+                                            </a>
+                                        </div>
+                                    ))}
+                                </Slider>
                             </div>
-                            <div className="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay={200}>
-                                <a href="#" className="h-100 feature-item">
-                                    <span className="d-block icon flaticon-wrench mb-3 text-primary" />
-                                    <h2>Automotive Jobs</h2>
-                                    <span className="counting">192</span>
-                                </a>
-                            </div>
-                            <div className="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay={300}>
-                                <a href="#" className="h-100 feature-item">
-                                    <span className="d-block icon flaticon-worker mb-3 text-primary" />
-                                    <h2>Construction / Facilities</h2>
-                                    <span className="counting">1,021</span>
-                                </a>
-                            </div>
-                            <div className="col-sm-6 col-md-4 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay={400}>
-                                <a href="#" className="h-100 feature-item">
-                                    <span className="d-block icon flaticon-telecommunications mb-3 text-primary" />
-                                    <h2>Telecommunications</h2>
-                                    <span className="counting">1,219</span>
-                                </a>
-                            </div>
-                         
                         </div>
+
                     </div>
                 </div>
                 <div className="site-section bg-light">
@@ -141,87 +160,9 @@ class Home extends Component {
                                 <div className="rounded border jobs-wrap">
 
                                     {allJobs.map(job => (
-                                        <JobCard title={job.jobTitle} location={job.location} role={job.role} />
+                                        <JobCard key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
                                     ))}
-                                    {/* <a href="#" className="job-item d-block d-md-flex align-items-center freelance">
-                                        <div className="company-logo blank-logo text-center text-md-left pl-3">
-                                            <img src="images/logo_1.png" alt="Image" className="img-fluid mx-auto" />
-                                        </div>
-                                        <div className="job-details h-100">
-                                            <div className="p-3 align-self-center">
-                                                <h3>JavaScript Fullstack Developer</h3>
-                                                <div className="d-block d-lg-flex">
-                                                    <div className="mr-3"><span className="icon-suitcase mr-1" /> Cooper</div>
-                                                    <div className="mr-3"><span className="icon-room mr-1" /> Anywhere</div>
-                                                    <div><span className="icon-money mr-1" /> $55000 — 70000</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="job-category align-self-center">
-                                            <div className="p-3">
-                                                <span className="text-warning p-2 rounded border border-warning">Freelance</span>
-                                            </div>
-                                        </div>
-                                    </a> */}
-                                    {/* <a href="#" className="job-item d-block d-md-flex align-items-center freelance">
-                                        <div className="company-logo blank-logo text-center text-md-left pl-3">
-                                            <img src="images/logo_1.png" alt="Image" className="img-fluid mx-auto" />
-                                        </div>
-                                        <div className="job-details h-100">
-                                            <div className="p-3 align-self-center">
-                                                <h3>ReactJS Fullstack Developer</h3>
-                                                <div className="d-block d-lg-flex">
-                                                    <div className="mr-3"><span className="icon-suitcase mr-1" /> Cooper</div>
-                                                    <div className="mr-3"><span className="icon-room mr-1" /> Anywhere</div>
-                                                    <div><span className="icon-money mr-1" /> $55000 — 70000</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="job-category align-self-center">
-                                            <div className="p-3">
-                                                <span className="text-warning p-2 rounded border border-warning">Freelance</span>
-                                            </div>
-                                        </div>
-                                    </a> */}
-                                    {/* <a href="#" className="job-item d-block d-md-flex align-items-center fulltime">
-                                        <div className="company-logo blank-logo text-center text-md-left pl-3">
-                                            <img src="images/company_logo_blank.png" alt="Image" className="img-fluid mx-auto" />
-                                        </div>
-                                        <div className="job-details h-100">
-                                            <div className="p-3 align-self-center">
-                                                <h3>Assistant Brooker, Real Estate</h3>
-                                                <div className="d-block d-lg-flex">
-                                                    <div className="mr-3"><span className="icon-suitcase mr-1" /> RealState</div>
-                                                    <div className="mr-3"><span className="icon-room mr-1" /> New York</div>
-                                                    <div><span className="icon-money mr-1" /> $55000 — 70000</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="job-category align-self-center">
-                                            <div className="p-3">
-                                                <span className="text-info p-2 rounded border border-info">Full Time</span>
-                                            </div>
-                                        </div>
-                                    </a> */}
-                                    {/* <a href="#" className="job-item d-block d-md-flex align-items-center partime">
-                                        <div className="company-logo blank-logo text-center text-md-left pl-3">
-                                            <img src="images/logo_2.png" alt="Image" className="img-fluid mx-auto" />
-                                        </div>
-                                        <div className="job-details h-100">
-                                            <div className="p-3 align-self-center">
-                                                <h3>Telecommunication Manager</h3>
-                                                <div className="d-block d-lg-flex">
-                                                    <div className="mr-3"><span className="icon-suitcase mr-1" /> Think</div>
-                                                    <div className="mr-3"><span className="icon-room mr-1" /> London</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="job-category align-self-center">
-                                            <div className="p-3">
-                                                <span className="text-danger p-2 rounded border border-danger">Par Time</span>
-                                            </div>
-                                        </div>
-                                    </a> */}
+
                                 </div>
                                 <div className="col-md-12 text-center mt-5">
                                     <Link to="/wantJob" className="btn btn-primary rounded py-3 px-5"><span className="icon-plus-circle" /> Show More Jobs</Link>
@@ -268,7 +209,6 @@ class Home extends Component {
                                 <span className="flaticon-calculator display-3 mb-3 d-block text-primary" />
                                 <h2 className="h4">Finance &amp; Accounting</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
-                                <p><a href="#">Read More <span className="icon-arrow-right small" /></a></p>
                             </div>
                         </div>
                     </div>

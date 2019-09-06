@@ -1,5 +1,6 @@
 /*eslint-disable */
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 class ContactUs extends Component {
     render() {
@@ -9,7 +10,7 @@ class ContactUs extends Component {
             <div className="unit-5 overlay" style={{backgroundImage: 'url("images/hero_1.jpg")'}}>
               <div className="container text-center">
                 <h2 className="mb-0">Contact</h2>
-                <p className="mb-0 unit-6"><a href="#">Home</a> <span className="sep">&gt;</span> <span>Contact</span></p>
+                <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>Contact</span></p>
               </div>
             </div>
             <div className="site-section bg-light">
@@ -73,7 +74,7 @@ class ContactUs extends Component {
                   <div className="col-md-4">
                     <div>
                       <h2><span className="icon-room" /> Location</h2>
-                      <p className="mb-0">New York - 2398 <br />  10 Hadson Carl Street</p>
+                      <p className="mb-0">Karachi <br />  Gulshan-e-Iqbal</p>
                     </div>
                   </div>
                   <div className="col-md-4">

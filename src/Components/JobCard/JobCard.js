@@ -11,7 +11,7 @@ const JobCard = ({title, location, role}) => {
     }
 
     return (
-        <a href="#" className={`job-item d-block d-md-flex align-items-center  border-bottom ${role === roles.FREELANCE ? 'fulltime' : 'partime' } `}>
+        <a style={{cursor: "pointer"}} className={`job-item d-block d-md-flex align-items-center  border-bottom ${role === roles.FREELANCE ? 'fulltime' : 'partime' } `}>
             <div className="company-logo blank-logo text-center text-md-left pl-3">
                 <img src="images/company_logo_blank.png" alt="Image" className="img-fluid mx-auto" />
             </div>

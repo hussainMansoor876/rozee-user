@@ -12,7 +12,7 @@ class Footer extends Component {
                     <div className="col-md-4">
                         <h3 className="footer-heading mb-4 text-white">About</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam, placeat amet.</p>
-                        <p><a href="#" className="btn btn-primary pill text-white px-4">Read More</a></p>
+                        <p><Link to="/about" className="btn btn-primary pill text-white px-4">Read More</Link></p>
                     </div>
                     <div className="col-md-6">
                         <div className="row">
@@ -47,7 +47,7 @@ class Footer extends Component {
                 <div className="row pt-5 mt-5 text-center">
                     <div className="col-md-12">
                         <p>
-                            Copyright ©  All Rights Reserved | This Website is made with <i className="icon-heart text-warning" aria-hidden="true" /> by <a target="_blank">Panacloud collaboration</a>
+                            Copyright ©  All Rights Reserved | This Website is made in collaboration with <i className="icon-heart text-warning" aria-hidden="true" /> by <a target="_blank">Panacloud </a>
                         </p>
                     </div>
                 </div>
