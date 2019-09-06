@@ -160,7 +160,7 @@ class Home extends Component {
                                 <div className="rounded border jobs-wrap">
 
                                     {allJobs.map(job => (
-                                        <JobCard key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
+                                        <JobCard  history={this.props.history} data={job} key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
                                     ))}
 
                                 </div>

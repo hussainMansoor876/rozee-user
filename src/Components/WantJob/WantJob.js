@@ -155,7 +155,8 @@ componentWillReceiveProps(nextProps) {
                                 <div className="rounded border jobs-wrap">
 
                                     {allJobs.map(job => (
-                                        <JobCard title={job.jobTitle} location={job.location} role={job.role} />
+                                        <JobCard  history={this.props.history} data={job} key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
+                                    
                                     ))}
                                     {/* <a href="#" className="job-item d-block d-md-flex align-items-center freelance">
                                         <div className="company-logo blank-logo text-center text-md-left pl-3">

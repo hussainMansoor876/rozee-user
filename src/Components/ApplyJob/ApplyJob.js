@@ -1,23 +1,83 @@
 /*eslint-disable */
-
 import React, { Component } from 'react'
-
+import axios from 'axios'
+import Path from '../../Config/path'
+import { connect } from 'react-redux'
+import * as jobMiddleware from '../../Store/middlewares/jobMiddleware'
+import { message } from 'antd'
 
 class ApplyJob extends Component {
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
 
+    state = {
+        email: "",
+        CV: null,
+        isApplying: false,
+        isError: false,
+        isLoading: false,
+        successMessage: "",
+        errorMessage: "",
+    }
+
+    handleChange = event => {
+        if (event.target.name === "CV") {
+            this.setState({ CV: event.target.files[0] })
+        } else {
+            this.setState({ email: event.target.value })
+        }
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+
+        const { email, CV } = this.state
+
+        var formData = new FormData();
+
+        formData.append("candidateEmail", email)
+        formData.append("CV", CV);
+        formData.append("jobId", this.props.location.state._id)
+
+        this.setState({ isLoading: true, isApplying: false })
+        this.props.apply(formData)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps)
+        if (nextProps.isError) {
+            message.error(nextProps.errorMessage)
+
+            return this.setState({
+                isError: nextProps.isError,
+                errorMessage: nextProps.errorMessage,
+                isLoading: false,
+                isApplying: false
+            })
+        }
+
+        if (nextProps.successMessage.length > 1) {
+            message.success(nextProps.successMessage)
+            this.setState({
+                isError: nextProps.isError,
+                successMessage: nextProps.successMessage,
+                isLoading: false,
+                isApplying: false
+            })
+
+        }
     }
 
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
 
     render() {
         if (!this.props.location.state) {
             window.location.replace('/')
         }
-        const { jobTitle, jobDescription, role, location, createdAt } = this.props.location.state
-        // console.log(jobTitle, jobDescription, role, location, createdAt )
+        const { jobTitle, jobDescription, role, location, createdAt, } = this.props.location.state
+        const { email, isApplying } = this.state
         return (
             <div className="site-wrap">
                 <div style={{ height: '113px' }} />
@@ -45,7 +105,36 @@ class ApplyJob extends Component {
                                         </div>
                                     </div>
                                     <p>{jobDescription}</p>
-                                    <p className="mt-5"><a style={{color:'white'}} className="btn btn-primary  py-2 px-4">Apply Job</a></p>
+
+
+                                    {isApplying ? (<form onSubmit={this.handleSubmit}>
+                                        <div className="row form-group">
+                                            <div className="col-md-12">
+                                                <label className="font-weight-bold" htmlFor="email">Enter Your Email</label>
+                                                <input
+                                                    type="email"
+                                                    id="email"
+                                                    name="email"
+                                                    value={email}
+                                                    className="form-control"
+                                                    placeholder="Email Address"
+                                                    onChange={this.handleChange}
+                                                />
+                                            </div>
+                                            <div className="col-md-12">
+                                                <label className="font-weight-bold mt-3" htmlFor="email">Upload Your CV:</label><br />
+                                                <input type="file" name="CV" id="CV" onChange={this.handleChange} />
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" value="Apply" className="btn btn-primary">Apply</button>
+
+                                    </form>) :
+                                        <p className="mt-5">
+                                            <a style={{ color: 'white' }} className="btn btn-primary  py-2 px-4" onClick={() => this.setState({ isApplying: true })} >
+                                                Apply Job
+                                            </a>
+                                        </p>}
                                 </div>
                             </div>
                             <div className="col-lg-4">
@@ -62,4 +151,23 @@ class ApplyJob extends Component {
     }
 }
 
-export default ApplyJob
+
+const mapStateToProps = state => {
+    return {
+        isError: state.jobs.isError,
+        isLoading: state.jobs.isLoading,
+        successMessage: state.jobs.successMessage,
+        errorMessage: state.jobs.errorMessage,
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        apply: data => {
+            dispatch(jobMiddleware.applyToJob(data))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ApplyJob)
+

@@ -3,3 +3,6 @@ export const GET_ALL_JOBS_SUCCESS = "GET_ALL_JOBS_SUCCESS";
 export const GET_ALL_JOBS_FAIL = "GET_ALL_JOBS_FAIL";
 
 
+export const APPLY_JOB = "APPLY_JOB"; 
+export const APPLY_JOB_SUCCESS = "APPLY_JOB_SUCCESS"
+export const APPLY_JOB_FAIL = "APPLY_JOB_FAIL"
