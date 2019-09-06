@@ -20,5 +20,5 @@ app.listen(app.get('port'),function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 process.on('uncaughtException', function (exception) {
-      //  console.log(exception);
+       console.log(exception);
 });
