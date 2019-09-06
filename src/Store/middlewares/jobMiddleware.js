@@ -18,3 +18,23 @@ export const getJobMiddleware = () => {
             })
     }
 }
+
+
+export const applyToJob = data => {
+    return dispatch => {
+        dispatch(getAllJobs());
+        axios.post(Path.APPLY_JOB, data)
+            .then(response => {
+
+                if (!response.data.success) {
+                    return dispatch(getAllJobsFail({ success: false, errorMessage: response.data.message }))
+                }
+
+                dispatch(getAllJobsSuccess({ success: true, successMessage: response.data.message }))
+            })
+            .catch(err => {
+                return dispatch(getAllJobsFail({ success: false, errorMessage: "Something went wrong please try again later" }))
+            })
+
+    }
+}

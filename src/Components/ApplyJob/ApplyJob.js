@@ -2,6 +2,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Path from '../../Config/path'
+import { connect } from 'react-redux'
+import * as jobMiddleware from '../../Store/middlewares/jobMiddleware'
+import { message } from 'antd'
 
 class ApplyJob extends Component {
 
@@ -9,14 +12,18 @@ class ApplyJob extends Component {
     state = {
         email: "",
         CV: null,
-        isApplying: false
+        isApplying: false,
+        isError: false,
+        isLoading: false,
+        successMessage: "",
+        errorMessage: "",
     }
 
-    handleChange = e => {
-        if (e.target.name === "CV") {
-            this.setState({ CV: e.target.files[0] })
+    handleChange = event => {
+        if (event.target.name === "CV") {
+            this.setState({ CV: event.target.files[0] })
         } else {
-            this.setState({ email: e.target.value })
+            this.setState({ email: event.target.value })
         }
     }
 
@@ -31,15 +38,33 @@ class ApplyJob extends Component {
         formData.append("CV", CV);
         formData.append("jobId", this.props.location.state._id)
 
-        
+        this.setState({ isLoading: true, isApplying: false })
+        this.props.apply(formData)
+    }
 
-        axios.post(Path.APPLY_JOB, formData).then(res => {
-            console.log(res)
-        }).catch(err => console.log(err))
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps)
+        if (nextProps.isError) {
+            message.error(nextProps.errorMessage)
 
+            return this.setState({
+                isError: nextProps.isError,
+                errorMessage: nextProps.errorMessage,
+                isLoading: false,
+                isApplying: false
+            })
+        }
 
+        if (nextProps.successMessage.length > 1) {
+            message.success(nextProps.successMessage)
+            this.setState({
+                isError: nextProps.isError,
+                successMessage: nextProps.successMessage,
+                isLoading: false,
+                isApplying: false
+            })
 
-
+        }
     }
 
 
@@ -52,7 +77,7 @@ class ApplyJob extends Component {
             window.location.replace('/')
         }
         const { jobTitle, jobDescription, role, location, createdAt, } = this.props.location.state
-        const { email } = this.state
+        const { email, isApplying } = this.state
         return (
             <div className="site-wrap">
                 <div style={{ height: '113px' }} />
@@ -82,7 +107,7 @@ class ApplyJob extends Component {
                                     <p>{jobDescription}</p>
 
 
-                                    {this.state.isApplying ? (<form onSubmit={this.handleSubmit}>
+                                    {isApplying ? (<form onSubmit={this.handleSubmit}>
                                         <div className="row form-group">
                                             <div className="col-md-12">
                                                 <label className="font-weight-bold" htmlFor="email">Enter Your Email</label>
@@ -104,14 +129,11 @@ class ApplyJob extends Component {
 
                                         <button type="submit" value="Apply" className="btn btn-primary">Apply</button>
 
-                                    </form>) : <p className="mt-5">
-                                            <a
-                                                style={{ color: 'white' }}
-                                                className="btn btn-primary  py-2 px-4"
-                                                onClick={() => this.setState({ isApplying: true })}
-                                            >
+                                    </form>) :
+                                        <p className="mt-5">
+                                            <a style={{ color: 'white' }} className="btn btn-primary  py-2 px-4" onClick={() => this.setState({ isApplying: true })} >
                                                 Apply Job
-                                        </a>
+                                            </a>
                                         </p>}
                                 </div>
                             </div>
@@ -129,4 +151,23 @@ class ApplyJob extends Component {
     }
 }
 
-export default ApplyJob
+
+const mapStateToProps = state => {
+    return {
+        isError: state.jobs.isError,
+        isLoading: state.jobs.isLoading,
+        successMessage: state.jobs.successMessage,
+        errorMessage: state.jobs.errorMessage,
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        apply: data => {
+            dispatch(jobMiddleware.applyToJob(data))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ApplyJob)
+

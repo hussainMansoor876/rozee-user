@@ -41,6 +41,34 @@ export const jobReducer = (state = initialAppState, action) => {
                 allJobs: []
             };
 
+        case actionTypes.APPLY_JOB:
+            return {
+                ...state,
+                isError: false,
+                successMessage: "",
+                errorMessage: "",
+                isLoading: true,
+            };
+
+
+        case actionTypes.APPLY_JOB_SUCCESS:
+            return {
+                ...state,
+                isError: false,
+                successMessage: action.data.successMessage,
+                errorMessage: "",
+                isLoading: false,
+            };
+
+        case actionTypes.APPLY_JOB_FAIL:
+            return {
+                ...state,
+                isError: true,
+                successMessage: "",
+                errorMessage: action.data.errorMessage,
+                isLoading: false,
+            };
+
         default:
             return state;
     }

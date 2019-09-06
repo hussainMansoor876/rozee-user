@@ -21,3 +21,26 @@ export const getAllJobsFail = (data) => {
         data
     }
 }
+
+
+export const applyJob = () => {
+    return { 
+        type: actionTypes.APPLY_JOB
+    }
+}
+
+
+export const applyJobSuccess = (data) => {
+    return { 
+        type: actionTypes.APPLY_JOB_SUCCESS,
+        data
+    }
+}
+
+
+export const applyJobFail = (data) => {
+    return { 
+        type: actionTypes.APPLY_JOB_FAIL,
+        data
+    }
+}
