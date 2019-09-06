@@ -1,23 +1,58 @@
 /*eslint-disable */
-
 import React, { Component } from 'react'
-
+import axios from 'axios'
+import Path from '../../Config/path'
 
 class ApplyJob extends Component {
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
+
+    state = {
+        email: "",
+        CV: null,
+        isApplying: false
+    }
+
+    handleChange = e => {
+        if (e.target.name === "CV") {
+            this.setState({ CV: e.target.files[0] })
+        } else {
+            this.setState({ email: e.target.value })
+        }
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+
+        const { email, CV } = this.state
+
+        var formData = new FormData();
+
+        formData.append("candidateEmail", email)
+        formData.append("CV", CV);
+        formData.append("jobId", this.props.location.state._id)
+
+        
+
+        axios.post(Path.APPLY_JOB, formData).then(res => {
+            console.log(res)
+        }).catch(err => console.log(err))
+
+
+
 
     }
 
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
 
     render() {
         if (!this.props.location.state) {
             window.location.replace('/')
         }
-        const { jobTitle, jobDescription, role, location, createdAt } = this.props.location.state
-        // console.log(jobTitle, jobDescription, role, location, createdAt )
+        const { jobTitle, jobDescription, role, location, createdAt, } = this.props.location.state
+        const { email } = this.state
         return (
             <div className="site-wrap">
                 <div style={{ height: '113px' }} />
@@ -45,7 +80,39 @@ class ApplyJob extends Component {
                                         </div>
                                     </div>
                                     <p>{jobDescription}</p>
-                                    <p className="mt-5"><a style={{color:'white'}} className="btn btn-primary  py-2 px-4">Apply Job</a></p>
+
+
+                                    {this.state.isApplying ? (<form onSubmit={this.handleSubmit}>
+                                        <div className="row form-group">
+                                            <div className="col-md-12">
+                                                <label className="font-weight-bold" htmlFor="email">Enter Your Email</label>
+                                                <input
+                                                    type="email"
+                                                    id="email"
+                                                    name="email"
+                                                    value={email}
+                                                    className="form-control"
+                                                    placeholder="Email Address"
+                                                    onChange={this.handleChange}
+                                                />
+                                            </div>
+                                            <div className="col-md-12">
+                                                <label className="font-weight-bold mt-3" htmlFor="email">Upload Your CV:</label><br />
+                                                <input type="file" name="CV" id="CV" onChange={this.handleChange} />
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" value="Apply" className="btn btn-primary">Apply</button>
+
+                                    </form>) : <p className="mt-5">
+                                            <a
+                                                style={{ color: 'white' }}
+                                                className="btn btn-primary  py-2 px-4"
+                                                onClick={() => this.setState({ isApplying: true })}
+                                            >
+                                                Apply Job
+                                        </a>
+                                        </p>}
                                 </div>
                             </div>
                             <div className="col-lg-4">
