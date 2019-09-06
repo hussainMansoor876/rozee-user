@@ -47,7 +47,7 @@ class Home extends Component {
 
     handleApplyJob = (job) => {
         console.log(job)
-        this.props.history.push('/applyJob', job )
+        this.props.history.push('/applyJob', job)
 
     }
 
@@ -133,19 +133,19 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className="row">
-
-
                             <div className="col-lg-12 col-md-12 col-sm-12">
                                 <Slider  {...settings}>
-                                    {allJobs.map(job => (
-                                        <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100} onClick={() => this.handleApplyJob(job)} >
-                                            <a className="h-100 feature-item" style={{ height: '500px', border: "solid 1px green", cursor:'pointer' }}>
-                                                <span className="d-block icon flaticon-calculator mb-3 text-primary" />
-                                                <h2>{job.jobTitle}</h2>
-                                                <span className="counting">{job.role}</span>
-                                            </a>
-                                        </div>
-                                    ))}
+                                    <div>
+                                        {allJobs.map(job => (
+                                            <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100} onClick={() => this.handleApplyJob(job)} >
+                                                <a className="h-100 feature-item" style={{ height: '500px', border: "solid 1px green", cursor: 'pointer' }}>
+                                                    <span className="d-block icon flaticon-calculator mb-3 text-primary" />
+                                                    <h2>{job.jobTitle}</h2>
+                                                    <span className="counting">{job.role}</span>
+                                                </a>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </Slider>
                             </div>
                         </div>
@@ -160,7 +160,7 @@ class Home extends Component {
                                 <div className="rounded border jobs-wrap">
 
                                     {allJobs.map(job => (
-                                        <JobCard  history={this.props.history} data={job} key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
+                                        <JobCard history={this.props.history} data={job} key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
                                     ))}
 
                                 </div>
