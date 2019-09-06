@@ -127,7 +127,7 @@ class ApplyJob extends Component {
                                             </div>
                                         </div>
 
-                                        <button type="submit" value="Apply" className="btn btn-primary">Apply</button>
+                                        <button type="submit" value="Apply" className="btn btn-primary">Submit</button>
 
                                     </form>) :
                                         <p className="mt-5">

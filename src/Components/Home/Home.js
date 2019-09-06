@@ -1,12 +1,11 @@
+/*eslint-disable */
+
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import Path from '../../Config/path';
 import JobCard from '../JobCard/JobCard';
 import { connect } from 'react-redux';
 import * as JobMiddleware from '../../Store/middlewares/jobMiddleware';
 import Slider from 'react-slick';
-import ApplyJob from '../ApplyJob/ApplyJob';
 
 class Home extends Component {
 
@@ -60,8 +59,8 @@ class Home extends Component {
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
                         infinite: true,
                         dots: true
                     }
@@ -85,7 +84,7 @@ class Home extends Component {
                 }
             ]
         };
-        const { isError, isLoading, successMessage, errorMessage, allJobs, } = this.state
+        const { allJobs } = this.state
         return (
             <div className="site-wrap">
                 <div style={{ height: '113px' }} />
