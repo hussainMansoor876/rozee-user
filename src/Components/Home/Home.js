@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import * as JobMiddleware from '../../Store/middlewares/jobMiddleware';
 import Slider from 'react-slick';
 import './Home.css'
-
+import JobSearch from '../JobSearch/JobSearch'
 class Home extends Component {
 
     state = {
@@ -15,7 +15,14 @@ class Home extends Component {
         isLoading: false,
         successMessage: "",
         errorMessage: "",
-        allJobs: []
+        allJobs: [],
+        search: {
+            jobTitle: "",
+            location: ""
+        },
+
+        visible: false,
+        filteredJobs: []
     }
 
     componentDidMount() {
@@ -42,10 +49,32 @@ class Home extends Component {
     }
 
     handleApplyJob = (job) => {
-        console.log(job)
         this.props.history.push('/applyJob', job)
-
     }
+
+    handleChange = event => {
+        const { search } = this.state
+        search[event.target.name] = event.target.value
+        this.setState({ search })
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+        const { search, allJobs } = this.state
+        const filtered = allJobs.filter(item =>
+            item.jobTitle.toLowerCase().includes(search.jobTitle) &&
+            item.location.toLowerCase().includes(search.location)
+        );
+
+        this.setState({ filteredJobs: filtered, visible: true })
+    }
+
+    onClose = () => {
+        this.setState({
+            visible: false,
+        });
+    };
+
 
     render() {
         var settings = {
@@ -88,7 +117,9 @@ class Home extends Component {
                 }
             ]
         };
-        const { allJobs } = this.state
+
+
+        const { allJobs, filteredJobs, search } = this.state
         return (
             <div className="site-wrap">
                 <div style={{ height: '113px' }} />
@@ -97,17 +128,32 @@ class Home extends Component {
                         <div className="row align-items-center">
                             <div className="col-12" data-aos="fade">
                                 <h1>Find Job</h1>
-                                <form action="#">
+                                <form onSubmit={this.handleSubmit}>
                                     <div className="row mb-3">
                                         <div className="col-md-9">
                                             <div className="row">
                                                 <div className="col-md-6 mb-3 mb-md-0">
-                                                    <input type="text" className="mr-3 form-control border-0 px-4" placeholder="job title, keywords or company name " />
+                                                    <input
+                                                        type="text"
+                                                        name="jobTitle"
+                                                        value={search.jobTitle}
+                                                        onChange={this.handleChange}
+                                                        className="mr-3 form-control border-0 px-4"
+                                                        placeholder="React Application Developer"
+                                                    />
                                                 </div>
                                                 <div className="col-md-6 mb-3 mb-md-0">
                                                     <div className="input-wrap">
                                                         <span className="icon icon-room" />
-                                                        <input type="text" className="form-control form-control-block search-input  border-0 px-4" id="autocomplete" placeholder="city, province or region" /* onFocus="geolocate()" */ />
+                                                        <input
+                                                            type="text"
+                                                            name="location"
+                                                            value={search.location}
+                                                            onChange={this.handleChange}
+                                                            className="form-control form-control-block search-input border-0 px-4"
+                                                            id="autocomplete"
+                                                            placeholder="Pakistan"
+                                                        />
                                                     </div>
                                                 </div>
                                             </div>
@@ -122,6 +168,7 @@ class Home extends Component {
                     </div>
                 </div>
 
+                <JobSearch history={this.props.history} jobs={filteredJobs} onClose={this.onClose} visible={this.state.visible} />
 
                 <div className="site-section">
                     <div className="container">
@@ -135,7 +182,7 @@ class Home extends Component {
                                 <Slider  {...settings}>
                                     {allJobs.map(job => (
                                         <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100}  >
-                                            <a className="h-100 feature-item" onClick={() => this.handleApplyJob(job)}  style={{ height: '500px', border: "solid 1px green", cursor: 'pointer' }}>
+                                            <a className="h-100 feature-item" onClick={() => this.handleApplyJob(job)} style={{ height: '500px', border: "solid 1px green", cursor: 'pointer' }}>
                                                 <span className="d-block icon flaticon-calculator mb-3 text-primary" />
                                                 <h2>{job.jobTitle}</h2>
                                                 <span className="counting">{job.role}</span>
