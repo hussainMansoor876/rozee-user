@@ -84,7 +84,7 @@ class ApplyJob extends Component {
                 <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")' }}>
                     <div className="container text-center">
                         <h2 className="mb-0">{jobTitle}</h2>
-                        <p className="mb-0 unit-6"><a>Home</a> <span className="sep">&gt;</span> <span>Job Item</span></p>
+                        <p className="mb-0 unit-6"><a>Home</a> <span className="sep">&gt;</span>{jobTitle}<span></span></p>
                     </div>
                 </div>
                 <div className="site-section bg-light">

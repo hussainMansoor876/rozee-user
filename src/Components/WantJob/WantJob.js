@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import JobCard from '../JobCard/JobCard';
 import { connect } from 'react-redux';
 import * as JobMiddleware from '../../Store/middlewares/jobMiddleware';
+import { Link } from 'react-router-dom'
 
 class WantJob extends Component {
 
@@ -49,11 +50,17 @@ class WantJob extends Component {
     return (
       <div className="site-wrap">
         <div style={{ height: '113px' }} />
-        <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-12" data-aos="fade">
-                <h1>Find Job</h1>
+        {/* <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5"> */}
+        <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }}>
+          <div className="container text-center">
+            <h2 className="mb-0">Find Jobs</h2>
+            <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>Want Job</span></p>
+          </div>
+        </div>
+        {/* <div className="container"> */}
+        {/* <div className="row align-items-center"> */}
+        {/* <div className="col-12" data-aos="fade"> */}
+        {/* <h1>Find Job</h1>
                 <form action="#">
                   <div className="row mb-3">
                     <div className="col-md-9">
@@ -73,11 +80,11 @@ class WantJob extends Component {
                       <input type="submit" className="btn btn-search btn-primary btn-block" defaultValue="Search" />
                     </div>
                   </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+                </form> */}
+        {/* </div> */}
+        {/* </div> */}
+        {/* </div> */}
+        {/* </div> */}
         {/* <div className="site-section">
               <div className="container">
                 <div className="row">

@@ -28,15 +28,16 @@ class JobSearch extends React.Component {
         INNER_WIDTH: window.innerWidth,
     };
 
-
-    componentDidMount() {
-        window.addEventListener('resize', () => {
-            this.setState({ INNER_WIDTH: window.innerWidth })
-        })
+    resize = () => {
+        this.setState({ INNER_WIDTH: window.innerWidth })
     }
 
-    componentWillUnmount(){
-        window.removeEventListener("resize")
+    componentDidMount() {
+        window.addEventListener('resize', this.resize)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.resize)
     }
 
     static getDerivedStateFromProps(props) {
@@ -69,8 +70,8 @@ class JobSearch extends React.Component {
                     onClose={() => this.props.onClose(!visible)}
                     visible={this.state.visible}
                 >
-
-                    {jobs.map(job => (
+                    
+                    {jobs.length ? jobs.map(job => (
                         <React.Fragment>
                             <h6>{job.jobTitle}</h6>
                             <Row>
@@ -99,7 +100,7 @@ class JobSearch extends React.Component {
                             </Row>
                             <Divider style={{ height: 3, backgroundColor: '#44444' }} />
                         </React.Fragment>
-                    ))}
+                    )) : <h5>No Jobs Found Please Modify Search</h5> }
                 </Drawer>
             </div>
         );

@@ -47,7 +47,7 @@ class Footer extends Component {
                 <div className="row pt-5 mt-5 text-center">
                     <div className="col-md-12">
                         <p>
-                            Copyright ©  All Rights Reserved | This Website is made in collaboration with <i className="icon-heart text-warning" aria-hidden="true" /> by <a target="_blank">Panacloud </a>
+                            Copyright ©  All Rights Reserved | This Website is made in collaboration with <i className="icon-heart text-danger" aria-hidden="true" /> by <a target="_blank"> Axiom Enterprises </a>
                         </p>
                     </div>
                 </div>
