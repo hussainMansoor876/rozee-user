@@ -1,4 +1,4 @@
-import { getAllJobs, getAllJobsFail, getAllJobsSuccess } from '../actions/jobAction'
+import { getAllJobs, getAllJobsFail, getAllJobsSuccess, applyJobFail, applyJobSuccess } from '../actions/jobAction'
 import axios from 'axios'
 import Path from '../../Config/path';
 
@@ -27,13 +27,13 @@ export const applyToJob = data => {
             .then(response => {
 
                 if (!response.data.success) {
-                    return dispatch(getAllJobsFail({ success: false, errorMessage: response.data.message }))
+                    return dispatch(applyJobFail({ success: false, errorMessage: response.data.message }))
                 }
 
-                dispatch(getAllJobsSuccess({ success: true, successMessage: response.data.message }))
+                dispatch(applyJobSuccess({ success: true, successMessage: response.data.message }))
             })
             .catch(err => {
-                return dispatch(getAllJobsFail({ success: false, errorMessage: "Something went wrong please try again later" }))
+                return dispatch(applyJobFail({ success: false, errorMessage: "Something went wrong please try again later" }))
             })
 
     }

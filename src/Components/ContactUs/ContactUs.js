@@ -53,7 +53,7 @@ class ContactUs extends Component {
                     <div className="p-4 mb-3 bg-white">
                       <h3 className="h5 text-black mb-3">Contact Info</h3>
                       <p className="mb-0 font-weight-bold">Address</p>
-                      <p className="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                      <p className="mb-4">203 state london, united kingdom</p>
                       <p className="mb-0 font-weight-bold">Phone</p>
                       <p className="mb-4"><a href="#">+1 232 3235 324</a></p>
                       <p className="mb-0 font-weight-bold">Email Address</p>
@@ -74,7 +74,7 @@ class ContactUs extends Component {
                   <div className="col-md-4">
                     <div>
                       <h2><span className="icon-room" /> Location</h2>
-                      <p className="mb-0">Karachi <br />  Gulshan-e-Iqbal</p>
+                      <p className="mb-0">London <br />  United Kingdom</p>
                     </div>
                   </div>
                   <div className="col-md-4">
