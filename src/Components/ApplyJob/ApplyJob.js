@@ -84,7 +84,7 @@ class ApplyJob extends Component {
                 <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")' }}>
                     <div className="container text-center">
                         <h2 className="mb-0">{jobTitle}</h2>
-                        <p className="mb-0 unit-6"><a>Home</a> <span className="sep">&gt;</span> <span>Job Item</span></p>
+                        <p className="mb-0 unit-6"><a>Home</a> <span className="sep">&gt;</span>{jobTitle}<span></span></p>
                     </div>
                 </div>
                 <div className="site-section bg-light">
@@ -123,11 +123,17 @@ class ApplyJob extends Component {
                                             </div>
                                             <div className="col-md-12">
                                                 <label className="font-weight-bold mt-3" htmlFor="email">Upload Your CV:</label><br />
-                                                <input type="file" name="CV" id="CV" onChange={this.handleChange} />
+                                                <input
+                                                    type="file"
+                                                    name="CV"
+                                                    id="CV"
+                                                    accept="application/msword,application/pdf,.docx,"
+                                                    onChange={this.handleChange}
+                                                />
                                             </div>
                                         </div>
 
-                                        <button type="submit" value="Apply" className="btn btn-primary">Apply</button>
+                                        <button type="submit" value="Apply" className="btn btn-primary">Submit</button>
 
                                     </form>) :
                                         <p className="mt-5">

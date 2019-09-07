@@ -1,13 +1,13 @@
+/*eslint-disable */
+
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import Path from '../../Config/path';
 import JobCard from '../JobCard/JobCard';
 import { connect } from 'react-redux';
 import * as JobMiddleware from '../../Store/middlewares/jobMiddleware';
 import Slider from 'react-slick';
-import ApplyJob from '../ApplyJob/ApplyJob';
-
+import './Home.css'
+import JobSearch from '../JobSearch/JobSearch'
 class Home extends Component {
 
     state = {
@@ -15,7 +15,14 @@ class Home extends Component {
         isLoading: false,
         successMessage: "",
         errorMessage: "",
-        allJobs: []
+        allJobs: [],
+        search: {
+            jobTitle: "",
+            location: ""
+        },
+
+        visible: false,
+        filteredJobs: []
     }
 
     componentDidMount() {
@@ -42,17 +49,39 @@ class Home extends Component {
     }
 
     handleApplyJob = (job) => {
-        console.log(job)
         this.props.history.push('/applyJob', job)
-
     }
+
+    handleChange = event => {
+        const { search } = this.state
+        search[event.target.name] = event.target.value
+        this.setState({ search })
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+        const { search, allJobs } = this.state
+        const filtered = allJobs.filter(item =>
+            item.jobTitle.toLowerCase().includes(search.jobTitle.toLowerCase()) &&
+            item.location.toLowerCase().includes(search.location.toLowerCase())
+        );
+
+        this.setState({ filteredJobs: filtered, visible: true })
+    }
+
+    onClose = () => {
+        this.setState({
+            visible: false,
+        });
+    };
+
 
     render() {
         var settings = {
             dots: true,
             infinite: false,
             speed: 500,
-            arrows: false,
+            arrows: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             initialSlide: 1,
@@ -60,10 +89,11 @@ class Home extends Component {
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
                         infinite: true,
-                        dots: true
+                        dots: true,
+                        arrows: true
                     }
                 },
                 {
@@ -72,7 +102,8 @@ class Home extends Component {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         initialSlide: 1,
-                        dots: true
+                        dots: true,
+                        arrows: true
                     }
                 },
                 {
@@ -80,12 +111,15 @@ class Home extends Component {
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        dots: true
+                        dots: true,
+                        arrows: true
                     }
                 }
             ]
         };
-        const { isError, isLoading, successMessage, errorMessage, allJobs, } = this.state
+
+
+        const { allJobs, filteredJobs, search } = this.state
         return (
             <div className="site-wrap">
                 <div style={{ height: '113px' }} />
@@ -94,17 +128,32 @@ class Home extends Component {
                         <div className="row align-items-center">
                             <div className="col-12" data-aos="fade">
                                 <h1>Find Job</h1>
-                                <form action="#">
+                                <form onSubmit={this.handleSubmit}>
                                     <div className="row mb-3">
                                         <div className="col-md-9">
                                             <div className="row">
                                                 <div className="col-md-6 mb-3 mb-md-0">
-                                                    <input type="text" className="mr-3 form-control border-0 px-4" placeholder="job title, keywords or company name " />
+                                                    <input
+                                                        type="text"
+                                                        name="jobTitle"
+                                                        value={search.jobTitle}
+                                                        onChange={this.handleChange}
+                                                        className="mr-3 form-control border-0 px-4"
+                                                        placeholder="React Application Developer"
+                                                    />
                                                 </div>
                                                 <div className="col-md-6 mb-3 mb-md-0">
                                                     <div className="input-wrap">
                                                         <span className="icon icon-room" />
-                                                        <input type="text" className="form-control form-control-block search-input  border-0 px-4" id="autocomplete" placeholder="city, province or region" /* onFocus="geolocate()" */ />
+                                                        <input
+                                                            type="text"
+                                                            name="location"
+                                                            value={search.location}
+                                                            onChange={this.handleChange}
+                                                            className="form-control form-control-block search-input border-0 px-4"
+                                                            id="autocomplete"
+                                                            placeholder="Pakistan"
+                                                        />
                                                     </div>
                                                 </div>
                                             </div>
@@ -119,6 +168,7 @@ class Home extends Component {
                     </div>
                 </div>
 
+                <JobSearch history={this.props.history} jobs={filteredJobs} onClose={this.onClose} visible={this.state.visible} />
 
                 <div className="site-section">
                     <div className="container">
@@ -128,11 +178,11 @@ class Home extends Component {
                             </div>
 
                             {/* <div className="row"> */}
-                            <div className="col-lg-12 col-md-12 col-sm-12">
+                            <div className="col-lg-12 col-md-12 col-sm-12 px-4"  >
                                 <Slider  {...settings}>
                                     {allJobs.map(job => (
-                                        <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100} onClick={() => this.handleApplyJob(job)} >
-                                            <a className="h-100 feature-item" style={{ height: '500px', border: "solid 1px green", cursor: 'pointer' }}>
+                                        <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100}  >
+                                            <a className="h-100 feature-item" onClick={() => this.handleApplyJob(job)} style={{ height: '500px', border: "solid 1px green", cursor: 'pointer' }}>
                                                 <span className="d-block icon flaticon-calculator mb-3 text-primary" />
                                                 <h2>{job.jobTitle}</h2>
                                                 <span className="counting">{job.role}</span>
