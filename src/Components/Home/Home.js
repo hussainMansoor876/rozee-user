@@ -8,8 +8,10 @@ import * as JobMiddleware from '../../Store/middlewares/jobMiddleware';
 import Slider from 'react-slick';
 import './Home.css'
 import JobSearch from '../JobSearch/JobSearch'
-class Home extends Component {
+import { Skeleton } from 'antd';
 
+
+class Home extends Component {
     state = {
         isError: false,
         isLoading: false,
@@ -119,7 +121,7 @@ class Home extends Component {
         };
 
 
-        const { allJobs, filteredJobs, search } = this.state
+        const { allJobs, filteredJobs, search, isLoading } = this.state
         return (
             <div className="site-wrap">
                 <div style={{ height: '113px' }} />
@@ -177,7 +179,7 @@ class Home extends Component {
                                 <h2 className="mb-5">ALL AVAILABLE JOBS</h2>
                             </div>
 
-                            {/* <div className="row"> */}
+                                {isLoading && <Skeleton active />}
                             <div className="col-lg-12 col-md-12 col-sm-12 px-4"  >
                                 <Slider  {...settings}>
                                     {allJobs.map(job => (
@@ -191,7 +193,6 @@ class Home extends Component {
                                     ))}
                                 </Slider>
                             </div>
-                            {/* </div> */}
                         </div>
                     </div>
                 </div>
@@ -201,7 +202,8 @@ class Home extends Component {
                             <div className="col-md-12 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay={100}>
                                 <h2 className="mb-5 h3">Recent Jobs</h2>
                                 <div className="rounded border jobs-wrap">
-
+                                {isLoading && <Skeleton active />}
+                                    
                                     {allJobs.map(job => (
                                         <JobCard history={this.props.history} data={job} key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
                                     ))}
