@@ -6,6 +6,7 @@ import JobCard from '../JobCard/JobCard';
 import { connect } from 'react-redux';
 import * as JobMiddleware from '../../Store/middlewares/jobMiddleware';
 import Slider from 'react-slick';
+import './Home.css'
 
 class Home extends Component {
 
@@ -51,7 +52,7 @@ class Home extends Component {
             dots: true,
             infinite: false,
             speed: 500,
-            arrows: false,
+            arrows: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             initialSlide: 1,
@@ -62,7 +63,8 @@ class Home extends Component {
                         slidesToShow: 2,
                         slidesToScroll: 2,
                         infinite: true,
-                        dots: true
+                        dots: true,
+                        arrows: true
                     }
                 },
                 {
@@ -71,7 +73,8 @@ class Home extends Component {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         initialSlide: 1,
-                        dots: true
+                        dots: true,
+                        arrows: true
                     }
                 },
                 {
@@ -79,7 +82,8 @@ class Home extends Component {
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        dots: true
+                        dots: true,
+                        arrows: true
                     }
                 }
             ]
@@ -127,11 +131,11 @@ class Home extends Component {
                             </div>
 
                             {/* <div className="row"> */}
-                            <div className="col-lg-12 col-md-12 col-sm-12">
+                            <div className="col-lg-12 col-md-12 col-sm-12 px-4"  >
                                 <Slider  {...settings}>
                                     {allJobs.map(job => (
-                                        <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100} onClick={() => this.handleApplyJob(job)} >
-                                            <a className="h-100 feature-item" style={{ height: '500px', border: "solid 1px green", cursor: 'pointer' }}>
+                                        <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100}  >
+                                            <a className="h-100 feature-item" onClick={() => this.handleApplyJob(job)}  style={{ height: '500px', border: "solid 1px green", cursor: 'pointer' }}>
                                                 <span className="d-block icon flaticon-calculator mb-3 text-primary" />
                                                 <h2>{job.jobTitle}</h2>
                                                 <span className="counting">{job.role}</span>

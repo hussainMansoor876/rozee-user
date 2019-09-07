@@ -123,7 +123,13 @@ class ApplyJob extends Component {
                                             </div>
                                             <div className="col-md-12">
                                                 <label className="font-weight-bold mt-3" htmlFor="email">Upload Your CV:</label><br />
-                                                <input type="file" name="CV" id="CV" onChange={this.handleChange} />
+                                                <input
+                                                    type="file"
+                                                    name="CV"
+                                                    id="CV"
+                                                    accept="application/msword,application/pdf,.docx,"
+                                                    onChange={this.handleChange}
+                                                />
                                             </div>
                                         </div>
 
