@@ -152,7 +152,7 @@ class Home extends Component {
                                                             onChange={this.handleChange}
                                                             className="form-control form-control-block search-input border-0 px-4"
                                                             id="autocomplete"
-                                                            placeholder="Pakistan"
+                                                            placeholder="United Kingdom"
                                                         />
                                                     </div>
                                                 </div>
