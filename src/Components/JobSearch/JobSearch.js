@@ -35,6 +35,10 @@ class JobSearch extends React.Component {
         })
     }
 
+    componentWillUnmount(){
+        window.removeEventListener("resize")
+    }
+
     static getDerivedStateFromProps(props) {
         return {
             visible: props.visible

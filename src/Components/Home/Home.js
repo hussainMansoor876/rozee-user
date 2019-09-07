@@ -62,8 +62,8 @@ class Home extends Component {
         event.preventDefault();
         const { search, allJobs } = this.state
         const filtered = allJobs.filter(item =>
-            item.jobTitle.toLowerCase().includes(search.jobTitle) &&
-            item.location.toLowerCase().includes(search.location)
+            item.jobTitle.toLowerCase().includes(search.jobTitle.toLowerCase()) &&
+            item.location.toLowerCase().includes(search.location.toLowerCase())
         );
 
         this.setState({ filteredJobs: filtered, visible: true })
