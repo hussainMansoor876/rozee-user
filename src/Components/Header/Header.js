@@ -28,7 +28,6 @@ class Header extends Component {
                                                 <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" className="site-menu-toggle js-menu-toggle text-black"><span className="icon-menu h3" /></a></div>
                                                 <ul className="site-menu js-clone-nav d-none d-lg-block">
                                                     <li><Link to="/">Home</Link></li>
-                                                    <li><Link to="/about" >About</Link></li>
                                                     <li><Link to="/contactUs" >Contact</Link></li>
                                                     <li><Link to="/wantJob" ><span className="bg-primary text-white py-3 px-4 rounded"><span className="icon-plus mr-3" />Want Job</span></Link></li>
                                                 </ul>

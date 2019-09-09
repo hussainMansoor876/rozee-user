@@ -14,7 +14,7 @@ import { Skeleton } from 'antd';
 class Home extends Component {
     state = {
         isError: false,
-        isLoading: false,
+        isLoading: true,
         successMessage: "",
         errorMessage: "",
         allJobs: [],
@@ -130,6 +130,11 @@ class Home extends Component {
                         <div className="row align-items-center">
                             <div className="col-12" data-aos="fade">
                                 <h1>Find Job</h1>
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <p className="extra-large">or browse by category: <Link to="/servicesforclients" className="category">Services for clients</Link> <Link to="/servicesforcandidates" className="category">Services for candidates</Link></p>
+                                    </div>
+                                </div>
                                 <form onSubmit={this.handleSubmit}>
                                     <div className="row mb-3">
                                         <div className="col-md-9">
@@ -163,7 +168,9 @@ class Home extends Component {
                                         <div className="col-md-3">
                                             <input type="submit" className="btn btn-search btn-primary btn-block" defaultValue="Search" />
                                         </div>
+
                                     </div>
+
                                 </form>
                             </div>
                         </div>
@@ -175,24 +182,25 @@ class Home extends Component {
                 <div className="site-section">
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-6 mx-auto text-center mb-5 section-heading">
+                            {/* <div className="col-md-6 mx-auto text-center mb-5 section-heading">
                                 <h2 className="mb-5">ALL AVAILABLE JOBS</h2>
-                            </div>
+                            </div> */}
 
-                                {isLoading && <Skeleton active />}
-                            <div className="col-lg-12 col-md-12 col-sm-12 px-4"  >
-                                <Slider  {...settings}>
-                                    {allJobs.map(job => (
-                                        <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100}  >
-                                            <a className="h-100 feature-item" onClick={() => this.handleApplyJob(job)} style={{ height: '500px', border: "solid 1px green", cursor: 'pointer' }}>
-                                                <span className="d-block icon flaticon-calculator mb-3 text-primary" />
-                                                <h2>{job.jobTitle}</h2>
-                                                <span className="counting">{job.role}</span>
-                                            </a>
-                                        </div>
-                                    ))}
-                                </Slider>
-                            </div>
+                            <Skeleton active loading={isLoading}>
+                                <div className="col-lg-12 col-md-12 col-sm-12 px-4"  >
+                                    <Slider  {...settings}>
+                                        {allJobs.map(job => (
+                                            <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100}  >
+                                                <a className="h-100 feature-item" onClick={() => this.handleApplyJob(job)} style={{ height: '500px', border: "solid 1px green", cursor: 'pointer' }}>
+                                                    <span className="d-block icon flaticon-calculator mb-3 text-primary" />
+                                                    <h2>{job.jobTitle}</h2>
+                                                    <span className="counting">{job.role}</span>
+                                                </a>
+                                            </div>
+                                        ))}
+                                    </Slider>
+                                </div>
+                            </Skeleton>
                         </div>
                     </div>
                 </div>
@@ -202,8 +210,8 @@ class Home extends Component {
                             <div className="col-md-12 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay={100}>
                                 <h2 className="mb-5 h3">Recent Jobs</h2>
                                 <div className="rounded border jobs-wrap">
-                                {isLoading && <Skeleton active />}
-                                    
+                                    {isLoading && <Skeleton active />}
+
                                     {allJobs.map(job => (
                                         <JobCard history={this.props.history} data={job} key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
                                     ))}
@@ -216,7 +224,28 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="site-blocks-cover overlay inner-page" style={{ backgroundImage: 'url("images/hero_1.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
+                <div className="site-wrap">
+                    <div className="site-section" data-aos="fade">
+                        <div className="container">
+                            <div className="row align-items-center">
+                                <div className="col-md-6 mb-5 mb-md-0">
+                                    <div className="img-border">
+                                        <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
+                                    </div>
+                                </div>
+                                <div className="col-md-5 ml-auto">
+                                    <div className="text-left mb-5 section-heading">
+                                        <h2>About Us</h2>
+                                    </div>
+                                    <p className="mb-4 h5 font-italic lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
+                                    <p>— <strong className="text-black font-weight-bold">John Holmes</strong>, Marketing Strategist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="site-blocks-cover overlay inner-page" style={{ backgroundImage: 'url("images/hero_2.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
                     <div className="container">
                         <div className="row align-items-center justify-content-center">
                             <div className="col-md-6 text-center" data-aos="fade">
@@ -227,7 +256,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="site-section site-block-feature bg-light">
+                {/* <div className="site-section site-block-feature bg-light">
                     <div className="container">
                         <div className="text-center mb-5 section-heading">
                             <h2>Why Choose Us</h2>
@@ -257,7 +286,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         )
