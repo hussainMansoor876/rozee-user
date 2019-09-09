@@ -19,7 +19,7 @@ class Footer extends Component {
                             <div className="col-md-6">
                                 <h3 className="footer-heading mb-4 text-white">Quick Menu</h3>
                                 <ul className="list-unstyled">
-                                    <li><Link to="/about" >About</Link></li>
+                                    <li><Link to="/contactUs" >contact us</Link></li>
                                     <li><Link to="/wantJob" >Search Job</Link></li>
                                 </ul>
                             </div>
@@ -36,10 +36,10 @@ class Footer extends Component {
                         <div className="col-md-12"><h3 className="footer-heading mb-4 text-white">Social Icons</h3></div>
                         <div className="col-md-12">
                             <p>
-                                <a href="#" className="pb-2 pr-2 pl-0"><span className="icon-facebook" /></a>
-                                <a href="#" className="p-2"><span className="icon-twitter" /></a>
-                                <a href="#" className="p-2"><span className="icon-instagram" /></a>
-                                <a href="#" className="p-2"><span className="icon-vimeo" /></a>
+                                <a  className="pb-2 pr-2 pl-0"><span className="icon-facebook" /></a>
+                                <a  className="p-2"><span className="icon-twitter" /></a>
+                                <a  className="p-2"><span className="icon-instagram" /></a>
+                                <a  className="p-2"><span className="icon-vimeo" /></a>
                             </p>
                         </div>
                     </div>
