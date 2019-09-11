@@ -10,6 +10,7 @@ import ApplyJob from './Components/ApplyJob/ApplyJob';
 import ServicesForClients from './Components/ServicesForClients/ServicesForClients';
 import ServicesForCandidates from './Components/ServicesForCandidates/ServicesForCandidates';
 import SeachJob from './Components/SearchJob/SearchJob';
+import WhyChooseUs from './Components/WhyChooseUs/WhyChooseUs';
 
 class Routes extends Component {
   render() {
@@ -25,11 +26,9 @@ class Routes extends Component {
             <Route exact path="/servicesforclients" component={ServicesForClients} />
             <Route exact path="/servicesforcandidates" component={ServicesForCandidates} />
             <Route exact path="/searchJob" component={SeachJob} />
-
-
-
+            <Route exact path="/whyChooseUs" component={WhyChooseUs} />
         </Switch>
-        {window.location.pathname === "/searchJob"  ? null : <Footer />}
+      <Footer />
     </Router>
     )
   }
