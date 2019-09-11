@@ -44,3 +44,28 @@ export const applyJobFail = (data) => {
         data
     }
 }
+
+export const uploadCV = () => {
+    return { 
+        type: actionTypes.UPLOAD_CV
+    }
+}
+
+
+export const uploadCVSuccess = (data) => {
+    return { 
+        type: actionTypes.UPLOAD_CV_SUCCESS,
+        data
+    }
+}
+
+
+export const uploadCVFail = (data) => {
+    return { 
+        type: actionTypes.UPLOAD_CV_FAIL,
+        data
+    }
+}
+
+
+

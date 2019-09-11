@@ -93,7 +93,15 @@ a {
   background: #000; }
 
 .btn-search {
-  height: 55px; }
+  height: 100px; }
+
+  .flexer { 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    
+  }
+
 
 .form-control {
   height: 55px; }
@@ -281,7 +289,7 @@ a {
         padding-right: 20px; }
         .site-navbar .site-navigation .site-menu .has-children > a:before {
           position: absolute;
-          content: "\e313";
+          /* content: "\e313"; */
           font-size: 16px;
           top: 50%;
           right: 0;
@@ -955,3 +963,7 @@ a {
     background: #28a745;
     color: #fff;
     border: 1px solid transparent; }
+
+    .test-border{
+      border: 2px solid red
+    }

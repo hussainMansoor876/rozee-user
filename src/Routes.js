@@ -9,6 +9,10 @@ import Footer from './Components/Footer/Footer';
 import ApplyJob from './Components/ApplyJob/ApplyJob';
 import ServicesForClients from './Components/ServicesForClients/ServicesForClients';
 import ServicesForCandidates from './Components/ServicesForCandidates/ServicesForCandidates';
+import SeachJob from './Components/SearchJob/SearchJob';
+import WhyChooseUs from './Components/WhyChooseUs/WhyChooseUs';
+import SubmitYourCV from './Components/SubmitYourCV/SubmitYourCV';
+import PageNotFound from './Components/PageNotFound/PageNotFound';
 
 class Routes extends Component {
   render() {
@@ -19,13 +23,18 @@ class Routes extends Component {
             <Route path="/" exact component={Home} />
             <Route exact path="/contactUs" component={ContactUs} />
             <Route exact path="/wantjob" component={WantJob} />
+            <Route exact path="/about" component={About} />
             <Route exact path="/applyJob" component={ApplyJob} />
             <Route exact path="/servicesforclients" component={ServicesForClients} />
             <Route exact path="/servicesforcandidates" component={ServicesForCandidates} />
+            <Route exact path="/searchJob" component={SeachJob} />
+            <Route exact path="/whyChooseUs" component={WhyChooseUs} />
+            <Route exact path="/submitYourCV" component={SubmitYourCV} />
+            <Route exact path="*" component={PageNotFound} />
 
 
         </Switch>
-        <Footer />
+      <Footer />
     </Router>
     )
   }

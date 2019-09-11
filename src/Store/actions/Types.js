@@ -6,3 +6,7 @@ export const GET_ALL_JOBS_FAIL = "GET_ALL_JOBS_FAIL";
 export const APPLY_JOB = "APPLY_JOB"; 
 export const APPLY_JOB_SUCCESS = "APPLY_JOB_SUCCESS"
 export const APPLY_JOB_FAIL = "APPLY_JOB_FAIL"
+
+export const UPLOAD_CV = "UPLOAD_CV"; 
+export const UPLOAD_CV_SUCCESS = "UPLOAD_CV_SUCCESS"
+export const UPLOAD_CV_FAIL = "UPLOAD_CV_FAIL"

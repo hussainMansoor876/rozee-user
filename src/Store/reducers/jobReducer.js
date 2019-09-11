@@ -69,6 +69,34 @@ export const jobReducer = (state = initialAppState, action) => {
                 isLoading: false,
             };
 
+        case actionTypes.UPLOAD_CV:
+            return {
+                ...state,
+                isError: false,
+                successMessage: "",
+                errorMessage: "",
+                isLoading: true,
+            };
+
+
+        case actionTypes.UPLOAD_CV_SUCCESS:
+            return {
+                ...state,
+                isError: false,
+                successMessage: action.data.successMessage,
+                errorMessage: "",
+                isLoading: false,
+            };
+
+        case actionTypes.UPLOAD_CV_FAIL:
+            return {
+                ...state,
+                isError: true,
+                successMessage: "",
+                errorMessage: action.data.errorMessage,
+                isLoading: false,
+            };
+
         default:
             return state;
     }
