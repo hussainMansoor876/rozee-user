@@ -9,6 +9,7 @@ import Footer from './Components/Footer/Footer';
 import ApplyJob from './Components/ApplyJob/ApplyJob';
 import ServicesForClients from './Components/ServicesForClients/ServicesForClients';
 import ServicesForCandidates from './Components/ServicesForCandidates/ServicesForCandidates';
+import SeachJob from './Components/SearchJob/SearchJob';
 
 class Routes extends Component {
   render() {
@@ -23,10 +24,12 @@ class Routes extends Component {
             <Route exact path="/applyJob" component={ApplyJob} />
             <Route exact path="/servicesforclients" component={ServicesForClients} />
             <Route exact path="/servicesforcandidates" component={ServicesForCandidates} />
+            <Route exact path="/searchJob" component={SeachJob} />
+
 
 
         </Switch>
-        <Footer />
+        {window.location.pathname === "/searchJob"  ? null : <Footer />}
     </Router>
     )
   }
