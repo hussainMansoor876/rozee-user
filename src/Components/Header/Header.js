@@ -1,6 +1,7 @@
 /*eslint-disable */
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
+import logo from './Images/companyLogo.jpeg';
 
 class Header extends Component {
     render() {
@@ -20,7 +21,7 @@ class Header extends Component {
                             <div className="py-1">
                                 <div className="row align-items-center">
                                     <div className="col-2">
-                                        <h2 className="mb-0 site-logo"><Link to="/" >Job<strong className="font-weight-bold">Finder</strong> </Link></h2>
+                                    <img className="mb-0" height="70px" width="50px" src={logo} alt="company logo" />
                                     </div>
                                     <div className="col-10">
                                         <nav className="site-navigation text-right" role="navigation">
