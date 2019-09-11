@@ -119,6 +119,7 @@ class ApplyJob extends Component {
                                                     className="form-control"
                                                     placeholder="Email Address"
                                                     onChange={this.handleChange}
+                                                    required='true'
                                                 />
                                             </div>
                                             <div className="col-md-12">

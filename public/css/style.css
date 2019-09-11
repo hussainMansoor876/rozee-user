@@ -95,6 +95,14 @@ a {
 .btn-search {
   height: 100px; }
 
+  .flexer { 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+
 .form-control {
   height: 55px; }
   .form-control:active, .form-control:focus {

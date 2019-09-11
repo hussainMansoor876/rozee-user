@@ -48,12 +48,12 @@ class Home extends Component {
                 isLoading: false,
                 isError: false,
                 errorMessage: "",
-                allJobs:[...allJobs]
+                allJobs: [...allJobs]
             })
 
         }
 
-      
+
     }
 
     handleApplyJob = (job) => {
@@ -132,14 +132,14 @@ class Home extends Component {
             <div className="site-wrap">
                 <div style={{ height: '113px' }} />
                 <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className=" col-md-10 col-sm-12" data-aos="fade">
-                            <Link to="/servicesforclients"><span className="btn bg-primary text-white py-5 px-5 rounded" style={{fontSize:'2rem', width:'330px'}} >Client Services</span></Link>
-                           <Link to="/servicesforcandidates"> <span className="btn bg-primary text-white py-5 px-5 rounded " style={{fontSize:'2rem',float:'right'}}>Candidates Services</span></Link>
+                    <div className="container  ">
+                        <div className="row align-items-center ">
+                            <div className="col-md-12 col-sm-12 col-sm-12" data-aos="fade">
+                                <Link to="/servicesforclients"><span className="btn bg-primary text-white py-5 px-5 rounded" style={{ fontSize: '2rem', width: '330px' }} >Client Services</span></Link>
+                                <Link to="/servicesforcandidates"> <span className="btn bg-primary text-white py-5 px-5 rounded " style={{ fontSize: '2rem', float: 'right' }}>Candidates Services</span></Link>
 
-                            {/* <input type="Client Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Client Services" /> */}
-                            {/* <input type="Candidates Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Candidates Services" /> */}
+                                {/* <input type="Client Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Client Services" /> */}
+                                {/* <input type="Candidates Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Candidates Services" /> */}
                                 {/* <h1>Find Job</h1>
                                 <div className="row">
                                     <div className="col-md-12">
@@ -205,7 +205,7 @@ class Home extends Component {
                                     </div>
                                     <p className="mb-4 h5 font-italic lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
                                     <p>— <strong className="text-black font-weight-bold">John Holmes</strong>, Marketing Strategist</p>
-                                    <p><Link to="/about" className="btn btn-primary pill text-white px-4" style={{float:"right"}} >Find out more</Link></p>
+                                    <p><Link to="/about" className="btn btn-primary pill text-white px-4" style={{ float: "right" }} >Find out more</Link></p>
 
                                 </div>
                             </div>
@@ -260,7 +260,7 @@ class Home extends Component {
                     </div>
                 </div> */}
 
-            
+
                 <div className="site-section site-block-feature bg-light">
                     <div className="container">
                         <div className="text-center mb-5 section-heading">

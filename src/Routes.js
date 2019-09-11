@@ -12,6 +12,7 @@ import ServicesForCandidates from './Components/ServicesForCandidates/ServicesFo
 import SeachJob from './Components/SearchJob/SearchJob';
 import WhyChooseUs from './Components/WhyChooseUs/WhyChooseUs';
 import SubmitYourCV from './Components/SubmitYourCV/SubmitYourCV';
+import PageNotFound from './Components/PageNotFound/PageNotFound';
 
 class Routes extends Component {
   render() {
@@ -29,6 +30,8 @@ class Routes extends Component {
             <Route exact path="/searchJob" component={SeachJob} />
             <Route exact path="/whyChooseUs" component={WhyChooseUs} />
             <Route exact path="/submitYourCV" component={SubmitYourCV} />
+            <Route exact path="*" component={PageNotFound} />
+
 
         </Switch>
       <Footer />
