@@ -19,6 +19,7 @@ class Routes extends Component {
             <Route path="/" exact component={Home} />
             <Route exact path="/contactUs" component={ContactUs} />
             <Route exact path="/wantjob" component={WantJob} />
+            <Route exact path="/about" component={About} />
             <Route exact path="/applyJob" component={ApplyJob} />
             <Route exact path="/servicesforclients" component={ServicesForClients} />
             <Route exact path="/servicesforcandidates" component={ServicesForCandidates} />

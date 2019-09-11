@@ -24,7 +24,7 @@ class Home extends Component {
         },
 
         visible: false,
-        filteredJobs: []
+        filteredJobs: [],
     }
 
     componentDidMount() {
@@ -42,12 +42,18 @@ class Home extends Component {
             })
         }
 
-        this.setState({
-            isLoading: false,
-            isError: false,
-            errorMessage: "",
-            allJobs: nextProps.allJobs,
-        })
+        if (nextProps.allJobs.length) {
+            const allJobs = nextProps.allJobs.splice(0, 10, nextProps.allJobs.length);
+            this.setState({
+                isLoading: false,
+                isError: false,
+                errorMessage: "",
+                allJobs:[...allJobs]
+            })
+
+        }
+
+      
     }
 
     handleApplyJob = (job) => {
@@ -128,8 +134,13 @@ class Home extends Component {
                 <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
                     <div className="container">
                         <div className="row align-items-center">
-                            <div className="col-12" data-aos="fade">
-                                <h1>Find Job</h1>
+                            <div className=" col-md-11 col-sm-12" data-aos="fade">
+                            <Link to="/servicesforclients"><span className="btn bg-primary text-white py-5 px-5 rounded" style={{fontSize:'2rem', width:'330px'}} >Client Services</span></Link>
+                           <Link to="/servicesforcandidates"> <span className="btn bg-primary text-white py-5 px-5 rounded " style={{fontSize:'2rem',float:'right'}}>Candidates Services</span></Link>
+
+                            {/* <input type="Client Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Client Services" /> */}
+                            {/* <input type="Candidates Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Candidates Services" /> */}
+                                {/* <h1>Find Job</h1>
                                 <div className="row">
                                     <div className="col-md-12">
                                         <p className="extra-large">or browse by category: <Link to="/servicesforclients" className="category">Services for clients</Link> <Link to="/servicesforcandidates" className="category">Services for candidates</Link></p>
@@ -171,7 +182,7 @@ class Home extends Component {
 
                                     </div>
 
-                                </form>
+                                </form> */}
                             </div>
                         </div>
                     </div>
@@ -179,12 +190,36 @@ class Home extends Component {
 
                 <JobSearch history={this.props.history} jobs={filteredJobs} onClose={this.onClose} visible={this.state.visible} />
 
+                <div className="site-wrap">
+                    <div className="site-section" data-aos="fade">
+                        <div className="container">
+                            <div className="row align-items-center">
+                                <div className="col-md-6 mb-5 mb-md-0">
+                                    <div className="img-border">
+                                        <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
+                                    </div>
+                                </div>
+                                <div className="col-md-5 ml-auto">
+                                    <div className="text-left mb-5 section-heading">
+                                        <h2>About Us</h2>
+                                    </div>
+                                    <p className="mb-4 h5 font-italic lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
+                                    <p>— <strong className="text-black font-weight-bold">John Holmes</strong>, Marketing Strategist</p>
+                                    <p><Link to="/about" className="btn btn-primary pill text-white px-4" style={{marginLeft:'300px'}} >Find out more</Link></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
                 <div className="site-section">
                     <div className="container">
                         <div className="row">
-                            {/* <div className="col-md-6 mx-auto text-center mb-5 section-heading">
-                                <h2 className="mb-5">ALL AVAILABLE JOBS</h2>
-                            </div> */}
+                            <div className="col-md-6 mx-auto text-center mb-5 section-heading">
+                                <h2 className="mb-5">RECENT JOBS</h2>
+                            </div>
 
                             <Skeleton active loading={isLoading}>
                                 <div className="col-lg-12 col-md-12 col-sm-12 px-4"  >
@@ -204,7 +239,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="site-section bg-light">
+                {/* <div className="site-section bg-light">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay={100}>
@@ -223,40 +258,10 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="site-wrap">
-                    <div className="site-section" data-aos="fade">
-                        <div className="container">
-                            <div className="row align-items-center">
-                                <div className="col-md-6 mb-5 mb-md-0">
-                                    <div className="img-border">
-                                        <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
-                                    </div>
-                                </div>
-                                <div className="col-md-5 ml-auto">
-                                    <div className="text-left mb-5 section-heading">
-                                        <h2>About Us</h2>
-                                    </div>
-                                    <p className="mb-4 h5 font-italic lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
-                                    <p>— <strong className="text-black font-weight-bold">John Holmes</strong>, Marketing Strategist</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div> */}
 
-                </div>
-                <div className="site-blocks-cover overlay inner-page" style={{ backgroundImage: 'url("images/hero_2.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
-                    <div className="container">
-                        <div className="row align-items-center justify-content-center">
-                            <div className="col-md-6 text-center" data-aos="fade">
-                                <h1 className="h3 mb-0">Your Dream Job</h1>
-                                <p className="h3 text-white mb-5">Is Waiting For You</p>
-                                <p><Link to="/wantJob" className="btn btn-outline-warning py-3 px-4">Find Jobs</Link></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* <div className="site-section site-block-feature bg-light">
+            
+                <div className="site-section site-block-feature bg-light">
                     <div className="container">
                         <div className="text-center mb-5 section-heading">
                             <h2>Why Choose Us</h2>
@@ -286,7 +291,18 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
+                <div className="site-blocks-cover overlay inner-page" style={{ backgroundImage: 'url("images/hero_2.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
+                    <div className="container">
+                        <div className="row align-items-center justify-content-center">
+                            <div className="col-md-6 text-center" data-aos="fade">
+                                <h1 className="h3 mb-0">Your Dream Job</h1>
+                                <p className="h3 text-white mb-5">Is Waiting For You</p>
+                                <p><Link to="/wantJob" className="btn btn-outline-warning py-3 px-4">Find Jobs</Link></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         )

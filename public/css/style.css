@@ -93,7 +93,7 @@ a {
   background: #000; }
 
 .btn-search {
-  height: 55px; }
+  height: 100px; }
 
 .form-control {
   height: 55px; }
@@ -955,3 +955,7 @@ a {
     background: #28a745;
     color: #fff;
     border: 1px solid transparent; }
+
+    .test-border{
+      border: 2px solid red
+    }
