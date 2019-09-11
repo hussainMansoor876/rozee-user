@@ -42,7 +42,7 @@ class Header extends Component {
                                                             <li><Link to="/servicesforcandidates" >Candidate</Link></li>
                                                             <li><Link to="/searchJob" >Job search</Link></li>
                                                             <li><Link to="/wantJob" >Want job</Link></li>
-                                                            <li><Link to="/submitCv" >Submit your CV</Link></li>
+                                                            <li><Link to="/submitYourCV" >Submit your CV</Link></li>
                                                             <li><Link to="/contactUs" >Conatact us</Link></li>
                                                         </ul>
                                                     </li>

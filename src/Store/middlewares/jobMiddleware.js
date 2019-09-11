@@ -1,4 +1,4 @@
-import { getAllJobs, getAllJobsFail, getAllJobsSuccess, applyJobFail, applyJobSuccess } from '../actions/jobAction'
+import { getAllJobs, getAllJobsFail, getAllJobsSuccess, applyJobFail, applyJobSuccess, uploadCVFail, uploadCVSuccess } from '../actions/jobAction'
 import axios from 'axios'
 import Path from '../../Config/path';
 
@@ -34,6 +34,26 @@ export const applyToJob = data => {
             })
             .catch(err => {
                 return dispatch(applyJobFail({ success: false, errorMessage: "Something went wrong please try again later" }))
+            })
+
+    }
+}
+
+
+export const uploadCV = data => {
+    return dispatch => {
+        dispatch(getAllJobs());
+        axios.post(Path.UPLOAD_CV, data)
+            .then(response => {
+
+                if (!response.data.success) {
+                    return dispatch(uploadCVFail({ success: false, errorMessage: response.data.message }))
+                }
+
+                dispatch(uploadCVSuccess({ success: true, successMessage: response.data.message }))
+            })
+            .catch(err => {
+                return dispatch(uploadCVFail({ success: false, errorMessage: "Something went wrong please try again later" }))
             })
 
     }

@@ -7,6 +7,11 @@ class Path {
     static GET_ALL_JOBS = Path.BASE_URL + "/job/getAllJobs"
 
     static APPLY_JOB = Path.BASE_URL + '/job/apply'
+
+    static UPLOAD_CV = Path.BASE_URL + '/cv/upload'
+
+
+
 }
 
 
