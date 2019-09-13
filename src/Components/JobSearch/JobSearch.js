@@ -70,7 +70,7 @@ class JobSearch extends React.Component {
                     onClose={() => this.props.onClose(!visible)}
                     visible={this.state.visible}
                 >
-                    
+
                     {jobs.length ? jobs.map(job => (
                         <React.Fragment>
                             <h6>{job.jobTitle}</h6>
@@ -100,7 +100,7 @@ class JobSearch extends React.Component {
                             </Row>
                             <Divider style={{ height: 3, backgroundColor: '#44444' }} />
                         </React.Fragment>
-                    )) : <h5>No Jobs Found Please Modify Search</h5> }
+                    )) : <h5>No Jobs Found Please Modify Search</h5>}
                 </Drawer>
             </div>
         );

@@ -9,7 +9,7 @@ class About extends Component {
 
     return (
       <div className="site-wrap">
-        <div style={{ height: '113px' }} />
+        {/* <div style={{ height: '50px', backgroundColor: 'white' }} /> */}
         <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }}>
           <div className="container text-center">
             <h2 className="mb-0">About Us</h2>
@@ -21,7 +21,7 @@ class About extends Component {
             <div className="row align-items-center">
               <div className="col-md-6 mb-5 mb-md-0">
                 <div className="img-border">
-                  <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
+                  <img src="images/hero_1.jpg" height="200px" alt="Image" className="img-fluid rounded" />
                 </div>
               </div>
               <div className="col-md-5 ml-auto">
@@ -39,8 +39,8 @@ class About extends Component {
           <div className="container  fluid">
             <div className="row align-items-center  m-0 p-0">
 
-              <div className="col-md-6 col-lg-6 flexer " style={{ backgroundColor: '#31332e', height: '400px' }}>
-                <p className="h5 lineheight1-5 " style={{ color: 'white', textAlign: 'center' }}>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
+              <div className="col-md-6 col-lg-6 flexer " style={{ backgroundColor: '#DCDCDC', height: '400px' }}>
+                <p className="h5 lineheight1-5 " style={{ color: 'black', textAlign: 'center' }}>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
 
               </div>
               <div className="col-md-6 mb-5 mb-md-0" style={{ right: '0', margin: '0', padding: '0' }}>
@@ -57,8 +57,8 @@ class About extends Component {
                   <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
                 </div>
               </div>
-              <div className="col-md-6 col-lg-6 flexer" style={{ backgroundColor: '#31332e', height: '400px' }}>
-                <p className="h5 lineheight1-5 " style={{ color: 'white', textAlign: 'center' }}>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
+              <div className="col-md-6 col-lg-6 flexer" style={{ backgroundColor: '#DCDCDC', height: '400px' }}>
+                <p className="h5 lineheight1-5 " style={{ color: 'black', textAlign: 'center' }}>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
               </div>
 
             </div>

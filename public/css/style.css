@@ -224,7 +224,7 @@ a {
   position: fixed;
   z-index: 99;
   width: 100%;
-  padding: 20px 0;
+  /* padding: 10px 0; */
   margin-bottom: 113px;
   left: 0;
   -webkit-transition: .3s all ease;
@@ -792,7 +792,7 @@ border-bottom: none;
       background: #28a745; }
 
 .unit-5 {
-  padding-top: 50px;
+  padding-top: 160px;
   padding-bottom: 50px;
   background-size: cover;
   background-position: center center; }

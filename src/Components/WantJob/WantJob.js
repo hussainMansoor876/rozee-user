@@ -21,7 +21,7 @@ class WantJob extends Component {
 
   componentDidMount() {
     this.setState({ loading: true })
-      this.props.getJobs();
+    this.props.getJobs();
   }
 
 
@@ -51,27 +51,27 @@ class WantJob extends Component {
 
     return (
       <div className="site-wrap">
-        <div style={{ height: '113px' }} />
+        {/* <div style={{ height: '113px' }} /> */}
         <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }}>
           <div className="container text-center">
             <h2 className="mb-0">Find Jobs</h2>
             <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>Want Job</span></p>
           </div>
         </div>
-    
+
         <div className="site-section bg-light">
           <div className="container">
             <div className="row">
               <div className="col-md-12 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay={100}>
                 <h2 className="mb-5 h3">All jobs for you</h2>
                 <Skeleton active loading={loading}>
-                <div className="rounded border jobs-wrap">
+                  <div className="rounded border jobs-wrap">
 
-                  {allJobs.map(job => (
-                    <JobCard history={this.props.history} data={job} key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
+                    {allJobs.map(job => (
+                      <JobCard history={this.props.history} data={job} key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
 
-                  ))}
-                </div>
+                    ))}
+                  </div>
                 </Skeleton>
               </div>
             </div>

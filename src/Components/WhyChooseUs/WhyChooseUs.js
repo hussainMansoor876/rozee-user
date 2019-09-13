@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class WhyChooseUs extends Component {
     render() {
         return (
             <div className="site-wrap">
-                <div style={{ height: '113px' }} />
+                {/* <div style={{ height: '113px' }} /> */}
                 <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }}>
                     <div className="container text-center">
                         <h2 className="mb-0">Why Choose Us</h2>
@@ -48,7 +48,7 @@ class WhyChooseUs extends Component {
                     <div className="site-section" data-aos="fade">
                         <div className="container">
                             <div className="row align-items-center">
-                                
+
                                 <div className="col-md-5 ml-auto">
                                     <div className="text-left mb-5 section-heading">
                                         <h2>CEO Message</h2>

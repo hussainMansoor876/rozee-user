@@ -80,7 +80,7 @@ class ApplyJob extends Component {
         const { email, isApplying } = this.state
         return (
             <div className="site-wrap">
-                <div style={{ height: '113px' }} />
+                {/* <div style={{ height: '113px' }} /> */}
                 <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")' }}>
                     <div className="container text-center">
                         <h2 className="mb-0">{jobTitle}</h2>
