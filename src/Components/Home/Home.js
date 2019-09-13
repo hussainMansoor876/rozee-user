@@ -134,17 +134,16 @@ class Home extends Component {
                     <div className="container  ">
                         <div className="row flexer ">
 
-                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn mr-5 mt-5">
+                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn ">
                                 <h2 className="text-white rounded" >Client Services</h2>
                                 <p>Reprehenderit labore nostrud nulla eiusmod. Elit voluptate ipsum proident enim deserunt do ipsum. Cupidatat sunt </p>
                                 <Link to="/servicesforclients" className="header-btn-inside" >GO</Link>
                             </div>
 
-                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn mt-5">
+                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn-second">
                                 <h2 className="text-white rounded" >Candidates Services</h2>
                                 <p>Reprehenderit labore nostrud nulla eiusmod. Elit voluptate ipsum proident enim deserunt do ipsum. Cupidatat sunt </p>
                                 <Link to="/servicesforcandidates" className="header-btn-inside" >GO</Link>
-
                             </div>
 
                             {/* <div className="col-lg-12 col-md-12 col-sm-12  " data-aos="fade">

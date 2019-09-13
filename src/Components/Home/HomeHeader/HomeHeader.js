@@ -2,8 +2,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import logo from './Images/companyLogo.jpeg';
+import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 
 class HomeHeader extends Component {
+
+    handlePush = () => {
+        this.props.history.push('/')
+    }
+
     render() {
         return (
             <div>
@@ -22,7 +29,7 @@ class HomeHeader extends Component {
                             <div className="py-1">
                                 <div className="row align-items-center">
                                     <div className="col-2">
-                                        <img className="mb-0 mt-4" height="90px" width="70px" src={logo} alt="company logo" />
+                                        <img className="mb-0 mt-4" style={{ cursor: 'pointer' }} height="90px" width="70px" src={logo} onClick={this.handlePush} alt="company logo" />
                                     </div>
                                     <div className="col-10">
                                         <nav className="site-navigation text-right" role="navigation">
@@ -34,30 +41,28 @@ class HomeHeader extends Component {
 
                                                     <li className="bg-primary text-white text-white py-2 px-3 rounded  has-children">
                                                         <a style={{ color: 'white' }}><span className="icon-list mr-3" />Menu</a>
-                                                        <ul className="dropdown arrow-top">
+                                                        <ul className="dropdown arrow-top" style={{ width: '250px' }}>
+
+
                                                             <li><Link to="/" >Home</Link></li>
-                                                            <li><Link to="/about" >about us</Link></li>
+                                                            <li><Link to="/about" >About us</Link></li>
                                                             <li><Link to="/whyChooseUs" >Why choose us</Link></li>
                                                             <li><Link to="/clients" >Clients</Link></li>
                                                             <li><Link to="/servicesforclients" >Client Services</Link></li>
+
                                                             <li><Link to="/servicesforcandidates" >Candidate</Link></li>
                                                             <li><Link to="/searchJob" >Job search</Link></li>
                                                             <li><Link to="/wantJob" >Want job</Link></li>
                                                             <li><Link to="/servicesforcandidates#submitCV" >Submit your CV</Link></li>
-                                                            <li><Link to="/contactUs" >Conatact us</Link></li>
+                                                            <li><Link to="/contactUs" >Contact us</Link></li>
+
+
+
+
+
                                                         </ul>
+
                                                     </li>
-
-
-
-                                                    {/* <li><Link to="/wantJob" ><span className="bg-primary text-white py-3 px-4 rounded has-children">                    
-                                                    <a>Menu</a>
-                                                        <ul className="dropdown ">
-                                                            <li><a href="category.html">Category</a></li>
-                                                            <li><a href="#">Browse Candidates</a></li>
-                                                            <li><a href="new-post.html">Post a Job</a></li>
-                                                            <li><a href="#">Employeer Profile</a></li>
-                                                        </ul></span></Link></li> */}
                                                 </ul>
                                             </div>
                                         </nav>
@@ -72,4 +77,6 @@ class HomeHeader extends Component {
     }
 }
 
-export default HomeHeader
+export default withRouter(HomeHeader)
+
+

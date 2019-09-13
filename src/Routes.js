@@ -16,10 +16,13 @@ import HomeHeader from './Components/Home/HomeHeader/HomeHeader';
 import Clients from './Components/Clients/Clients';
 
 class Routes extends Component {
+  componentWillMount = () => {
+
+  }
   render() {
     return (
       <Router>
-        {window.location.pathname === "/" ? <HomeHeader /> : <Header />}
+        <HomeHeader />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route exact path="/contactUs" component={ContactUs} />
