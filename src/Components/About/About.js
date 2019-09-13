@@ -2,21 +2,11 @@
 
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import { Collapse } from 'antd';
 
 
 class About extends Component {
-
-   callback(key) {
-    console.log(key);
-  }
-
   render() {
-    const text = `
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.,
-    it can be found as a welcome guest in many households across the world.
-`;
-    const { Panel } = Collapse;
+
     return (
       <div className="site-wrap">
         <div style={{ height: '113px' }} />
@@ -44,31 +34,40 @@ class About extends Component {
             </div>
           </div>
         </div>
-        <div className="site-section">
-          <div className="container">
-            <div className="row justify-content-center text-center mb-5">
-              <div className="col-md-6" data-aos="fade">
-                <h2>Frequently Ask Questions</h2>
+
+        <div className="site-section" data-aos="fade">
+          <div className="container  fluid">
+            <div className="row align-items-center  m-0 p-0">
+
+              <div className="col-md-6 col-lg-6 flexer " style={{ backgroundColor: '#31332e', height: '400px' }}>
+                <p className="h5 lineheight1-5 " style={{ color: 'white', textAlign: 'center' }}>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
+
               </div>
-              <div className="col-lg-12 col-md-12">
-              <Collapse defaultActiveKey={['1']} onChange={this.callback}>
-                <Panel header="This is panel header 1" key="1">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 2" key="2">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 3" key="3">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 3" key="5">
-                  <p>{text}</p>
-                </Panel>
-              </Collapse>
+              <div className="col-md-6 mb-5 mb-md-0" style={{ right: '0', margin: '0', padding: '0' }}>
+                <div className="img-border">
+                  <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
+                </div>
               </div>
             </div>
           </div>
+          <div className="container  fluid">
+            <div className="row align-items-center  m-0 p-0">
+              <div className="col-md-6 mb-5 mb-md-0" style={{ right: '0', margin: '0', padding: '0' }}>
+                <div className="img-border">
+                  <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-6 flexer" style={{ backgroundColor: '#31332e', height: '400px' }}>
+                <p className="h5 lineheight1-5 " style={{ color: 'white', textAlign: 'center' }}>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
+              </div>
+
+            </div>
+          </div>
         </div>
+
+
+
+
       </div>
 
     )

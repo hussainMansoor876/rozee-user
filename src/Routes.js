@@ -17,25 +17,26 @@ import PageNotFound from './Components/PageNotFound/PageNotFound';
 class Routes extends Component {
   render() {
     return (
-        <Router>
-            <Header />
+      <Router>
+        {window.location.pathname === "/" ? null : <Header />}
         <Switch>
-            <Route path="/" exact component={Home} />
-            <Route exact path="/contactUs" component={ContactUs} />
-            <Route exact path="/wantjob" component={WantJob} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/applyJob" component={ApplyJob} />
-            <Route exact path="/servicesforclients" component={ServicesForClients} />
-            <Route exact path="/servicesforcandidates" component={ServicesForCandidates} />
-            <Route exact path="/searchJob" component={SeachJob} />
-            <Route exact path="/whyChooseUs" component={WhyChooseUs} />
-            <Route exact path="/submitYourCV" component={SubmitYourCV} />
-            <Route exact path="*" component={PageNotFound} />
+
+          <Route path="/" exact component={Home} />
+          <Route exact path="/contactUs" component={ContactUs} />
+          <Route exact path="/wantjob" component={WantJob} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/applyJob" component={ApplyJob} />
+          <Route exact path="/servicesforclients" component={ServicesForClients} />
+          <Route exact path="/servicesforcandidates" component={ServicesForCandidates} />
+          <Route exact path="/searchJob" component={SeachJob} />
+          <Route exact path="/whyChooseUs" component={WhyChooseUs} />
+          <Route exact path="/submitYourCV" component={SubmitYourCV} />
+          <Route exact path="*" component={PageNotFound} />
 
 
         </Switch>
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
     )
   }
 }
