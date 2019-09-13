@@ -220,20 +220,43 @@ a {
 
 /* Navbar */
 .site-navbar-wrap {
-  background: #fff !important;
+  /* background: #fff !important; */
   position: fixed;
   z-index: 99;
   width: 100%;
-  padding: 20px 0;
+  /* padding: 10px 0; */
   margin-bottom: 113px;
   left: 0;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
-  transition: .3s all ease; }
+  transition: .3s all ease; 
+}
   .site-navbar-wrap.scrolled {
     padding: 0px 0;
     -webkit-box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.1); }
+
+    .home-site-navbar-wrap {
+      position: absolute;
+      z-index: 99;
+      width: 100%;
+      padding: 10px 0;
+      margin-bottom: 113px;
+      left: 0;
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease; }
+      .home-site-navbar-wrap.scrolled {
+        padding: 0px 0;
+        background: white !important;
+        -webkit-box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.1); }
+        
+.home-site-navbar {
+margin-bottom: 0px;
+width: 100%;
+border-bottom: none;
+}
 
 .site-navbar-top {
   display: none;
@@ -251,21 +274,27 @@ a {
   margin-bottom: 0px;
   width: 100%;
   border-bottom: none;
-  background: #fff !important; }
+  /* background: #fff !important;  */
+}
   .site-navbar .site-logo {
-    font-weight: 200; }
+    font-weight: 200; 
+  }
     .site-navbar .site-logo a {
       font-weight: 200;
       font-size: 26px;
-      color: #000; }
+      color: #000; 
+    }
   .site-navbar .site-navigation .site-menu {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+   }
     .site-navbar .site-navigation .site-menu .active > a {
-      color: #000; }
+      color: #000; 
+    }
     .site-navbar .site-navigation .site-menu a {
       text-decoration: none !important;
       font-size: 15px;
-      display: inline-block; }
+      display: inline-block; 
+    }
     .site-navbar .site-navigation .site-menu > li {
       display: inline-block;
       padding: 10px 5px; }
@@ -754,7 +783,7 @@ a {
       height: 7px;
       border-radius: 50%;
       border: none;
-      float: left;
+      /* float: left; */
       background: #cccccc;
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
@@ -763,7 +792,7 @@ a {
       background: #28a745; }
 
 .unit-5 {
-  padding-top: 50px;
+  padding-top: 160px;
   padding-bottom: 50px;
   background-size: cover;
   background-position: center center; }
@@ -967,3 +996,90 @@ a {
     .test-border{
       border: 2px solid red
     }
+
+    .main-btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-color: rgb(255, 255, 255);
+      border: solid 2px grey;
+      padding: 10px;
+      transition: none 0s ease 0s;
+      text-align: center;
+      height: 30%;
+      margin-right: 20px;
+      margin-top: 180px;
+    }
+
+    .main-btn-second{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-color: rgb(255, 255, 255);
+      border: solid 2px grey;
+      padding: 10px;
+      transition: none 0s ease 0s;
+      text-align: center;
+      height: 30%;
+      margin-top: 180px;
+
+    }
+
+    .header-btn-inside { 
+      cursor: pointer;
+      border: solid 1px white; 
+      width: 25%;
+      border-radius: 5px;
+      background: transparent;
+      color: white; 
+      padding: 10px;
+      font-size: 1.2rem;      
+    }
+
+    .header-btn-inside:hover { 
+      background: red;
+      color:white;
+    }
+    .header-btn-inside:hover { 
+      background: red;
+      color:white;
+    }
+
+
+    /* .small-btn{
+      background-color: rgba(0, 0, 0, 0.7);
+      border-color: rgb(255, 255, 255);
+      border-width: 2px;
+      border-style: solid;
+      padding: 20px ;
+      transition: none 0s ease 0s;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 0px;  
+    } */
+
+    .main-btn:hover{
+      background-color: black;
+    }
+    .main-btn-second:hover{
+      background-color: black;
+    }
+
+    @media screen and (max-width: 375px) {
+    .main-btn{
+      height: auto;
+      margin-right: 0px;
+      /* margin-top: 200px; */
+    }
+    }
+    @media screen and (max-width: 375px) {
+      .main-btn-second{
+        height: auto;
+        margin-right: 0px;
+        margin-top: -50px;
+      }
+      }

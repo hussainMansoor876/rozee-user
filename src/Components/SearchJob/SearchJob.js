@@ -40,7 +40,7 @@ class SearchJob extends Component {
             allJobs: nextProps.allJobs
         })
 
-      
+
     }
 
 
@@ -71,59 +71,59 @@ class SearchJob extends Component {
 
 
     render() {
-        const {  filteredJobs, search } = this.state
+        const { filteredJobs, search } = this.state
 
         return (
             <div className="site-wrap">
-            <div style={{ height: '113px' }} />
-            <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")',overflow:'hidden' }} data-aos="fade" data-stellar-background-ratio="0.5">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className=" col-md-12" data-aos="fade">
-                            <h1>Find Job</h1>
-                           
-                            <form onSubmit={this.handleSubmit}>
-                                <div className="row mb-3">
-                                    <div className="col-md-9">
-                                        <div className="row">
-                                            <div className="col-md-6 mb-3 mb-md-0">
-                                                <input
-                                                    type="text"
-                                                    name="jobTitle"
-                                                    value={search.jobTitle}
-                                                    onChange={this.handleChange}
-                                                    className="mr-3 form-control border-0 px-4"
-                                                    placeholder="React Application Developer"
-                                                />
-                                            </div>
-                                            <div className="col-md-6 mb-3 mb-md-0">
-                                                <div className="input-wrap">
-                                                    <span className="icon icon-room" />
+                {/* <div style={{ height: '113px' }} /> */}
+                <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")', overflow: 'hidden' }} data-aos="fade" data-stellar-background-ratio="0.5">
+                    <div className="container">
+                        <div className="row align-items-center">
+                            <div className=" col-md-12" data-aos="fade">
+                                <h1>Find Job</h1>
+
+                                <form onSubmit={this.handleSubmit}>
+                                    <div className="row mb-3">
+                                        <div className="col-md-9">
+                                            <div className="row">
+                                                <div className="col-md-6 mb-3 mb-md-0">
                                                     <input
                                                         type="text"
-                                                        name="location"
-                                                        value={search.location}
+                                                        name="jobTitle"
+                                                        value={search.jobTitle}
                                                         onChange={this.handleChange}
-                                                        className="form-control form-control-block search-input border-0 px-4"
-                                                        id="autocomplete"
-                                                        placeholder="United Kingdom"
+                                                        className="mr-3 form-control border-0 px-4"
+                                                        placeholder="React Application Developer"
                                                     />
+                                                </div>
+                                                <div className="col-md-6 mb-3 mb-md-0">
+                                                    <div className="input-wrap">
+                                                        <span className="icon icon-room" />
+                                                        <input
+                                                            type="text"
+                                                            name="location"
+                                                            value={search.location}
+                                                            onChange={this.handleChange}
+                                                            className="form-control form-control-block search-input border-0 px-4"
+                                                            id="autocomplete"
+                                                            placeholder="United Kingdom"
+                                                        />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="col-md-3">
-                                        <input style={{height:'60px'}} type="submit" className="btn btn-search btn-primary btn-block" defaultValue="Search" />
+                                        <div className="col-md-3">
+                                            <input style={{ height: '60px' }} type="submit" className="btn btn-search btn-primary btn-block" defaultValue="Search" />
+                                        </div>
+
                                     </div>
 
-                                </div>
-
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <JobSearch history={this.props.history} jobs={filteredJobs} onClose={this.onClose} visible={this.state.visible} />
+                <JobSearch history={this.props.history} jobs={filteredJobs} onClose={this.onClose} visible={this.state.visible} />
             </div>
         )
     }

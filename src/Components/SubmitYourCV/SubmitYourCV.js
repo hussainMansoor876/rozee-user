@@ -35,7 +35,7 @@ export class SubmitYourCV extends Component {
         formData.append("candidateName", name)
         formData.append("CV", CV);
 
-        this.setState({ isLoading: true})
+        this.setState({ isLoading: true })
         this.props.apply(formData)
     }
 
@@ -58,8 +58,8 @@ export class SubmitYourCV extends Component {
                 isError: nextProps.isError,
                 successMessage: nextProps.successMessage,
                 isLoading: false,
-                name:"",
-                CV:""
+                name: "",
+                CV: ""
             })
 
         }
@@ -75,7 +75,7 @@ export class SubmitYourCV extends Component {
 
         return (
             <div className="site-wrap">
-                <div style={{ height: '113px' }} />
+                {/* <div style={{ height: '113px' }} /> */}
                 <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }}>
                     <div className="container text-center">
                         <h2 className="mb-0">Submit Your CV</h2>

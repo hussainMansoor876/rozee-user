@@ -130,17 +130,33 @@ class Home extends Component {
         const { allJobs, filteredJobs, search, isLoading } = this.state
         return (
             <div className="site-wrap">
-                <div style={{ height: '113px' }} />
-                <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
+                <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")', }} data-aos="fade" data-stellar-background-ratio="0.5">
                     <div className="container  ">
-                        <div className="row align-items-center ">
-                            <div className="col-md-12 col-sm-12 col-sm-12" data-aos="fade">
-                                <Link to="/servicesforclients"><span className="btn bg-primary text-white py-5 px-5 rounded" style={{ fontSize: '2rem', width: '330px' }} >Client Services</span></Link>
-                                <Link to="/servicesforcandidates"> <span className="btn bg-primary text-white py-5 px-5 rounded " style={{ fontSize: '2rem', float: 'right' }}>Candidates Services</span></Link>
+                        <div className="row flexer ">
 
-                                {/* <input type="Client Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Client Services" /> */}
-                                {/* <input type="Candidates Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Candidates Services" /> */}
-                                {/* <h1>Find Job</h1>
+                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn ">
+                                <h2 className="text-white rounded" >Client Services</h2>
+                                <p>Reprehenderit labore nostrud nulla eiusmod. Elit voluptate ipsum proident enim deserunt do ipsum. Cupidatat sunt </p>
+                                <Link to="/servicesforclients" className="header-btn-inside" >GO</Link>
+                            </div>
+
+                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn-second">
+                                <h2 className="text-white rounded" >Candidates Services</h2>
+                                <p>Reprehenderit labore nostrud nulla eiusmod. Elit voluptate ipsum proident enim deserunt do ipsum. Cupidatat sunt </p>
+                                <Link to="/servicesforcandidates" className="header-btn-inside" >GO</Link>
+                            </div>
+
+                            {/* <div className="col-lg-12 col-md-12 col-sm-12  " data-aos="fade">
+                                <div>
+                                    <span className="main-btn text-white rounded p-5" >Client Services</span>
+                                </div>
+                                <div>
+                                    <span className="main-btn text-white rounded p-5 ">Candidates Services</span>
+                                </div>
+                            </div> */}
+                            {/* <input type="Client Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Client Services" /> */}
+                            {/* <input type="Candidates Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Candidates Services" /> */}
+                            {/* <h1>Find Job</h1>
                                 <div className="row">
                                     <div className="col-md-12">
                                         <p className="extra-large">or browse by category: <Link to="/servicesforclients" className="category">Services for clients</Link> <Link to="/servicesforcandidates" className="category">Services for candidates</Link></p>
@@ -183,7 +199,7 @@ class Home extends Component {
                                     </div>
 
                                 </form> */}
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -292,7 +308,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="site-blocks-cover overlay inner-page" style={{ backgroundImage: 'url("images/hero_2.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
+                {/* <div className="site-blocks-cover overlay inner-page" style={{ backgroundImage: 'url("images/hero_2.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
                     <div className="container">
                         <div className="row align-items-center justify-content-center">
                             <div className="col-md-6 text-center" data-aos="fade">
@@ -302,7 +318,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         )
