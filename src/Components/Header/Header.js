@@ -37,7 +37,7 @@ class Header extends Component {
                                                             <li><Link to="/" >Home</Link></li>
                                                             <li><Link to="/about" >about us</Link></li>
                                                             <li><Link to="/whyChooseUs" >Why choose us</Link></li>
-                                                            <li><Link to="/servicesforclients" >Clients</Link></li>
+                                                            <li><Link to="/clients" >Clients</Link></li>
                                                             <li><Link to="/servicesforclients" >Client Services</Link></li>
                                                             <li><Link to="/servicesforcandidates" >Candidate</Link></li>
                                                             <li><Link to="/searchJob" >Job search</Link></li>

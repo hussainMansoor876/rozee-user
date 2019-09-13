@@ -11,26 +11,26 @@ import ServicesForClients from './Components/ServicesForClients/ServicesForClien
 import ServicesForCandidates from './Components/ServicesForCandidates/ServicesForCandidates';
 import SeachJob from './Components/SearchJob/SearchJob';
 import WhyChooseUs from './Components/WhyChooseUs/WhyChooseUs';
-import SubmitYourCV from './Components/SubmitYourCV/SubmitYourCV';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
+import HomeHeader from './Components/Home/HomeHeader/HomeHeader';
+import Clients from './Components/Clients/Clients';
 
 class Routes extends Component {
   render() {
     return (
       <Router>
-        {window.location.pathname === "/" ? null : <Header />}
+        {window.location.pathname === "/" ? <HomeHeader /> : <Header />}
         <Switch>
-
           <Route path="/" exact component={Home} />
           <Route exact path="/contactUs" component={ContactUs} />
           <Route exact path="/wantjob" component={WantJob} />
           <Route exact path="/about" component={About} />
           <Route exact path="/applyJob" component={ApplyJob} />
           <Route exact path="/servicesforclients" component={ServicesForClients} />
+          <Route exact path="/clients" component={Clients} />
           <Route exact path="/servicesforcandidates" component={ServicesForCandidates} />
           <Route exact path="/searchJob" component={SeachJob} />
           <Route exact path="/whyChooseUs" component={WhyChooseUs} />
-          <Route exact path="/submitYourCV" component={SubmitYourCV} />
           <Route exact path="*" component={PageNotFound} />
 
 

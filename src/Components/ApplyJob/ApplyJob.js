@@ -88,12 +88,12 @@ class ApplyJob extends Component {
                     </div>
                 </div>
                 <div className="site-section bg-light">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12 col-lg-8 mb-5">
+                    <div className="container ">
+                        <div className="row ">
+                            <div className="col-md-12 col-lg-12 mb-5">
                                 <div className="p-5 bg-white">
-                                    <div className="mb-4 mb-md-5 mr-5">
-                                        <div className="job-post-item-header d-flex align-items-center">
+                                    <div className="mb-4 mb-md-5 mr-5 ">
+                                        <div className="job-post-item-header d-flex align-items-center ">
                                             <h2 className="mr-3 text-black h4">{jobTitle}</h2>
                                             <div className="badge-wrap">
                                                 <span className="border border-warning text-warning py-2 px-4 rounded">{role}</span>
@@ -109,7 +109,7 @@ class ApplyJob extends Component {
 
                                     {isApplying ? (<form onSubmit={this.handleSubmit}>
                                         <div className="row form-group">
-                                            <div className="col-md-12">
+                                            <div className="col-md-6">
                                                 <label className="font-weight-bold" htmlFor="email">Enter Your Email</label>
                                                 <input
                                                     type="email"
@@ -144,12 +144,12 @@ class ApplyJob extends Component {
                                         </p>}
                                 </div>
                             </div>
-                            <div className="col-lg-4">
+                            {/* <div className="col-lg-4">
                                 <div className="p-4 mb-3 bg-white">
                                     <h3 className="h5 text-black mb-3">More Info</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,6 @@ import Slider from 'react-slick';
 import './Home.css'
 import JobSearch from '../JobSearch/JobSearch'
 import { Skeleton } from 'antd';
-import HomeHeader from './HomeHeader/HomeHeader';
 
 
 class Home extends Component {
@@ -131,8 +130,6 @@ class Home extends Component {
         const { allJobs, filteredJobs, search, isLoading } = this.state
         return (
             <div className="site-wrap">
-                {/* <div style={{ height: '113px', backgroundColor: 'transparent' }} /> */}
-                <HomeHeader />
                 <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")', }} data-aos="fade" data-stellar-background-ratio="0.5">
                     <div className="container  ">
                         <div className="row flexer ">
@@ -147,6 +144,7 @@ class Home extends Component {
                                 <h2 className="text-white rounded" >Candidates Services</h2>
                                 <p>Reprehenderit labore nostrud nulla eiusmod. Elit voluptate ipsum proident enim deserunt do ipsum. Cupidatat sunt </p>
                                 <Link to="/servicesforcandidates" className="header-btn-inside" >GO</Link>
+
                             </div>
 
                             {/* <div className="col-lg-12 col-md-12 col-sm-12  " data-aos="fade">

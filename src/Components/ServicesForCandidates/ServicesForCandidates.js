@@ -74,8 +74,10 @@ class ServicesForCandidates extends Component {
         }, 100);
       })
 
+    } else {
+
+      window.scrollTo(0, 0)
     }
-    // window.scrollTo(0, 0)
   }
 
   render() {
@@ -89,11 +91,10 @@ class ServicesForCandidates extends Component {
             <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>Our Services for candidates</span></p>
           </div>
         </div>
-        <div className="site-section site-block-feature bg-light">
+
+
+        {/* <div className="site-section site-block-feature bg-light">
           <div className="container">
-            {/* <div className="text-center mb-5 section-heading">
-                            <h2>Services for clients</h2>
-                        </div> */}
             <div className="d-block d-md-flex border-bottom">
               <div className="text-center p-4 item border-right" data-aos="fade">
                 <span className="flaticon-worker display-3 mb-3 d-block text-primary" />
@@ -119,7 +120,7 @@ class ServicesForCandidates extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
 
         <div className="site-section scroller  bg-light" id="#submitCV">
