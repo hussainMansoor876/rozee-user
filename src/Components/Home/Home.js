@@ -130,20 +130,22 @@ class Home extends Component {
         const { allJobs, filteredJobs, search, isLoading } = this.state
         return (
             <div className="site-wrap">
-                <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")', }} data-aos="fade" data-stellar-background-ratio="0.5">
-                    <div className="container  ">
-                        <div className="row flexer ">
-
-                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn ">
+                <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")', overflowX: 'hidden', overflow: 'hidden' }} data-aos="fade" data-stellar-background-ratio="0.5">
+                    <div className="container"  >
+                        <div className="row flexer">
+                            <div className="col-lg-12 col-md-12 col-sm-12 mt-5 main-heading ">
+                                <h1  >DELIVERING IT SOLUTIONS <br /><p className="main-banner-text" style={{}}>Together we are dedicated in finding you the best</p></h1>
+                            </div>
+                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn">
                                 <h2 className="text-white rounded" >Client Services</h2>
-                                <p>Reprehenderit labore nostrud nulla eiusmod. Elit voluptate ipsum proident enim deserunt do ipsum. Cupidatat sunt </p>
-                                <Link to="/servicesforclients" className="header-btn-inside" >GO</Link>
+                                <p style={{ fontSize: '20px' }}>I am looking for candidates. </p>
+                                <Link to="/servicesforclients" className="header-btn-inside mt-5" >GO</Link>
                             </div>
 
-                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn-second">
+                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn-second  ">
                                 <h2 className="text-white rounded" >Candidates Services</h2>
-                                <p>Reprehenderit labore nostrud nulla eiusmod. Elit voluptate ipsum proident enim deserunt do ipsum. Cupidatat sunt </p>
-                                <Link to="/servicesforcandidates" className="header-btn-inside" >GO</Link>
+                                <p style={{ fontSize: '20px' }}>I am looking for job roles. </p>
+                                <Link to="/servicesforcandidates" className="header-btn-inside mt-5" >GO</Link>
                             </div>
 
                             {/* <div className="col-lg-12 col-md-12 col-sm-12  " data-aos="fade">
