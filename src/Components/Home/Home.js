@@ -136,16 +136,16 @@ class Home extends Component {
                             <div className="col-lg-12 col-md-12 col-sm-12 mt-5 main-heading ">
                                 <h1  >DELIVERING IT SOLUTIONS <br /><p className="main-banner-text" style={{}}>Together we are dedicated in finding you the best</p></h1>
                             </div>
-                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn">
+                            <div className="col-lg-5 col-md-5 col-sm-4 main-btn">
                                 <h2 className="text-white rounded" >Client Services</h2>
                                 <p style={{ fontSize: '20px' }}>I am looking for candidates. </p>
-                                <Link to="/servicesforclients" className="header-btn-inside mt-5" >GO</Link>
+                                <Link to="/servicesforclients" className="header-btn-inside mt-5 flexer" >GO</Link>
                             </div>
 
-                            <div className="col-lg-5 col-md-5 col-sm-11 main-btn-second  ">
+                            <div className="col-lg-5 col-md-5 col-sm-4 col-xs-4 main-btn-second  ">
                                 <h2 className="text-white rounded" >Candidates Services</h2>
                                 <p style={{ fontSize: '20px' }}>I am looking for job roles. </p>
-                                <Link to="/servicesforcandidates" className="header-btn-inside mt-5" >GO</Link>
+                                <Link to="/servicesforcandidates" className="header-btn-inside mt-5 flexer" >GO</Link>
                             </div>
 
                             {/* <div className="col-lg-12 col-md-12 col-sm-12  " data-aos="fade">
