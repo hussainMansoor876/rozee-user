@@ -11,7 +11,7 @@ class Footer extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-3 flexer">
-                            <img className="mb-0 footer-logo" height="140px" style={{ boxShadow: '0px 0px 5px 5px grey ' }} width="120px" src={logo} alt="company logo" />
+                            <img className="mb-0 footer-logo" src={logo} alt="company logo" />
 
                         </div>
                         <div className="col-md-3">
