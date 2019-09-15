@@ -41,7 +41,7 @@ class HomeHeader extends Component {
     render() {
         return (
             <React.Fragment>
-                {this.state.INNER_WIDTH < 992 ?
+                {this.state.INNER_WIDTH <= 992 ?
                     <div>
                         <div className="site-mobile-menu">
                             <div className="site-mobile-menu-header">
@@ -85,10 +85,6 @@ class HomeHeader extends Component {
                                                                     <li><Link style={{ color: 'white' }} to="/servicesforcandidates#submitCV" >Submit your CV</Link></li>
                                                                     <li><Link style={{ color: 'white' }} to="/contactUs" >Contact us</Link></li>
 
-
-
-
-
                                                                 </ul>
 
                                                             </li>
@@ -113,7 +109,7 @@ class HomeHeader extends Component {
                         </div>
 
                         <div className="home-site-navbar-wrap ">
-                            <div className="container">
+                            <div className="container-fluid">
                                 <div className="site-navbar">
                                     <div className="py-1">
                                         <div className="row align-items-center">
@@ -122,7 +118,7 @@ class HomeHeader extends Component {
                                             </div>
                                             <div className="col-10">
                                                 <nav className="site-navigation text-right" role="navigation">
-                                                    <div className="container">
+                                                    <div className="container-fluid">
                                                         <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" className="site-menu-toggle js-menu-toggle text-black"><span className="icon-menu h3" /></a></div>
                                                         <ul className="site-menu js-clone-nav d-none d-lg-block">
                                                             <li className="border border-dark text-warning py-2 px-4 rounded mr-2" style={{ borderColor: 'black', backgroundColor: 'white' }}><span className="icon-search mr-3" /><Link to="/searchJob">Search Jobs</Link></li>

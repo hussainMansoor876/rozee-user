@@ -36,38 +36,37 @@ class About extends Component {
         </div>
 
         <div className="site-section" data-aos="fade">
-          <div className="container  fluid">
-            <div className="row align-items-center  m-0 p-0">
+          <div className="container-fluid">
+            <div className="row text-center">
 
-              <div className="col-md-6 col-lg-6 flexer " style={{ backgroundColor: '#DCDCDC', height: '400px' }}>
-                <p className="h5 lineheight1-5 " style={{ color: 'black', textAlign: 'center' }}>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
 
+              <div className="col-md-6 flexer " style={{ backgroundColor: '#DCDCDC', }}>
+                <p className="h5 lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
+                Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
+                ..”</p>
               </div>
-              <div className="col-md-6 mb-5 mb-md-0" style={{ right: '0', margin: '0', padding: '0' }}>
-                <div className="img-border">
-                  <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
+              <div className="col-md-6 mb-5 mb-md-0 " style={{ right: '0', margin: '0', padding: '0' }}>
+                <div className="img-border ">
+                  <img src="images/hero_2.jpg" alt="Image" className="img-fluid rounded" />
                 </div>
               </div>
             </div>
           </div>
-          <div className="container  fluid">
-            <div className="row align-items-center  m-0 p-0">
-              <div className="col-md-6 mb-5 mb-md-0" style={{ right: '0', margin: '0', padding: '0' }}>
-                <div className="img-border">
+          <div className="container-fluid">
+            <div className="row text-center">
+              <div className="col-md-6 mb-5 mb-md-0 " style={{ right: '0', margin: '0', padding: '0' }}>
+                <div className="img-border ">
                   <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
                 </div>
               </div>
-              <div className="col-md-6 col-lg-6 flexer" style={{ backgroundColor: '#DCDCDC', height: '400px' }}>
-                <p className="h5 lineheight1-5 " style={{ color: 'black', textAlign: 'center' }}>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
+              <div className="col-md-6 flexer " style={{ backgroundColor: '#DCDCDC', }}>
+                <p className="h5 lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum,
+                Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
+                 id rem eveniet dolor possimus voluptas..”</p>
               </div>
-
             </div>
           </div>
         </div>
-
-
-
-
       </div>
 
     )
