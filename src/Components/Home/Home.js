@@ -142,7 +142,7 @@ class Home extends Component {
                                 <Link to="/servicesforclients" className="header-btn-inside mt-5 flexer" ><span className="icon-arrow-right" /></Link>
                             </div>
 
-                            <div className="col-lg-5 col-md-5 col-sm-4 col-xs-4 ml-5 main-btn-second  ">
+                            <div className="col-lg-5 col-md-5 col-sm-4 col-xs-4 main-btn-second  ">
                                 <h2 className="text-white rounded" >Candidates Services</h2>
                                 <p style={{ fontSize: '20px' }}>I am looking for job roles. </p>
                                 <Link to="/servicesforcandidates" className="header-btn-inside mt-5 flexer" ><span className="icon-arrow-right" /></Link>
