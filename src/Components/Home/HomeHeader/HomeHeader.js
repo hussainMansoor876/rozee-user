@@ -1,7 +1,7 @@
 /*eslint-disable */
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import logo from './Images/companyLogo.jpeg';
+import logo from './Images/companyLogo.jpg';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 import { Drawer, Button } from 'antd'
@@ -114,7 +114,7 @@ class HomeHeader extends Component {
                                     <div className="py-1">
                                         <div className="row align-items-center">
                                             <div className="col-2" >
-                                                <img className="mb-0 mt-4" border="15" style={{ cursor: 'pointer', border: '3px solid grey' }} height="90px" width="70px" src={logo} onClick={this.handlePush} alt="company logo" />
+                                                <img className="mb-0 mt-4" border="15" style={{ cursor: 'pointer', border: '8px solid black' }} height="100px" width="80px" src={logo} onClick={this.handlePush} alt="company logo" />
                                             </div>
                                             <div className="col-10">
                                                 <nav className="site-navigation text-right" role="navigation">

@@ -1096,7 +1096,7 @@ border-bottom: none;
 
     .footer-logo{
       box-shadow: 0px 0px 5px 5px grey; 
-      height: 140px;
+      height: 160px;
       width: 120px;
     }
 
@@ -1111,6 +1111,8 @@ border-bottom: none;
           .logo{
             height: 60px;
             width: 50px;
+            border: 5px solid black;
+
           }
 
           .footer-logo{
@@ -1133,6 +1135,7 @@ border-bottom: none;
             .logo{
               height: 60px;
               width: 50px;
+              border: 5px solid black;
             }
 
             .footer-logo{
@@ -1155,6 +1158,10 @@ border-bottom: none;
               margin-top: -140px;  
               margin-left: 0;
             }
+
+            .header-btn-inside {
+              margin-left: 0;
+            }
             
             }
           
@@ -1162,6 +1169,8 @@ border-bottom: none;
                 .logo{
                   height: 60px;
                   width: 50px;
+              border: 5px solid black;
+
                 }
 
                 .footer-logo{
@@ -1190,6 +1199,7 @@ border-bottom: none;
                   }
                   .header-btn-inside {
                     width: auto;
+                    margin-left: 0px;
                   }
                 }
                 /* @media screen and (max-width: 414px) {
