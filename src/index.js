@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import 'antd/dist/antd.css'; 
 
 console.log("working")
-
+console.log("working on new feature")
 
 ReactDOM.render(
   <Provider store={store}>
