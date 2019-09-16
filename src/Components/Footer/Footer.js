@@ -2,7 +2,11 @@
 
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import logo from './Images/companyLogo.jpeg'
+import logo from './Images/companyLogo.png'
+import fb from './Images/fb.png';
+import twitter from './Images/twitter.png';
+import linkdin from './Images/linkdin.png';
+import social from './Images/social.png';
 
 class Footer extends Component {
     render() {
@@ -49,10 +53,10 @@ class Footer extends Component {
                         <div className="col-md-2">
                             <h3 className="footer-heading mb-4 text-white">Social Icons</h3>
                             <p>
-                                <a className="pb-2 pr-2 pl-0"><span className="icon-facebook" /></a>
-                                <a className="p-2"><span className="icon-twitter" /></a>
-                                <a className="p-2"><span className="icon-instagram" /></a>
-                                <a className="p-2"><span className="icon-vimeo" /></a>
+                                <img className="p-2 " style={{ cursor: 'pointer' }} src={fb} alt="fb-icon" />
+                                <img className="p-2" style={{ cursor: 'pointer' }} src={twitter} alt="twitter-icon" />
+                                <img className="p-2" style={{ cursor: 'pointer' }} src={linkdin} alt="linkdin-icon" />
+                                <img className="p-2" style={{ cursor: 'pointer' }} src={social} alt="social-icon" />
                             </p>
                         </div>
                     </div>
