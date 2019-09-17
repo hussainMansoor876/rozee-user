@@ -53,10 +53,10 @@ class Footer extends Component {
                         <div className="col-md-2">
                             <h3 className="footer-heading mb-4 text-white">Social Icons</h3>
                             <p>
-                                <img className="p-2 " style={{ cursor: 'pointer', borderRadius:'30%' }} src={fb} alt="fb-icon" />
-                                <img className="p-2" style={{ cursor: 'pointer', borderRadius:'30%' }} src={twitter} alt="twitter-icon" />
-                                <img className="p-2" style={{ cursor: 'pointer', borderRadius:'30%' }} src={linkdin} alt="linkdin-icon" />
-                                <img className="p-2" style={{ cursor: 'pointer', borderRadius:'30%' }} src={social} alt="social-icon" />
+                                <img className="p-2 " style={{ cursor: 'pointer', borderRadius: '50%' }} src={fb} alt="fb-icon" />
+                                <img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={twitter} alt="twitter-icon" />
+                                <img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={linkdin} alt="linkdin-icon" />
+                                <img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={social} alt="social-icon" />
                             </p>
                         </div>
                     </div>
