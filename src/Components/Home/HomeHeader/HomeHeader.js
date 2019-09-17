@@ -114,7 +114,7 @@ class HomeHeader extends Component {
                                     <div className="py-1">
                                         <div className="row align-items-center">
                                             <div className="col-2" >
-                                                <img className="mb-0 mt-4" border="15" style={{ cursor: 'pointer', border: '8px solid black' }} height="100px" width="80px" src={logo} onClick={this.handlePush} alt="company logo" />
+                                                <img className="mb-0 mt-4" border="15" style={{ cursor: 'pointer', border: '8px solid black' }} height="150px" width="150px" src={logo} onClick={this.handlePush} alt="company logo" />
                                             </div>
                                             <div className="col-10">
                                                 <nav className="site-navigation text-right" role="navigation">
