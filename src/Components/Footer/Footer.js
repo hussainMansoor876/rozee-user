@@ -18,7 +18,7 @@ class Footer extends Component {
                             <img className="mb-0 footer-logo" src={logo} alt="company logo" />
 
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-4">
 
                             <h3 className="footer-heading mb-4 text-white">Contact Us</h3>
                             <p>If you are interested in learning more about.</p>
@@ -27,7 +27,7 @@ class Footer extends Component {
 
                         </div>
 
-                        <div className="col-md-4">
+                        <div className="col-md-3">
                             <div className="row">
                                 <div className="col-md-6">
                                     <h3 className="footer-heading text-white">Quick Menu</h3>
@@ -41,22 +41,22 @@ class Footer extends Component {
                                         <li><Link to="/wantJob" >Want job</Link></li>
                                     </ul>
                                 </div>
-                                <div className="col-md-6 ">
+                                {/* <div className="col-md-6 ">
                                     <h3 className="footer-heading mb-4 text-white">Categories</h3>
                                     <ul className="list-unstyled">
                                         <li><a >Freelancer</a></li>
                                         <li><a >Permanent</a></li>
                                     </ul>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="col-md-2">
                             <h3 className="footer-heading mb-4 text-white">Social Icons</h3>
                             <p>
-                                <img className="p-2 " style={{ cursor: 'pointer' }} src={fb} alt="fb-icon" />
-                                <img className="p-2" style={{ cursor: 'pointer' }} src={twitter} alt="twitter-icon" />
-                                <img className="p-2" style={{ cursor: 'pointer' }} src={linkdin} alt="linkdin-icon" />
-                                <img className="p-2" style={{ cursor: 'pointer' }} src={social} alt="social-icon" />
+                                <img className="p-2 " style={{ cursor: 'pointer', borderRadius:'30%' }} src={fb} alt="fb-icon" />
+                                <img className="p-2" style={{ cursor: 'pointer', borderRadius:'30%' }} src={twitter} alt="twitter-icon" />
+                                <img className="p-2" style={{ cursor: 'pointer', borderRadius:'30%' }} src={linkdin} alt="linkdin-icon" />
+                                <img className="p-2" style={{ cursor: 'pointer', borderRadius:'30%' }} src={social} alt="social-icon" />
                             </p>
                         </div>
                     </div>
