@@ -104,6 +104,13 @@ a {
     
   }
 
+  .flexer-space { 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
 
 .form-control {
   height: 55px; }
@@ -1009,7 +1016,6 @@ border-bottom: none;
       flex-wrap: wrap;
       background-color: rgba(0, 0, 0, 0.7);
       border-color: rgb(255, 255, 255);
-      border: solid 2px grey;
       padding: 10px;
       transition: none 0s ease 0s;
       text-align: center;
@@ -1027,7 +1033,6 @@ border-bottom: none;
       flex-wrap: wrap;
       background-color: rgba(0, 0, 0, 0.7);
       border-color: rgb(255, 255, 255);
-      border: solid 2px grey;
       padding: 0px 10px 10px 10px;
       transition: none 0s ease 0s;
       text-align: center;
@@ -1100,7 +1105,7 @@ border-bottom: none;
     }
 
     .main-banner-text{
-      font-size: 2rem;
+      font-size: 1.7rem;
       font-weight: 200;
        text-align: center
     }
