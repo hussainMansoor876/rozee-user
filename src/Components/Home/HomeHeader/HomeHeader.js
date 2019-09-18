@@ -41,7 +41,7 @@ class HomeHeader extends Component {
     render() {
         return (
             <React.Fragment>
-                {this.state.INNER_WIDTH <= 992 ?
+                {this.state.INNER_WIDTH < 992 ?
                     <div>
                         <div className="site-mobile-menu">
                             <div className="site-mobile-menu-header">
@@ -66,8 +66,6 @@ class HomeHeader extends Component {
                                                         <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" className="site-menu-toggle js-menu-toggle text-black"><span className="icon-menu h3" /></a></div>
                                                         <ul className="site-menu js-clone-nav d-none d-lg-block">
                                                             <li className="border border-dark text-warning py-2 px-4 rounded mr-2" style={{ borderColor: 'black', backgroundColor: 'white' }}><Link to="/searchJob">Search Jobs</Link></li>
-                                                            {/* <li><Link to="/contactUs" >Contact</Link></li> */}
-
                                                             <li className="bg-primary text-white text-white py-2 px-3 rounded  has-children mt-3">
                                                                 <a style={{ color: 'white' }}><span className="icon-list mr-3" />Menu</a>
                                                                 <ul className="dropdown arrow-top" style={{ width: '250px' }}>
@@ -107,47 +105,38 @@ class HomeHeader extends Component {
                             </div>
                             <div className="site-mobile-menu-body" />
                         </div>
-
                         <div className="home-site-navbar-wrap ">
                             <div className="container-fluid">
                                 <div className="site-navbar">
                                     <div className="py-1">
                                         <div className="row align-items-center">
-                                            <div className="col-2" >
-                                                <img className="mb-0 mt-4" border="15" style={{ cursor: 'pointer' }} height="150px" width="150px" src={logo} onClick={this.handlePush} alt="company logo" />
+                                            <div className="col-6  d-flex justify-content-start align-item-start" >
+                                                <img className="mb-0 mt-4" border="15" style={{ cursor: 'pointer' }} height="160px" width="150px" src={logo} onClick={this.handlePush} alt="company logo" />
+                                                <div className="mt-5 ml-3" >
+                                                    <h1 style={{ color: 'white' }} >DELIVERING IT SOLUTIONS <br /><p className="main-banner-text" style={{}}>Together we are dedicated in finding you the best</p></h1>
+                                                </div>
                                             </div>
-                                            <div className="col-10">
+                                            <div className="col-6">
                                                 <nav className="site-navigation text-right" role="navigation">
                                                     <div className="container-fluid">
                                                         <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" className="site-menu-toggle js-menu-toggle text-black"><span className="icon-menu h3" /></a></div>
                                                         <ul className="site-menu js-clone-nav d-none d-lg-block">
                                                             <li className="border border-dark text-warning py-2 px-4 rounded mr-2" style={{ borderColor: 'black', backgroundColor: 'white' }}><span className="icon-search mr-3" /><Link to="/searchJob">Search Jobs</Link></li>
-                                                            {/* <li><Link to="/contactUs" >Contact</Link></li> */}
-
-
-
-
                                                             <li className="bg-primary text-white text-white py-2 px-3 rounded">
                                                                 <a style={{ color: 'white' }} onClick={this.showDrawer} ><span className="icon-list mr-3" />Menu</a>
                                                                 <ul className="dropdown arrow-top">
-
                                                                     <Drawer
-                                                                        // title="Main menu"
                                                                         placement="right"
                                                                         closable={false}
                                                                         onClose={this.onClose}
                                                                         visible={this.state.visible}
-                                                                        width="350px"
-                                                                    >
+                                                                        width="350px" >
                                                                         <div>
-
-
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }}><Link to="/" onClick={this.onClose} className="list-view" >Home</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/about" >About us</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/whyChooseUs" >Why choose us</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/clients" >Clients</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/servicesforclients" >Client Services</Link></li>
-
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/servicesforcandidates" >Candidate</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/searchJob" >Job search</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/wantJob" >Want job</Link></li>
@@ -155,11 +144,7 @@ class HomeHeader extends Component {
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/contactUs" >Contact us</Link></li>
                                                                         </div>
                                                                     </Drawer>
-
-
-
                                                                 </ul>
-
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -172,7 +157,6 @@ class HomeHeader extends Component {
                         </div>
                     </div >
                 }
-
             </React.Fragment>
         )
     }

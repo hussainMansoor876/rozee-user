@@ -25,11 +25,17 @@ class Home extends Component {
 
         visible: false,
         filteredJobs: [],
+        INNER_WIDTH: window.innerWidth
     }
 
     componentDidMount() {
         this.setState({ isLoading: true })
         this.props.getJobs();
+
+        window.addEventListener('resize', () => {
+            var newWidth = window.innerWidth;
+            this.setState({ INNER_WIDTH: newWidth })
+        })
     }
 
 
@@ -133,8 +139,11 @@ class Home extends Component {
                 <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")', overflowX: 'hidden', overflow: 'hidden' }} data-aos="fade" data-stellar-background-ratio="0.5">
                     <div className="container"  >
                         <div className="row flexer">
+
                             <div className="col-lg-12 col-md-12 col-sm-12 mt-5 main-heading ">
-                                <h1  >DELIVERING IT SOLUTIONS <br /><p className="main-banner-text" style={{}}>Together we are dedicated in finding you the best</p></h1>
+                                {this.state.INNER_WIDTH < 993 ?
+                                    <h1  >DELIVERING IT SOLUTIONS <br /><p className="main-banner-text" style={{}}>Together we are dedicated in finding you the best</p></h1>
+                                    : null}
                             </div>
                             <div className="col-lg-5 col-md-5 col-sm-4 main-btn">
                                 <h2 className="text-white rounded" >Client Services</h2>
@@ -145,63 +154,8 @@ class Home extends Component {
                             <div className="col-lg-5 col-md-5 col-sm-4 col-xs-4 main-btn-second">
                                 <h2 className="text-white rounded" >Candidates Services</h2>
                                 <p style={{ fontSize: '20px' }}>I am looking for job roles. </p>
-                                <Link to="/servicesforcandidates" className="header-btn-inside mt-5 flexer" ><span className="icon-arrow-right" /></Link>
+                                <Link to="/servicesforcandidates" className="header-btn-inside-second mt-5 flexer" ><span className="icon-arrow-right" /></Link>
                             </div>
-
-                            {/* <div className="col-lg-12 col-md-12 col-sm-12  " data-aos="fade">
-                                <div>
-                                    <span className="main-btn text-white rounded p-5" >Client Services</span>
-                                </div>
-                                <div>
-                                    <span className="main-btn text-white rounded p-5 ">Candidates Services</span>
-                                </div>
-                            </div> */}
-                            {/* <input type="Client Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Client Services" /> */}
-                            {/* <input type="Candidates Services" className="btn btn-search btn-primary btn-block" style={{fontSize:'2rem'}} defaultValue="Candidates Services" /> */}
-                            {/* <h1>Find Job</h1>
-                                <div className="row">
-                                    <div className="col-md-12">
-                                        <p className="extra-large">or browse by category: <Link to="/servicesforclients" className="category">Services for clients</Link> <Link to="/servicesforcandidates" className="category">Services for candidates</Link></p>
-                                    </div>
-                                </div>
-                                <form onSubmit={this.handleSubmit}>
-                                    <div className="row mb-3">
-                                        <div className="col-md-9">
-                                            <div className="row">
-                                                <div className="col-md-6 mb-3 mb-md-0">
-                                                    <input
-                                                        type="text"
-                                                        name="jobTitle"
-                                                        value={search.jobTitle}
-                                                        onChange={this.handleChange}
-                                                        className="mr-3 form-control border-0 px-4"
-                                                        placeholder="React Application Developer"
-                                                    />
-                                                </div>
-                                                <div className="col-md-6 mb-3 mb-md-0">
-                                                    <div className="input-wrap">
-                                                        <span className="icon icon-room" />
-                                                        <input
-                                                            type="text"
-                                                            name="location"
-                                                            value={search.location}
-                                                            onChange={this.handleChange}
-                                                            className="form-control form-control-block search-input border-0 px-4"
-                                                            id="autocomplete"
-                                                            placeholder="United Kingdom"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-3">
-                                            <input type="submit" className="btn btn-search btn-primary btn-block" defaultValue="Search" />
-                                        </div>
-
-                                    </div>
-
-                                </form> */}
-
                         </div>
                     </div>
                 </div>
@@ -257,27 +211,6 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                {/* <div className="site-section bg-light">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay={100}>
-                                <h2 className="mb-5 h3">Recent Jobs</h2>
-                                <div className="rounded border jobs-wrap">
-                                    {isLoading && <Skeleton active />}
-
-                                    {allJobs.map(job => (
-                                        <JobCard history={this.props.history} data={job} key={job._id} title={job.jobTitle} location={job.location} role={job.role} />
-                                    ))}
-
-                                </div>
-                                <div className="col-md-12 text-center mt-5">
-                                    <Link to="/wantJob" className="btn btn-primary rounded py-3 px-5"><span className="icon-plus-circle" /> Show More Jobs</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-
 
                 <div className="site-section site-block-feature bg-light">
                     <div className="container">
@@ -310,17 +243,6 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                {/* <div className="site-blocks-cover overlay inner-page" style={{ backgroundImage: 'url("images/hero_2.jpg")' }} data-aos="fade" data-stellar-background-ratio="0.5">
-                    <div className="container">
-                        <div className="row align-items-center justify-content-center">
-                            <div className="col-md-6 text-center" data-aos="fade">
-                                <h1 className="h3 mb-0">Your Dream Job</h1>
-                                <p className="h3 text-white mb-5">Is Waiting For You</p>
-                                <p><Link to="/wantJob" className="btn btn-outline-warning py-3 px-4">Find Jobs</Link></p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </div>
 
         )
