@@ -142,6 +142,7 @@ class Home extends Component {
 
                             <div className="col-lg-12 col-md-12 col-sm-12 mt-5 main-heading ">
                                     <h1  >DELIVERING IT SOLUTIONS <br /><p className="main-banner-text" style={{}}>Together we are dedicated in finding you the best</p></h1>
+
                             </div>
                             <div className="col-lg-5 col-md-5 col-sm-4 main-btn">
                                 <h2 className="text-white rounded" >Client Services</h2>

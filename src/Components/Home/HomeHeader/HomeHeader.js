@@ -13,8 +13,7 @@ class HomeHeader extends Component {
         INNER_WIDTH: window.innerWidth
     }
 
-
-    componentDidMount() {
+componentDidMount() {
         window.addEventListener('resize', () => {
             var newWidth = window.innerWidth;
             this.setState({ INNER_WIDTH: newWidth })
