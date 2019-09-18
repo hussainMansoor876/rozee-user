@@ -1075,12 +1075,12 @@ border-bottom: none;
     }
 
     .header-btn-inside:hover { 
-      background: red;
+      background: #0000b3;
       color:white;
     }
 
     .header-btn-inside-second:hover { 
-      background: red;
+      background: #0000b3;
       color:white;
     }
 

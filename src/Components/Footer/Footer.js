@@ -14,7 +14,7 @@ class Footer extends Component {
             <footer className="site-footer">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-3 flexer">
+                        <div className="col-md-3 d-flex align-item-center justify-content-center">
                             <img className="mb-0 footer-logo" src={logo} alt="company logo" />
 
                         </div>
