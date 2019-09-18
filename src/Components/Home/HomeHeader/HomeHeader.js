@@ -40,7 +40,7 @@ componentDidMount() {
     render() {
         return (
             <React.Fragment>
-                {this.state.INNER_WIDTH < 992 ?
+                {this.state.INNER_WIDTH < 993 ?
                     <div>
                         <div className="site-mobile-menu">
                             <div className="site-mobile-menu-header">
