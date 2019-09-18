@@ -18,18 +18,21 @@ class Clients extends Component {
           <div className="site-section" data-aos="fade">
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-md-6 mb-5 mb-md-0">
+                {/* <div className="col-md-6 mb-5 mb-md-0">
                   <div className="img-border">
                     <img src="images/hero_2.jpg" alt="Image" className="img-fluid rounded" />
                   </div>
-                </div>
-                <div className="col-md-5 ml-auto">
-                  <div className="text-left mb-5 section-heading">
-                    <h2>About Us</h2>
-                  </div>
-                  <p className="mb-4 h5 font-italic lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
+                </div> */}
+                <div className="col-md-12 ml-auto text-align-center">
+                <div className="col-md-6 mx-auto text-center mb-5 section-heading">
+                                <h2 className="mb-5">ABOUT US</h2>
+                            </div>
+                  <p className="mb-4 h5 font-italic lineheight1-5" style={{textAlign:'center'}}>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
+                  
+                  ..”</p>
                   <p>— <strong className="text-black font-weight-bold">John Holmes</strong>, Marketing Strategist</p>
-                  <p><Link to="/about" className="btn btn-primary pill text-white px-4" style={{ float: "right" }} >Find out more</Link></p>
+                  {/* <p><Link to="/about" className="btn btn-primary pill text-white px-4" style={{ float: "right" }} >Find out more</Link></p> */}
 
                 </div>
               </div>

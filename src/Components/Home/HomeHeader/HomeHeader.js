@@ -110,13 +110,13 @@ class HomeHeader extends Component {
                                 <div className="site-navbar">
                                     <div className="py-1">
                                         <div className="row align-items-center">
-                                            <div className="col-7  d-flex justify-content-start align-item-start" >
+                                            <div className="col-4  d-flex justify-content-start align-item-start" >
                                                 <img className="mb-0 mt-4 footer-logo" border="15" style={{ cursor: 'pointer' }} src={logo} onClick={this.handlePush} alt="company logo" />
-                                                <div className="mt-5 ml-3" >
+                                                {/* <div className="mt-5 ml-3" >
                                                     <h1 style={{ color: 'white' }} >DELIVERING IT SOLUTIONS <br /><p className="main-banner-text" style={{}}>Together we are dedicated in finding you the best</p></h1>
-                                                </div>
+                                                </div> */}
                                             </div>
-                                            <div className="col-5">
+                                            <div className="col-8">
                                                 <nav className="site-navigation text-right" role="navigation">
                                                     <div className="container-fluid">
                                                         <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" className="site-menu-toggle js-menu-toggle text-black"><span className="icon-menu h3" /></a></div>
