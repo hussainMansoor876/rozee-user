@@ -1028,7 +1028,7 @@ border-bottom: none;
       background-color: rgba(0, 0, 0, 0.7);
       border-color: rgb(255, 255, 255);
       border: solid 2px grey;
-      /* padding: 0px 10px 10px 10px; */
+      padding: 0px 10px 10px 10px;
       transition: none 0s ease 0s;
       text-align: center;
       height: 30%;
