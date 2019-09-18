@@ -20,11 +20,9 @@ class About extends Component {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-6 mb-5 mb-md-0">
-                <div className="img-border">
-                  <img src="images/hero_1.jpg" height="200px" alt="Image" className="img-fluid rounded" />
-                </div>
+                
               </div>
-              <div className="col-md-5 ml-auto">
+              <div className=" ml-auto">
                 <div className="text-left mb-5 section-heading">
                   <h2>About Us</h2>
                 </div>
@@ -41,7 +39,7 @@ class About extends Component {
 
 
               <div className="col-md-6 flexer " style={{ backgroundColor: '#DCDCDC', }}>
-                <p className="h5 lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
+                <p className="h5 lineheight1-5">“MOHAMMED HAS EDITED THISLorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
                 Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
                 ..”</p>
               </div>
