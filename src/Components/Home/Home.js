@@ -142,7 +142,7 @@ class Home extends Component {
                                 <Link to="/servicesforclients" className="header-btn-inside mt-5 flexer" ><span className="icon-arrow-right" /></Link>
                             </div>
 
-                            <div className="col-lg-5 col-md-5 col-sm-4 col-xs-4 main-btn">
+                            <div className="col-lg-5 col-md-5 col-sm-4 col-xs-4 main-btn-second">
                                 <h2 className="text-white rounded" >Candidates Services</h2>
                                 <p style={{ fontSize: '20px' }}>I am looking for job roles. </p>
                                 <Link to="/servicesforcandidates" className="header-btn-inside mt-5 flexer" ><span className="icon-arrow-right" /></Link>
@@ -244,7 +244,7 @@ class Home extends Component {
                                     <Slider  {...settings}>
                                         {allJobs.map(job => (
                                             <div key={job._id} className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay={100}  >
-                                                <a className="h-100 feature-item" onClick={() => this.handleApplyJob(job)} style={{ height: '500px', border: "solid 1px green", cursor: 'pointer' }}>
+                                                <a className="h-100 feature-item" onClick={() => this.handleApplyJob(job)} style={{ height: '500px', border: "solid 1px blue", cursor: 'pointer' }}>
                                                     <span className="d-block icon flaticon-calculator mb-3 text-primary" />
                                                     <h2>{job.jobTitle}</h2>
                                                     <span className="counting">{job.role}</span>
