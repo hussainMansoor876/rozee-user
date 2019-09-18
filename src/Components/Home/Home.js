@@ -137,7 +137,7 @@ class Home extends Component {
         return (
             <div className="site-wrap">
                 <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")', overflowX: 'hidden', overflow: 'hidden' }} data-aos="fade" data-stellar-background-ratio="0.5">
-                    <div className="container"  >
+                    <div className="container" >
                         <div className="row flexer-space">
 
                             <div className="col-lg-12 col-md-12 col-sm-12 mt-5 main-heading ">
