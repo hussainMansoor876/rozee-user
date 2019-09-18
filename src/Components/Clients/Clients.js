@@ -20,7 +20,7 @@ class Clients extends Component {
               <div className="row align-items-center">
                 <div className="col-md-6 mb-5 mb-md-0">
                   <div className="img-border">
-                    <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
+                    <img src="images/hero_2.jpg" alt="Image" className="img-fluid rounded" />
                   </div>
                 </div>
                 <div className="col-md-5 ml-auto">
