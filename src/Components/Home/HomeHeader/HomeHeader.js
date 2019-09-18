@@ -112,7 +112,7 @@ componentDidMount() {
                                             <div className="col-6  d-flex justify-content-start align-item-start" >
                                                 <img className="mb-0 mt-4" border="15" style={{ cursor: 'pointer' }} height="160px" width="150px" src={logo} onClick={this.handlePush} alt="company logo" />
                                                 <div className="mt-5 ml-3" >
-                                                    <h1 style={{ color: 'white' }} >DELIVERING SOLUTIONS <br /><p className="main-banner-text" style={{}}>Together we are dedicated in finding you the best</p></h1>
+                                                    <h1 style={{ color: 'white' }} >DELIVERING IT SOLUTIONS <br /><p className="main-banner-text" style={{}}>Together we are dedicated in finding you the best</p></h1>
                                                 </div>
                                             </div>
                                             <div className="col-6">
