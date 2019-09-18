@@ -39,9 +39,10 @@ class About extends Component {
 
 
               <div className="col-md-6 flexer " style={{ backgroundColor: '#DCDCDC', }}>
-                <p className="h5 lineheight1-5">“MOHAMMED HAS EDITED THISLorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
+                <p className="h5 lineheight1-5">“MOHAMMED Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
                 Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
                 ..”</p>
+                <p>my name is mohammed</p>
               </div>
               <div className="col-md-6 mb-5 mb-md-0 " style={{ right: '0', margin: '0', padding: '0' }}>
                 <div className="img-border ">
