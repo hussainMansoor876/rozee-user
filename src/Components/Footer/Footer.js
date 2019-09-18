@@ -14,7 +14,7 @@ class Footer extends Component {
             <footer className="site-footer">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-3 flexer">
+                        <div className="col-md-3 d-flex align-item-center justify-content-center">
                             <img className="mb-0 footer-logo" src={logo} alt="company logo" />
 
                         </div>
@@ -41,13 +41,6 @@ class Footer extends Component {
                                         <li><Link to="/wantJob" >Want job</Link></li>
                                     </ul>
                                 </div>
-                                {/* <div className="col-md-6 ">
-                                    <h3 className="footer-heading mb-4 text-white">Categories</h3>
-                                    <ul className="list-unstyled">
-                                        <li><a >Freelancer</a></li>
-                                        <li><a >Permanent</a></li>
-                                    </ul>
-                                </div> */}
                             </div>
                         </div>
                         <div className="col-md-2">
