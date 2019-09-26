@@ -74,8 +74,6 @@ class ServicesForClients extends Component {
                       we are able to pool together talent based on client requirements, however niche
                        or in-demand they may be. Our contract recruitment expertise allow us to meticulously
                        source talents both from the national and international market, delivering to our clients on time and within budgets.
-
-
                   </p>
                 </div>
               </div>
@@ -89,6 +87,30 @@ class ServicesForClients extends Component {
               <p className="mb-0 unit-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
             </div>
           </div>
+
+          {/* <div className="site-section" data-aos="fade">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-md-12 ml-auto text-align-center">
+                  <div className="col-md-12 mx-auto text-center section-heading">
+                    <h1><b>What we do to provide you the best service
+                    </b>
+                    </h1>
+                  </div>
+                  <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
+                    Our clients can count on us when it come to finding contract positions.
+                     Thanks to our most up-to-date resources and skilled recruiters and consultants,
+                      we are able to pool together talent based on client requirements, however niche
+                       or in-demand they may be. Our contract recruitment expertise allow us to meticulously
+                       source talents both from the national and international market, delivering to our clients on time and within budgets.
+
+
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div> */}
 
 
         </div>
@@ -117,34 +139,44 @@ class ServicesForClients extends Component {
 
         </div> */}
 
-        {/* <div className="site-section site-block-feature bg-light">
+        <div className="site-section site-block-feature bg-light">
           <div className="container">
-            <div className="d-block d-md-flex border-bottom">
-              <div className="text-center p-4 item border-right" data-aos="fade">
-                <span className="flaticon-worker display-3 mb-3 d-block text-primary" />
-                <h2 className="h4">More Jobs Every Day</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
-              </div>
-              <div className="text-center p-4 item" data-aos="fade">
-                <span className="flaticon-wrench display-3 mb-3 d-block text-primary" />
-                <h2 className="h4">Creative Jobs</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
-              </div>
+            <div className="col-md-12 mx-auto text-center mb-5 section-heading">
+              <h2 className="mb-5">What we do to provide you the best service </h2>
             </div>
-            <div className="d-block d-md-flex">
-              <div className="text-center p-4 item border-right" data-aos="fade">
-                <span className="flaticon-stethoscope display-3 mb-3 d-block text-primary" />
-                <h2 className="h4">Healthcare</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+            <div className="d-block d-md-flex ">
+              <div className="text-center p-4 " data-aos="fade">
+                <span className="flaticon-computer-graphic display-3 mb-3 d-block text-primary" />
+                <p>We take our time to get to know our clients well, starting from understanding the company to understanding Client’s requirements.
+              </p>
               </div>
-              <div className="text-center p-4 item" data-aos="fade">
+              <div className="text-center p-4 " data-aos="fade">
+                <span className="flaticon-telecommunications display-3 mb-3 d-block text-primary" />
+                <p>A team briefing takes place with t he relevant team. Each team has their own technological and geographical focus, where they are given a detailed summary from one of our Senior Consultants.
+                </p>
+              </div>
+              <div className="text-center p-4 " data-aos="fade">
                 <span className="flaticon-calculator display-3 mb-3 d-block text-primary" />
-                <h2 className="h4">Finance &amp; Accounting</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+                <p>Our people understand the importance of building relationships. Our teams hand-select the best candidates using our regularly updated in-house training
+              </p>
               </div>
             </div>
+            <p className="mt-5 h3 lineheight1-5" style={{ textAlign: 'justify' }}>
+              Plans are devised, to deliver you hand-selected candidates within 24 hours. Examples of some of the technologies we work with:
+              </p>
+            <ul>
+              <li style={{ fontSize: '1.5rem' }} >Enterprise Resource Planning applications
+                <ul>
+                  <li>SAP</li>
+                  <li>Oracle</li>
+                </ul>
+              </li>
+              <li style={{ fontSize: '1.5rem' }}>Cloud Infrastructure</li>
+              <li style={{ fontSize: '1.5rem' }}>Cyber Security</li>
+              <li style={{ fontSize: '1.5rem' }}>Data</li>
+            </ul>
           </div>
-        </div> */}
+        </div>
 
 
       </div>
