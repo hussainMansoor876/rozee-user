@@ -93,17 +93,29 @@ class ServicesForCandidates extends Component {
         </div>
 
 
-        <div className="site-section site-block-feature bg-light">
-          <div className="container">
-            <div className="d-block d-md-flex border-bottom">
-              <h3>
-                Whether you are looking for a Permanent or Freelance position, in any IT roles we have you covered.
-                <br />
-                <br />
-                It can be exhausting searching for the right role. Our team of expert consultants have years of experience in understanding and helping candidates find out positions best suited to them. We take everything into consideration from your social and cultural background to understanding your past.
+        <div className="site-wrap">
+          <div className="site-section" data-aos="fade">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-md-12 ml-auto text-align-center">
+                  <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
+                    Whether you are looking for a Permanent or Freelance position, in any IT roles we have you covered.
+                    <br />
+                    <br />
+                    It can be exhausting searching for the right role. Our team of expert consultants have years of experience in understanding and helping candidates find out positions best suited to them. We take everything into consideration from your social and cultural background to understanding your past.
 
-              </h3>
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+
+        </div>
+
+        <div className="unit-5 overlay  flexer" style={{ backgroundImage: 'url("images/clientBanner.jpg")' }} >
+          <div className="container text-center  mb-5">
+            <h2 className="mb-0">Clients Satisfaction</h2>
+            <p className="mb-0 unit-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
           </div>
         </div>
 
