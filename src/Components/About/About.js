@@ -40,21 +40,20 @@ class About extends Component {
             <div className="row text-center">
 
 
-              <div className="col-md-6 flexer " style={{ backgroundColor: '#DCDCDC', }}>
+              <div className="col-md-6 flexer" style={{ backgroundColor: '#DCDCDC', }}>
                 <p className="h5 lineheight1-5">
-                  <ul style={{width: '90%'}}>
+                  <h3 style={{ textDecoration: 'underline' }} >We promise our clients short-term expenses with long-term profit.
+                  </h3>
+                  <br />
+                  <br />
+
+                  <ul>
                     <li>
-                      <b>
-                      We promise our clients short-term expenses with long-term profit.
-                      </b>
+                      Our credo is to introduce to our clients a selection of IT professionals within a very short time, who not only meet your requirements profiles, but exceed it.
                     </li>
-                    <br/>
+                    <br />
                     <li>
-                    Our credo is to introduce to our clients a selection of IT professionals within a very short time, who not only meet your requirements profiles, but exceed it.
-                    </li>
-                    <br/>
-                    <li>
-                    We have a competent network that covers all desired IT fields. From SAP BW consultants to JAVA developers to project managers, our clients will find IT professionals from junior to senior level.
+                      We have a competent network that covers all desired IT fields. From SAP BW consultants to JAVA developers to project managers, our clients will find IT professionals from junior to senior level.
                     </li>
                   </ul>
                 </p>
@@ -75,19 +74,17 @@ class About extends Component {
               </div>
               <div className="col-md-6 flexer " style={{ backgroundColor: '#DCDCDC', }}>
                 <p className="h5 lineheight1-5">
-                <ul style={{width: '90%'}}>
+                  <h3 style={{ textDecoration: 'underline' }} >Our internal sourcing and recruiting teams aim is to make searching for our clients easier.</h3>
+                  <br />
+                  <br />
+                  <ul>
+                    <br />
                     <li>
-                      <b>
-                      Our internal sourcing and recruiting teams aim is to make searching for our clients easier.
-                      </b>
+                      We shine not only with our expertise and our multilingual team, but above all with personality.
                     </li>
-                    <br/>
+                    <br />
                     <li>
-                    We shine not only with our expertise and our multilingual team, but above all with personality.
-                    </li>
-                    <br/>
-                    <li>
-                    Our qualified IT recruiters and consultants reliably accompany and advise clients and candidates through the entire recruitment process, both on the national and international market.
+                      Our qualified IT recruiters and consultants reliably accompany and advise clients and candidates through the entire recruitment process, both on the national and international market.
                     </li>
                   </ul>
                 </p>
