@@ -28,8 +28,8 @@ class About extends Component {
                 <div className="text-left mb-5 section-heading">
                   <h2>About Us</h2>
                 </div>
-                <p className="mb-4 h5 font-italic lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..”</p>
-                <p>— <strong className="text-black font-weight-bold">John Holmes</strong>, Marketing Strategist</p>
+                <p className="mb-4 h5 font-italic lineheight1-5">247 IT International is an expert-level IT recruitment company motivated by the rapid global growth of the technology based industry. We specialise in the placement of IT based roles to top organisations across the world, from start-ups to blue-chip companies.
+                </p>
               </div>
             </div>
           </div>
@@ -41,9 +41,23 @@ class About extends Component {
 
 
               <div className="col-md-6 flexer " style={{ backgroundColor: '#DCDCDC', }}>
-                <p className="h5 lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
-                Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
-                ..”</p>
+                <p className="h5 lineheight1-5">
+                  <ul style={{width: '90%'}}>
+                    <li>
+                      <b>
+                      We promise our clients short-term expenses with long-term profit.
+                      </b>
+                    </li>
+                    <br/>
+                    <li>
+                    Our credo is to introduce to our clients a selection of IT professionals within a very short time, who not only meet your requirements profiles, but exceed it.
+                    </li>
+                    <br/>
+                    <li>
+                    We have a competent network that covers all desired IT fields. From SAP BW consultants to JAVA developers to project managers, our clients will find IT professionals from junior to senior level.
+                    </li>
+                  </ul>
+                </p>
               </div>
               <div className="col-md-6 mb-5 mb-md-0 " style={{ right: '0', margin: '0', padding: '0' }}>
                 <div className="img-border ">
@@ -60,9 +74,23 @@ class About extends Component {
                 </div>
               </div>
               <div className="col-md-6 flexer " style={{ backgroundColor: '#DCDCDC', }}>
-                <p className="h5 lineheight1-5">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum,
-                Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas
-                 id rem eveniet dolor possimus voluptas..”</p>
+                <p className="h5 lineheight1-5">
+                <ul style={{width: '90%'}}>
+                    <li>
+                      <b>
+                      Our internal sourcing and recruiting teams aim is to make searching for our clients easier.
+                      </b>
+                    </li>
+                    <br/>
+                    <li>
+                    We shine not only with our expertise and our multilingual team, but above all with personality.
+                    </li>
+                    <br/>
+                    <li>
+                    Our qualified IT recruiters and consultants reliably accompany and advise clients and candidates through the entire recruitment process, both on the national and international market.
+                    </li>
+                  </ul>
+                </p>
               </div>
             </div>
           </div>

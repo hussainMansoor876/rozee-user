@@ -18,32 +18,48 @@ class WhyChooseUs extends Component {
                         <div className="text-center mb-5 section-heading">
                             <h2>Our Services</h2>
                         </div>
-                        <div className="d-block d-md-flex border-bottom">
-                            <div className="text-center p-4 item border-right" data-aos="fade">
+                        <div className="d-block d-md-flex border-bottom" style={{ width: '100%' }}>
+                            <div className="text-center p-4 item border-right" data-aos="fade" style={{ width: '100%' }}>
                                 <span className="flaticon-worker display-3 mb-3 d-block text-primary" />
                                 <h2 className="h4">More Jobs Every Day</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+                                <p>
+                                    Our teams specialize within their technological and geographical fields, allowing them to work together in teams to fulfil client’s requirements, even for the most niche and in-demand skills.
+                                </p>
                             </div>
-                            <div className="text-center p-4 item" data-aos="fade">
+                            <div className="text-center p-4 item" data-aos="fade" style={{ width: '100%' }}>
                                 <span className="flaticon-wrench display-3 mb-3 d-block text-primary" />
                                 <h2 className="h4">Creative Jobs</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+                                <p>
+                                    We deliver our clients well-matched candidates within 24 hours at the most competitive rates on the market thanks to our extensive and growing network.
+                                </p>
                             </div>
                         </div>
-                        <div className="d-block d-md-flex">
-                            <div className="text-center p-4 item border-right" data-aos="fade">
+                        <div className="d-block d-md-flex" style={{ width: '100%' }}>
+                            <div className="text-center p-4 item border-right" data-aos="fade" style={{ width: '100%' }}>
                                 <span className="flaticon-stethoscope display-3 mb-3 d-block text-primary" />
                                 <h2 className="h4">Healthcare</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+                                <p>
+                                    Our internal sourcing and recruiting team aim to make our client’s search easier, by using the most up-to-date resources and techniques, which are constantly revised and improved.
+                                </p>
                             </div>
-                            <div className="text-center p-4 item" data-aos="fade">
+                            <div className="text-center p-4 item" data-aos="fade" style={{ width: '100%' }}>
                                 <span className="flaticon-calculator display-3 mb-3 d-block text-primary" />
                                 <h2 className="h4">Finance &amp; Accounting</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+                                <p>
+                                    247 IT International is set to grow significantly over the upcoming years as a result of our re-investments back into our people and resources.
+                                </p>
                             </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div className="col-md-12 ml-auto text-align-center" >
+                            <h4 style={{ textAlign: 'center' }}>
+                                With over 100,000 professionals in our network and years of experience, we have the resources and expertise to connect you with exceptional individuals who are ready to start making an impact right away whether you need 15 or 50, at 247 IT we offer flexible efficient and collaborative solutions to your technology based hiring requirements with our focus on you we are more than just a vendor we are a partner our clients.
+                            </h4>
                         </div>
                     </div>
                 </div>
+
                 <div className="site-wrap">
                     <div className="site-section" data-aos="fade">
                         <div className="container">
