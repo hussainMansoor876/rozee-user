@@ -2,3 +2,9 @@
 .slick-next:before {
   color: black !important;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text'); 
+
+.class2{
+  font-family: "Big Shoulders Text" !important;
+}

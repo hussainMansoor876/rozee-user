@@ -1,12 +1,23 @@
 /* Base */
+@import url('https://fonts.googleapis.com/css?family=Manjari');
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text'); 
+
+*{
+  font-family: "Manjari";
+}
+
+h1, h2, h3, h4,h5, h6, #class1 > li {
+  font-family: "Big Shoulders Text" !important;
+}
 
 body {
   line-height: 1.7;
   color: rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 1rem;
-  font-family: "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  
+  /* font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  */
+}
 
 ::-moz-selection {
   background: #000;

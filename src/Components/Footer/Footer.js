@@ -47,10 +47,10 @@ class Footer extends Component {
                         <div className="col-md-2">
                             <h3 className="footer-heading mb-4 text-white">Follow us</h3>
                             <p>
-                                <img className="p-2 " style={{ cursor: 'pointer', borderRadius: '50%' }} src={fb} alt="fb-icon" />
-                                <img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={twitter} alt="twitter-icon" />
-                                <img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={linkdin} alt="linkdin-icon" />
-                                <img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={social} alt="social-icon" />
+                                <a href="https://www.facebook.com/247itintl/?modal=admin_todo_tour" target="_blank"><img className="p-2 " style={{ cursor: 'pointer', borderRadius: '50%' }} src={fb} alt="fb-icon" /></a>
+                                <a href="https://twitter.com/247ITInternati2" target="_blank"><img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={twitter} alt="twitter-icon" /></a>
+                                <a href="https://www.linkedin.com/company/247-it-international/about/" target="_blank"><img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={linkdin} alt="linkdin-icon" /></a>
+                                {/* <img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={social} alt="social-icon" /> */}
                             </p>
                         </div>
                     </div>

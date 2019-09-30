@@ -167,12 +167,12 @@ class ServicesForClients extends Component {
               Plans are devised, to deliver you hand-selected candidates within 24 hours. Examples of some of the technologies we work with:
               </p>
             <ul>
-              <li style={{ fontSize: '1.5rem' }} >Enterprise Resource Planning applications
-                <ul>
-                  <li style={{ display: 'inline' }}>SAP &&nbsp;</li>
-                  <li style={{ display: 'inline' }}>Oracle</li>
-                </ul>
-              </li>
+              <li style={{ fontSize: '1.5rem' }} >Enterprise Resource Planning applications</li>
+                
+              <li style={{ fontSize: '1.5rem' }}>SAP</li>
+              <li style={{ fontSize: '1.5rem' }}>Oracle</li>
+                
+          
               <li style={{ fontSize: '1.5rem' }}>Cloud Infrastructure</li>
               <li style={{ fontSize: '1.5rem' }}>Cyber Security</li>
               <li style={{ fontSize: '1.5rem' }}>Data</li>

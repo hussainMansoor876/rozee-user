@@ -5,6 +5,7 @@ import logo from './Images/companyLogo.png';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 import { Drawer, Button } from 'antd'
+import '../Home.css';
 
 class HomeHeader extends Component {
 
@@ -130,17 +131,17 @@ componentDidMount() {
                                                                         onClose={this.onClose}
                                                                         visible={this.state.visible}
                                                                         width="350px" >
-                                                                        <div>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }}><Link to="/" onClick={this.onClose} className="list-view" >Home</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/about" >About us</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/whyChooseUs" >Why choose us</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/clients" >Clients</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/servicesforclients" >Client Services</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/servicesforcandidates" >Candidate</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/searchJob" >Job search</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/wantJob" >Available job</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/servicesforcandidates#submitCV" >Submit your CV</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/contactUs" >Contact us</Link></li>
+                                                                        <div id="class1">
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link to="/" onClick={this.onClose} className="list-view class2" >Home</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/about" >About us</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/whyChooseUs" >Why choose us</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/clients" >Clients</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/servicesforclients" >Client Services</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/servicesforcandidates" >Candidate</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/searchJob" >Job search</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/wantJob" >Available jobs</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/servicesforcandidates#submitCV" >Submit your CV</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/contactUs" >Contact us</Link></li>
                                                                         </div>
                                                                     </Drawer>
                                                                 </ul>
