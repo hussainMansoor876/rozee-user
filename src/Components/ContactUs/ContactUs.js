@@ -53,17 +53,17 @@ class ContactUs extends Component {
                 <div className="p-4 mb-3 bg-white">
                   <h3 className="h5 text-black mb-3">Contact Info</h3>
                   <p className="mb-0 font-weight-bold">Address</p>
-                  <p className="mb-4">203 state london, united kingdom</p>
+                  <p className="mb-4">218 Tollgate Road London E6 5YA</p>
                   <p className="mb-0 font-weight-bold">Phone</p>
-                  <p className="mb-4"><a href="#">+1 232 3235 324</a></p>
+                  <p className="mb-4"><a href="#">0207 473 5838</a></p>
                   <p className="mb-0 font-weight-bold">Email Address</p>
-                  <p className="mb-0"><a href="#">youremail@domain.com</a></p>
+                  <p className="mb-0"><a href="#">info@247itinternational.com </a></p>
                 </div>
-                <div className="p-4 mb-3 bg-white">
+                {/* <div className="p-4 mb-3 bg-white">
                   <h3 className="h5 text-black mb-3">More Info</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
                   <p><a href="#" className="btn btn-primary px-4 py-2 text-white pill">Learn More</a></p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -87,8 +87,8 @@ class ContactUs extends Component {
               </div>
               <div className="col-md-4">
                 <h2><span className="icon-comments" /> Get In Touch</h2>
-                <p className="mb-0">Email: info@yoursite.com <br />
-                  Phone: (123) 3240-345-9348 </p>
+                <p className="mb-0">Email: info@247itinternational.com <br />
+                  Phone: 0207 473 5838 </p>
               </div>
             </div>
           </div>

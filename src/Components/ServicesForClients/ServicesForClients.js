@@ -31,7 +31,7 @@ class ServicesForClients extends Component {
               <div className="row align-items-center">
                 <div className="col-md-12 ml-auto text-align-center">
                   <div className="col-md-12 mx-auto text-center mt-5 section-heading">
-                    <h1><b>Permanent (Client)</b>
+                    <h1><b>Permanent</b>
                     </h1>
                     <h3 >SOLUTION TO SOLVING PERMENANT RECRUITMENT CHALLENGES
                     </h3>
@@ -51,10 +51,11 @@ class ServicesForClients extends Component {
             </div>
           </div>
           <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/client1.jpg")', height: 400 }} >
-            {/* <div className="container text-center mb-5">
-              <h2 className="mb-0">Availability 24/7</h2>
-              <p className="mb-0 unit-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
-            </div> */}
+            <div className="container text-center mb-5">
+              <h2 className="mb-0">
+                Permanent and temporary solutions
+                </h2>
+            </div>
           </div>
 
           <div className="site-section" data-aos="fade">
@@ -62,7 +63,7 @@ class ServicesForClients extends Component {
               <div className="row align-items-center">
                 <div className="col-md-12 ml-auto text-align-center">
                   <div className="col-md-12 mx-auto text-center section-heading">
-                    <h1><b>Temporary (Client)</b>
+                    <h1><b>Temporary</b>
                     </h1>
                     <h3 >DELIVERING THE BEST, ON TIME, AND WITHIN BUDGETS
 
@@ -82,10 +83,11 @@ class ServicesForClients extends Component {
           </div>
 
           <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/client2.jpg")', height: 400 }} >
-            {/* <div className="container text-center mb-5">
-              <h2 className="mb-0">Availability 24/7</h2>
-              <p className="mb-0 unit-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
-            </div> */}
+            <div className="container text-center mb-5">
+              <h2 className="mb-0">
+                We have covered you
+              </h2>
+            </div>
           </div>
 
           {/* <div className="site-section" data-aos="fade">
@@ -152,7 +154,7 @@ class ServicesForClients extends Component {
               </div>
               <div className="text-center p-4 " data-aos="fade">
                 <span className="flaticon-telecommunications display-3 mb-3 d-block text-primary" />
-                <p>A team briefing takes place with t he relevant team. Each team has their own technological and geographical focus, where they are given a detailed summary from one of our Senior Consultants.
+                <p>A team briefing takes place with the relevant team. Each team has their own technological and geographical focus, where they are given a detailed summary from one of our Senior Consultants.
                 </p>
               </div>
               <div className="text-center p-4 " data-aos="fade">

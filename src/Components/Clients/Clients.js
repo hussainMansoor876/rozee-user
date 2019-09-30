@@ -34,10 +34,9 @@ class Clients extends Component {
 
         </div>
         <div className="unit-5 overlay  flexer" style={{ backgroundImage: 'url("images/client1.jpg")', height: 400 }} >
-          {/* <div className="container text-center  mb-5">
+          <div className="container text-center  mb-5">
             <h2 className="mb-0">Satisfaction</h2>
-            <p className="mb-0 unit-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
-          </div> */}
+          </div>
         </div>
 
         <div className="site-section" data-aos="fade">
@@ -61,10 +60,9 @@ class Clients extends Component {
         </div>
 
         <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/client2.jpg")', height: 400 }} >
-          {/* <div className="container text-center mb-5">
-            <h2 className="mb-0">Availability 24/7</h2>
-            <p className="mb-0 unit-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
-          </div> */}
+          <div className="container text-center mb-5">
+            <h2 className="mb-0">Teamwork</h2>
+          </div>
         </div>
 
 

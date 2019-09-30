@@ -112,10 +112,9 @@ class ServicesForCandidates extends Component {
 
         </div>
 
-        <div className="unit-5 overlay  flexer" style={{ backgroundImage: 'url("images/client2.jpg")' }} >
+        <div className="unit-5 overlay  flexer" style={{ backgroundImage: 'url("images/client2.jpg")', height: 400 }} >
           <div className="container text-center  mb-5">
-            <h2 className="mb-0">Candidates Satisfaction</h2>
-            <p className="mb-0 unit-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+            <h2 className="mb-0">Job Satisfaction</h2>
           </div>
         </div>
 
