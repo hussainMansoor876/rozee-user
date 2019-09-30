@@ -6,7 +6,7 @@ class ServicesForClients extends Component {
     return (
       <div className="site-wrap">
         {/* <div style={{ height: '113px' }} /> */}
-        <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }}>
+        <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/aboutus1.jpg")' }}>
           <div className="container text-center">
             <h2 className="mb-0">Services for clients</h2>
             <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>Our Services for clients</span></p>
@@ -50,11 +50,11 @@ class ServicesForClients extends Component {
 
             </div>
           </div>
-          <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/clientBanner2.jpg")' }} >
-            <div className="container text-center mb-5">
+          <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/client1.jpg")', height: 400 }} >
+            {/* <div className="container text-center mb-5">
               <h2 className="mb-0">Availability 24/7</h2>
               <p className="mb-0 unit-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="site-section" data-aos="fade">
@@ -81,11 +81,11 @@ class ServicesForClients extends Component {
             </div>
           </div>
 
-          <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/clientBanner.jpg")' }} >
-            <div className="container text-center mb-5">
+          <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/client2.jpg")', height: 400 }} >
+            {/* <div className="container text-center mb-5">
               <h2 className="mb-0">Availability 24/7</h2>
               <p className="mb-0 unit-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
-            </div>
+            </div> */}
           </div>
 
           {/* <div className="site-section" data-aos="fade">

@@ -76,7 +76,7 @@ class SearchJob extends Component {
         return (
             <div className="site-wrap">
                 {/* <div style={{ height: '113px' }} /> */}
-                <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")', overflow: 'hidden' }} data-aos="fade" data-stellar-background-ratio="0.5">
+                <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/jobsearch.jpg")', overflow: 'hidden' }} data-aos="fade" data-stellar-background-ratio="0.5">
                     <div className="container">
                         <div className="row align-items-center">
                             <div className=" col-md-12" data-aos="fade">

@@ -10,7 +10,7 @@ class About extends Component {
     return (
       <div className="site-wrap">
         {/* <div style={{ height: '50px', backgroundColor: 'white' }} /> */}
-        <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }}>
+        <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/aboutus1.jpg")' }}>
           <div className="container text-center">
             <h2 className="mb-0">About Us</h2>
             <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>About Us</span></p>
@@ -21,7 +21,7 @@ class About extends Component {
             <div className="row align-items-center">
               <div className="col-md-6 mb-5 mb-md-0">
                 <div className="img-border">
-                  <img src="images/hero_1.jpg" height="200px" alt="Image" className="img-fluid rounded" />
+                  <img src="images/aboutus2.jpg" height="200px" alt="Image" className="img-fluid rounded" />
                 </div>
               </div>
               <div className="col-md-5 ml-auto">
@@ -60,7 +60,7 @@ class About extends Component {
               </div>
               <div className="col-md-6 mb-5 mb-md-0 " style={{ right: '0', margin: '0', padding: '0' }}>
                 <div className="img-border ">
-                  <img src="images/hero_2.jpg" alt="Image" className="img-fluid rounded" />
+                  <img src="images/aboutus3.jpg" style={{ width: '100%' }} alt="Image" className="img-fluid rounded" />
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@ class About extends Component {
             <div className="row text-center">
               <div className="col-md-6 mb-5 mb-md-0 " style={{ right: '0', margin: '0', padding: '0' }}>
                 <div className="img-border ">
-                  <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
+                  <img src="images/aboutus4.jpg" style={{ width: '100%' }} alt="Image" className="img-fluid rounded" />
                 </div>
               </div>
               <div className="col-md-6 flexer " style={{ backgroundColor: '#DCDCDC', }}>

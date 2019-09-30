@@ -6,7 +6,7 @@ class WhyChooseUs extends Component {
         return (
             <div className="site-wrap">
                 {/* <div style={{ height: '113px' }} /> */}
-                <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }}>
+                <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/aboutus1.jpg")' }}>
                     <div className="container text-center">
                         <h2 className="mb-0">Why Choose Us</h2>
                         <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>Why Choose Us</span></p>
@@ -71,7 +71,7 @@ class WhyChooseUs extends Component {
                                 </div>
                                 <div className="col-md-6 mb-5 mb-md-0">
                                     <div className="img-border">
-                                        <img src="images/hero_2.jpg" alt="Image" className="img-fluid rounded" />
+                                        <img src="images/chooseus.jpg" alt="Image" className="img-fluid rounded" />
                                     </div>
                                 </div>
                             </div>

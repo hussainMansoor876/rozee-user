@@ -85,7 +85,7 @@ class ServicesForCandidates extends Component {
     return (
       <div className="site-wrap">
         {/* <div style={{ height: '113px' }} /> */}
-        <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }}>
+        <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/aboutus1.jpg")' }}>
           <div className="container text-center">
             <h2 className="mb-0">Services for candidates</h2>
             <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>Our Services for candidates</span></p>
@@ -112,7 +112,7 @@ class ServicesForCandidates extends Component {
 
         </div>
 
-        <div className="unit-5 overlay  flexer" style={{ backgroundImage: 'url("images/clientBanner.jpg")' }} >
+        <div className="unit-5 overlay  flexer" style={{ backgroundImage: 'url("images/client2.jpg")' }} >
           <div className="container text-center  mb-5">
             <h2 className="mb-0">Candidates Satisfaction</h2>
             <p className="mb-0 unit-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>

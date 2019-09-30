@@ -7,7 +7,7 @@ class ContactUs extends Component {
     return (
       <div className="site-wrap">
         {/* <div style={{height: '113px'}} /> */}
-        <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_1.jpg")' }}>
+        <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/aboutus1.jpg")' }}>
           <div className="container text-center">
             <h2 className="mb-0">Contact</h2>
             <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>Contact</span></p>

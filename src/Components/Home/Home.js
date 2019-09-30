@@ -136,7 +136,7 @@ class Home extends Component {
         const { allJobs, filteredJobs, search, isLoading } = this.state
         return (
             <div className="site-wrap">
-                <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")', overflowX: 'hidden', overflow: 'hidden' }} data-aos="fade" data-stellar-background-ratio="0.5">
+                <div className="site-blocks-cover overlay" style={{ backgroundImage: 'url("images/landing.jpg")', overflowX: 'hidden', overflow: 'hidden' }} data-aos="fade" data-stellar-background-ratio="0.5">
                     <div className="container" >
                         <div className="row flexer-space">
 
@@ -167,7 +167,7 @@ class Home extends Component {
                             <div className="row align-items-center">
                                 <div className="col-md-6 mb-5 mb-md-0">
                                     <div className="img-border">
-                                        <img src="images/hero_1.jpg" alt="Image" className="img-fluid rounded" />
+                                        <img src="images/aboutus2.jpg" alt="Image" className="img-fluid rounded" />
                                     </div>
                                 </div>
                                 <div className="col-md-5 ml-auto">
