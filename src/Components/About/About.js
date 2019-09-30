@@ -28,7 +28,7 @@ class About extends Component {
                 <div className="text-left mb-5 section-heading">
                   <h2>About Us</h2>
                 </div>
-                <p className="mb-4 h5 font-italic lineheight1-5">247 IT International is an expert-level IT recruitment company motivated by the rapid global growth of the technology based industry. We specialise in the placement of IT based roles to top organisations across the world, from start-ups to blue-chip companies.
+                <p className="mb-4 h5 font-italic lineheight1-5" style={{ fontWeight: 'lighter'}}>247 IT International is an expert-level IT recruitment company motivated by the rapid global growth of the technology based industry. We specialise in the placement of IT based roles to top organisations across the world, from start-ups to blue-chip companies.
                 </p>
               </div>
             </div>

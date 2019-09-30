@@ -68,7 +68,7 @@ class ContactUs extends Component {
             </div>
           </div>
         </div>
-        <div className="py-5 quick-contact-info">
+        {/* <div className="py-5 quick-contact-info">
           <div className="container">
             <div className="row">
               <div className="col-md-4">
@@ -92,7 +92,7 @@ class ContactUs extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
     )

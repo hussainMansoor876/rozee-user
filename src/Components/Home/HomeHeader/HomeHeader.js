@@ -78,7 +78,7 @@ componentDidMount() {
 
                                                                     <li><Link style={{ color: 'white' }} to="/servicesforcandidates" >Candidate</Link></li>
                                                                     <li><Link style={{ color: 'white' }} to="/searchJob" >Job search</Link></li>
-                                                                    <li><Link style={{ color: 'white' }} to="/wantJob" >Want job</Link></li>
+                                                                    <li><Link style={{ color: 'white' }} to="/wantJob" >Available jobs</Link></li>
                                                                     <li><Link style={{ color: 'white' }} to="/servicesforcandidates#submitCV" >Submit your CV</Link></li>
                                                                     <li><Link style={{ color: 'white' }} to="/contactUs" >Contact us</Link></li>
 
@@ -138,7 +138,7 @@ componentDidMount() {
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/servicesforclients" >Client Services</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/servicesforcandidates" >Candidate</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/searchJob" >Job search</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/wantJob" >Want job</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/wantJob" >Available job</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/servicesforcandidates#submitCV" >Submit your CV</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view" to="/contactUs" >Contact us</Link></li>
                                                                         </div>

@@ -20,32 +20,32 @@ class WhyChooseUs extends Component {
                         </div> */}
                         <div className="d-block d-md-flex border-bottom" style={{ width: '100%' }}>
                             <div className="text-center p-4 item border-right" data-aos="fade" style={{ width: '100%' }}>
-                                <span className="flaticon-worker display-3 mb-3 d-block text-primary" />
+                                {/* <span className="flaticon-worker display-3 mb-3 d-block text-primary" /> */}
                                 {/* <h2 className="h4">More Jobs Every Day</h2> */}
-                                <p>
+                                <p style={{ paddingTop: 20, paddingBottom: 20, fontSize: 20 }}>
                                     Our teams specialize within their technological and geographical fields, allowing them to work together in teams to fulfil client’s requirements, even for the most niche and in-demand skills.
                                 </p>
                             </div>
                             <div className="text-center p-4 item" data-aos="fade" style={{ width: '100%' }}>
-                                <span className="flaticon-wrench display-3 mb-3 d-block text-primary" />
+                                {/* <span className="flaticon-wrench display-3 mb-3 d-block text-primary" /> */}
                                 {/* <h2 className="h4">Creative Jobs</h2> */}
-                                <p>
+                                <p style={{ paddingTop: 20, paddingBottom: 20, fontSize: 20 }}>
                                     We deliver our clients well-matched candidates within 24 hours at the most competitive rates on the market thanks to our extensive and growing network.
                                 </p>
                             </div>
                         </div>
                         <div className="d-block d-md-flex" style={{ width: '100%' }}>
                             <div className="text-center p-4 item border-right" data-aos="fade" style={{ width: '100%' }}>
-                                <span className="flaticon-stethoscope display-3 mb-3 d-block text-primary" />
+                                {/* <span className="flaticon-stethoscope display-3 mb-3 d-block text-primary" /> */}
                                 {/* <h2 className="h4">Healthcare</h2> */}
-                                <p>
+                                <p style={{ paddingTop: 20, paddingBottom: 20, fontSize: 20 }}>
                                     Our internal sourcing and recruiting team aim to make our client’s search easier, by using the most up-to-date resources and techniques, which are constantly revised and improved.
                                 </p>
                             </div>
                             <div className="text-center p-4 item" data-aos="fade" style={{ width: '100%' }}>
-                                <span className="flaticon-calculator display-3 mb-3 d-block text-primary" />
+                                {/* <span className="flaticon-calculator display-3 mb-3 d-block text-primary" /> */}
                                 {/* <h2 className="h4">Finance &amp; Accounting</h2> */}
-                                <p>
+                                <p style={{ paddingTop: 20, paddingBottom: 20, fontSize: 20 }}>
                                     247 IT International is set to grow significantly over the upcoming years as a result of our re-investments back into our people and resources.
                                 </p>
                             </div>

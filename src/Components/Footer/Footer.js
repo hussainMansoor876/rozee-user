@@ -21,9 +21,10 @@ class Footer extends Component {
                         <div className="col-md-4">
 
                             <h3 className="footer-heading mb-4 text-white">Contact Us</h3>
-                            <p>If you are interested in learning more about.</p>
-                            <p>JOB FINDER, please contact us.</p>
-                            <p><Link to="/contactUs" className="btn btn-primary pill text-white px-4">Contact Us</Link></p>
+                            <p>0207 473 5838</p>
+                            <p>info@247itinternational.com</p>
+                            <p>218 Tollgate Road London E6 5YA</p>
+                            {/* <p><Link to="/contactUs" className="btn btn-primary pill text-white px-4">Contact Us</Link></p> */}
 
                         </div>
 
@@ -44,7 +45,7 @@ class Footer extends Component {
                             </div>
                         </div>
                         <div className="col-md-2">
-                            <h3 className="footer-heading mb-4 text-white">Social Icons</h3>
+                            <h3 className="footer-heading mb-4 text-white">Follow us</h3>
                             <p>
                                 <img className="p-2 " style={{ cursor: 'pointer', borderRadius: '50%' }} src={fb} alt="fb-icon" />
                                 <img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={twitter} alt="twitter-icon" />

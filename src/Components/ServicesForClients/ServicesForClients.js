@@ -169,8 +169,8 @@ class ServicesForClients extends Component {
             <ul>
               <li style={{ fontSize: '1.5rem' }} >Enterprise Resource Planning applications
                 <ul>
-                  <li>SAP</li>
-                  <li>Oracle</li>
+                  <li style={{ display: 'inline' }}>SAP &&nbsp;</li>
+                  <li style={{ display: 'inline' }}>Oracle</li>
                 </ul>
               </li>
               <li style={{ fontSize: '1.5rem' }}>Cloud Infrastructure</li>
