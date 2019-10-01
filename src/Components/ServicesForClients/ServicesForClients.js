@@ -19,7 +19,7 @@ class ServicesForClients extends Component {
               <div className="row align-items-center">
                 <div className="col-md-12 ml-auto text-align-center">
                   <div className="col-md-12 mx-auto text-center mb-5 section-heading">
-                    <h2 className="mb-5">Providing you recruitment solutions for both start-up and blue-chip companies</h2>
+                    <h2 className="mb-5 text-uppercase">Providing you recruitment solutions for both start-up and blue-chip companies</h2>
                   </div>
                   <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
                     Our non-binding services include competent advice; discreet dissemination of our client’s job advertisements
@@ -31,10 +31,8 @@ class ServicesForClients extends Component {
               <div className="row align-items-center">
                 <div className="col-md-12 ml-auto text-align-center">
                   <div className="col-md-12 mx-auto text-center mt-5 section-heading">
-                    <h1><b>Permanent</b>
-                    </h1>
-                    <h3 >SOLUTION TO SOLVING PERMENANT RECRUITMENT CHALLENGES
-                    </h3>
+                    <h1><b>PERMANENT</b></h1>
+                    <h3>SOLUTION TO SOLVING PERMANENT RECRUITMENT CHALLENGES </h3>
                   </div>
                   <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
                     We take pride in understanding and making sense of our clients needs. We have teams of consultants
@@ -63,11 +61,8 @@ class ServicesForClients extends Component {
               <div className="row align-items-center">
                 <div className="col-md-12 ml-auto text-align-center">
                   <div className="col-md-12 mx-auto text-center section-heading">
-                    <h1><b>Temporary</b>
-                    </h1>
-                    <h3 >DELIVERING THE BEST, ON TIME, AND WITHIN BUDGETS
-
-                    </h3>
+                    <h1><b>TEMPORARY</b></h1>
+                    <h3 >DELIVERING THE BEST, ON TIME, AND WITHIN BUDGETS</h3>
                   </div>
                   <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
                     Our clients can count on us when it come to finding contract positions.
@@ -168,11 +163,11 @@ class ServicesForClients extends Component {
               </p>
             <ul>
               <li style={{ fontSize: '1.5rem' }} >Enterprise Resource Planning applications</li>
-                
+
               <li style={{ fontSize: '1.5rem' }}>SAP</li>
               <li style={{ fontSize: '1.5rem' }}>Oracle</li>
-                
-          
+
+
               <li style={{ fontSize: '1.5rem' }}>Cloud Infrastructure</li>
               <li style={{ fontSize: '1.5rem' }}>Cyber Security</li>
               <li style={{ fontSize: '1.5rem' }}>Data</li>

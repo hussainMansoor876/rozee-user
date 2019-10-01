@@ -93,7 +93,6 @@ class SearchJob extends Component {
                                                         value={search.jobTitle}
                                                         onChange={this.handleChange}
                                                         className="mr-3 form-control border-0 px-4"
-                                                        placeholder="React Application Developer"
                                                     />
                                                 </div>
                                                 <div className="col-md-6 mb-3 mb-md-0">

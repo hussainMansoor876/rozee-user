@@ -3,10 +3,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import logo from './Images/companyLogo.png'
-import fb from './Images/fb.png';
-import twitter from './Images/twitter.png';
-import linkdin from './Images/linkdin.png';
-import social from './Images/social.png';
+import fb from './Images/fbIcon.png';
+import twitter from './Images/twitterIcon.png';
+import linkdin from './Images/linkdinIcon.png';
 
 class Footer extends Component {
     render() {
@@ -47,9 +46,9 @@ class Footer extends Component {
                         <div className="col-md-2">
                             <h3 className="footer-heading mb-4 text-white">Follow us</h3>
                             <p>
-                                <a href="https://www.facebook.com/247itintl/?modal=admin_todo_tour" target="_blank"><img className="p-2 " style={{ cursor: 'pointer', borderRadius: '50%' }} src={fb} alt="fb-icon" /></a>
-                                <a href="https://twitter.com/247ITInternati2" target="_blank"><img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={twitter} alt="twitter-icon" /></a>
-                                <a href="https://www.linkedin.com/company/247-it-international/about/" target="_blank"><img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={linkdin} alt="linkdin-icon" /></a>
+                                <a href="https://www.facebook.com/247itintl/?modal=admin_todo_tour" target="_blank"><img className="p-2 " style={{ cursor: 'pointer'}} height="55" width="55" src={fb} alt="fb-icon" /></a>
+                                <a href="https://twitter.com/247ITInternati2" target="_blank"><img className="p-2" style={{ cursor: 'pointer'}} height="55" width="55" src={twitter} alt="twitter-icon" /></a>
+                                <a href="https://www.linkedin.com/company/247-it-international/about/" target="_blank"><img className="p-2" style={{ cursor: 'pointer'}} height="55" width="55" src={linkdin} alt="linkdin-icon" /></a>
                                 {/* <img className="p-2" style={{ cursor: 'pointer', borderRadius: '50%' }} src={social} alt="social-icon" /> */}
                             </p>
                         </div>
@@ -57,7 +56,7 @@ class Footer extends Component {
                     <div className="row pt-5 mt-5 text-center">
                         <div className="col-md-12">
                             <p>
-                                Copyright ©  All Rights Reserved | This Website is made in collaboration with <i className="icon-heart text-danger" aria-hidden="true" /> by <a target="_blank"> Axiom Enterprises </a>
+                                Copyright ©  All Rights Reserved
                             </p>
                         </div>
                     </div>
