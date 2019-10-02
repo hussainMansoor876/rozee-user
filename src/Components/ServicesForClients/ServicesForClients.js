@@ -19,7 +19,7 @@ class ServicesForClients extends Component {
               <div className="row align-items-center">
                 <div className="col-md-12 ml-auto text-align-center">
                   <div className="col-md-12 mx-auto text-center mb-5 section-heading">
-                    <h2 className="mb-5 text-uppercase">Providing you recruitment solutions for both start-up and blue-chip companies</h2>
+                    <h2 className="mb-5 text-uppercase" style={{ fontFamily: "Big Shoulders Text !important" }}>Providing you recruitment solutions for both start-up and blue-chip companies</h2>
                   </div>
                   <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
                     Our non-binding services include competent advice; discreet dissemination of our client’s job advertisements
@@ -31,8 +31,8 @@ class ServicesForClients extends Component {
               <div className="row align-items-center">
                 <div className="col-md-12 ml-auto text-align-center">
                   <div className="col-md-12 mx-auto text-center mt-5 section-heading">
-                    <h1><b>PERMANENT</b></h1>
-                    <h3>SOLUTION TO SOLVING PERMANENT RECRUITMENT CHALLENGES </h3>
+                    <h1>PERMANENT</h1>
+                    <h3>SOLUTION TO SOLVING PERMANENT RECRUITMENT CHALLENGES</h3>
                   </div>
                   <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
                     We take pride in understanding and making sense of our clients needs. We have teams of consultants
@@ -61,8 +61,9 @@ class ServicesForClients extends Component {
               <div className="row align-items-center">
                 <div className="col-md-12 ml-auto text-align-center">
                   <div className="col-md-12 mx-auto text-center section-heading">
-                    <h1><b>TEMPORARY</b></h1>
-                    <h3 >DELIVERING THE BEST, ON TIME, AND WITHIN BUDGETS</h3>
+                    {/* <h3><b>TEMPORARY</b></h3> */}
+                    <h1>TEMPORARY</h1>
+                    <h3>DELIVERING THE BEST, ON TIME, AND WITHIN BUDGETS</h3>
                   </div>
                   <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
                     Our clients can count on us when it come to finding contract positions.
@@ -143,39 +144,37 @@ class ServicesForClients extends Component {
             </div>
             <div className="d-block d-md-flex ">
               <div className="text-center p-4 " data-aos="fade">
-                <span className="flaticon-computer-graphic display-3 mb-3 d-block text-primary" />
-                <p>We take our time to get to know our clients well, starting from understanding the company to understanding Client’s requirements.
+                {/* <span className="flaticon-computer-graphic display-3 mb-3 d-block text-primary" /> */}
+                <p style={{ fontSize: '18px' }} >We take our time to get to know our clients well, starting from understanding the company to understanding Client’s requirements.
               </p>
               </div>
               <div className="text-center p-4 " data-aos="fade">
-                <span className="flaticon-telecommunications display-3 mb-3 d-block text-primary" />
-                <p>A team briefing takes place with the relevant team. Each team has their own technological and geographical focus, where they are given a detailed summary from one of our Senior Consultants.
+                {/* <span className="flaticon-telecommunications display-3 mb-3 d-block text-primary" /> */}
+                <p style={{ fontSize: '18px' }} >A team briefing takes place with the relevant team. Each team has their own technological and geographical focus, where they are given a detailed summary from one of our Senior Consultants.
                 </p>
               </div>
               <div className="text-center p-4 " data-aos="fade">
-                <span className="flaticon-calculator display-3 mb-3 d-block text-primary" />
-                <p>Our people understand the importance of building relationships. Our teams hand-select the best candidates using our regularly updated in-house training
+                {/* <span className="flaticon-calculator display-3 mb-3 d-block text-primary" /> */}
+                <p style={{ fontSize: '18px' }} >Our people understand the importance of building relationships. Our teams hand-select the best candidates using our regularly updated in-house training
               </p>
               </div>
             </div>
-            <p className="mt-5 h3 lineheight1-5" style={{ textAlign: 'justify' }}>
+            <span className="mt-5 lineheight1-5" style={{ textAlign: 'justify', fontSize: '1.5rem' }}>
               Plans are devised, to deliver you hand-selected candidates within 24 hours. Examples of some of the technologies we work with:
-              </p>
+              </span>
             <ul>
-              <li style={{ fontSize: '1.5rem' }} >Enterprise Resource Planning applications</li>
+              <div className="font-li" >
+                <li>Enterprise Resource Planning applications</li>
+                <li>SAP</li>
+                <li>Oracle</li>
+                <li>Cloud Infrastructure</li>
+                <li>Cyber Security</li>
+                <li>Data</li>
+              </div>
 
-              <li style={{ fontSize: '1.5rem' }}>SAP</li>
-              <li style={{ fontSize: '1.5rem' }}>Oracle</li>
-
-
-              <li style={{ fontSize: '1.5rem' }}>Cloud Infrastructure</li>
-              <li style={{ fontSize: '1.5rem' }}>Cyber Security</li>
-              <li style={{ fontSize: '1.5rem' }}>Data</li>
             </ul>
           </div>
         </div>
-
-
       </div>
     )
   }

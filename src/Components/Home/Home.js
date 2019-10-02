@@ -219,14 +219,14 @@ class Home extends Component {
                             <div className="text-center p-4 item border-right" data-aos="fade" style={{ width: '100%' }}>
                                 {/* <span className="flaticon-worker display-3 mb-3 d-block text-primary" /> */}
                                 {/* <h2 className="h4">ADD LOGO HERE</h2> */}
-                                <p>
+                                <p style={{ fontSize: '20px' }}  >
                                     Our teams specialize within their technological and geographical fields, allowing them to work together in teams to fulfil client’s requirements, even for the most niche and in-demand skills.
                                 </p>
                             </div>
                             <div className="text-center p-4 item" data-aos="fade" style={{ width: '100%' }}>
                                 {/* <span className="flaticon-wrench display-3 mb-3 d-block text-primary" /> */}
                                 {/* <h2 className="h4">ADD LOGO HERE</h2> */}
-                                <p>
+                                <p style={{ fontSize: '20px' }} >
                                     We deliver our clients well-matched candidates within 24 hours at the most competitive rates on the market thanks to our extensive and growing network.
                                 </p>
                             </div>
@@ -235,14 +235,14 @@ class Home extends Component {
                             <div className="text-center p-4 item border-right" data-aos="fade" style={{ width: '100%' }}>
                                 {/* <span className="flaticon-stethoscope display-3 mb-3 d-block text-primary" /> */}
                                 {/* <h2 className="h4">ADD LOGO HERE</h2> */}
-                                <p>
+                                <p style={{ fontSize: '20px' }} >
                                     Our internal sourcing and recruiting team aim to make our client’s search easier, by using the most up-to-date resources and techniques, which are constantly revised and improved.
                                 </p>
                             </div>
                             <div className="text-center p-4 item" data-aos="fade" style={{ width: '100%' }}>
                                 {/* <span className="flaticon-calculator display-3 mb-3 d-block text-primary" /> */}
                                 {/* <h2 className="h4">ADD LOGO HERE</h2> */}
-                                <p>
+                                <p style={{ fontSize: '20px' }} >
                                     247 IT International is set to grow significantly over the upcoming years as a result of our re-investments back into our people and resources.
                                 </p>
                             </div>

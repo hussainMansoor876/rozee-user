@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text'); 
 
 *{
-  font-family: "Manjari";
+  font-family: "Manjari" !important;
 }
 
 h1, h2, h3, h4,h5, h6, #class1 > li {
-  font-family: "Big Shoulders Text" !important;
+  font-family:  "Big Shoulders Text" !important;
 }
 
 body {
@@ -1243,3 +1243,7 @@ border-bottom: none;
                     margin-left: -30px;
                   }
                 }
+.font-li > li{
+  font-size: 20px;
+  font-family: "Manjari !important";
+}
