@@ -22,7 +22,7 @@ class ServicesForClients extends Component {
                     <h2 className="mb-5 text-uppercase" style={{ fontFamily: "Big Shoulders Text !important" }}>Providing you recruitment solutions for both start-up and blue-chip companies</h2>
                   </div>
                   <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
-                    Our non-binding services include competent advice; discreet dissemination of our client’s job advertisements
+                    Our non-binding services include competent advice; discrete dissemination of our client’s job advertisements
                      on various job portals and career networks; meticulous screening of candidates; several internal discussions
                       with the candidates; Evaluation of references; identification of qualities and competences; up to the interview.
                   </p>

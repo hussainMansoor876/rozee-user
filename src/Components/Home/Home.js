@@ -141,7 +141,7 @@ class Home extends Component {
                         <div className="row flexer-space">
 
                             <div className="col-lg-12 col-md-12 col-sm-12 mt-5 main-heading ">
-                                <h1  >DELIVERING IT SOLUTIONS <br /><p className="main-banner-text" style={{}}>Together we are dedicated to finding you the best</p></h1>
+                                <h1  >DELIVERING IT SOLUTIONS <br /><h4 className="main-banner-text" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '2.5rem' }}>Together we are dedicated to finding you the best</h4></h1>
 
                             </div>
                             <div className="col-lg-5 col-md-5 col-sm-4 main-btn">
