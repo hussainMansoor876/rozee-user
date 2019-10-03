@@ -155,7 +155,7 @@ class Home extends Component {
                             </div>
 
                             <div className="col-lg-5 col-md-5 col-sm-4 col-xs-4 main-btn-second">
-                                <h2 className="text-white rounded" >Candidates Services</h2>
+                                <h2 className="text-white rounded" >Candidate Services</h2>
                                 <p style={{ fontSize: '20px' }}>I am looking for job roles. </p>
                                 <Link to="/servicesforcandidates" className="header-btn-inside-second mt-5 flexer" ><span className="icon-arrow-right" /></Link>
                             </div>

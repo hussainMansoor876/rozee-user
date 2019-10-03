@@ -160,7 +160,7 @@ class ServicesForClients extends Component {
               </div>
               <div className="text-center p-4 " data-aos="fade">
                 {/* <span className="flaticon-calculator display-3 mb-3 d-block text-primary" /> */}
-                <p style={{ fontSize: '18px' }} >Our people understand the importance of building relationships. They are able to hand-select the best candidates using our regularly updated in-house training
+                <p style={{ fontSize: '18px' }} >Our people understand the importance of building relationships. They are able to hand-select the best candidates using our regularly updated in-house training.
               </p>
               </div>
             </div>

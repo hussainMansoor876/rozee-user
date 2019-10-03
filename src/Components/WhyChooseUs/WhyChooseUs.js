@@ -71,7 +71,7 @@ class WhyChooseUs extends Component {
                                         With over 100,000 professionals in our network and years of experience,
                                      we have the resources and expertise to connect you with exceptional individuals who are ready to start making an
                                      impact right away whether you need 15 or 50. At 247 IT, we offer flexible, efficient and collaborative solutions to your
-                                     technoglogy based hiring requirements with our focus on you. We are more than just a vendor, we are a partner of our Clients.
+                                     technology based hiring requirements with our focus on you. We are more than just a vendor, we are a partner of our Clients.
                                     </p>
                                 </div>
                                 <div className="col-md-6 mb-5 mb-md-0">
