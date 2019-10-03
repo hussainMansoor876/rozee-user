@@ -28,6 +28,10 @@ class Home extends Component {
         INNER_WIDTH: window.innerWidth
     }
 
+    componentWillMount() {
+        window.scrollTo(0, 0)
+    }
+
     componentDidMount() {
         this.setState({ isLoading: true })
         this.props.getJobs();

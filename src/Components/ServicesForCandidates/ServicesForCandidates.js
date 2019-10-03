@@ -16,6 +16,8 @@ class ServicesForCandidates extends Component {
     errorMessage: "",
   }
 
+
+
   handleChange = event => {
     if (event.target.name === "CV") {
       this.setState({ CV: event.target.files[0] })
@@ -98,11 +100,15 @@ class ServicesForCandidates extends Component {
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-md-12 ml-auto text-align-center">
+                  <div className="col-md-12 mx-auto text-center mb-5 section-heading">
+                    <h2 className="mb-5 text-uppercase" style={{ fontFamily: "Big Shoulders Text !important" }}>
+                      Whether you are looking for a permanent or freelance position in any IT roles, we have you covered
+                    </h2>
+                  </div>
                   <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
-                    Whether you are looking for a Permanent or Freelance position, in any IT roles we have you covered.
-                    <br />
-                    <br />
-                    It can be exhausting searching for the right role. Our team of expert consultants have years of experience in understanding and helping candidates find out positions best suited to them. We take everything into consideration from your social and cultural background to understanding your past.
+                    It can be exhausting searching for the right role. Our team of expert consultants have years of experience
+                     in understanding and helping candidates find out positions best suited to them. We take everything into consideration
+                     from your social and cultural background, to understanding your past.
 
                   </p>
                 </div>

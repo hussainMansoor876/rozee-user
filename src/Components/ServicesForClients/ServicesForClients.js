@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 class ServicesForClients extends Component {
+
+  componentWillMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     return (
       <div className="site-wrap">
@@ -66,7 +71,7 @@ class ServicesForClients extends Component {
                     <h3>DELIVERING THE BEST, ON TIME, AND WITHIN BUDGETS</h3>
                   </div>
                   <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
-                    Our clients can count on us when it come to finding contract positions.
+                    Our clients can count on us when it comes to finding IT professionals for their contract positions.
                      Thanks to our most up-to-date resources and skilled recruiters and consultants,
                       we are able to pool together talent based on client requirements, however niche
                        or in-demand they may be. Our contract recruitment expertise allow us to meticulously
@@ -81,7 +86,7 @@ class ServicesForClients extends Component {
           <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/client2.jpg")', height: 400 }} >
             <div className="container text-center mb-5">
               <h2 className="mb-0">
-                We have covered you
+                We have you covered
               </h2>
             </div>
           </div>
@@ -145,22 +150,22 @@ class ServicesForClients extends Component {
             <div className="d-block d-md-flex ">
               <div className="text-center p-4 " data-aos="fade">
                 {/* <span className="flaticon-computer-graphic display-3 mb-3 d-block text-primary" /> */}
-                <p style={{ fontSize: '18px' }} >We take our time to get to know our clients well, starting from understanding the company to understanding Client’s requirements.
+                <p style={{ fontSize: '18px' }} >We take our time to get to know our clients well, starting from understanding the company to understanding client requirements.
               </p>
               </div>
               <div className="text-center p-4 " data-aos="fade">
                 {/* <span className="flaticon-telecommunications display-3 mb-3 d-block text-primary" /> */}
-                <p style={{ fontSize: '18px' }} >A team briefing takes place with the relevant team. Each team has their own technological and geographical focus, where they are given a detailed summary from one of our Senior Consultants.
+                <p style={{ fontSize: '18px' }} >A team briefing takes place with the relevant team. Each team has their own technological and geographical focus, where they are given a detailed summary from one of our senior consultants.
                 </p>
               </div>
               <div className="text-center p-4 " data-aos="fade">
                 {/* <span className="flaticon-calculator display-3 mb-3 d-block text-primary" /> */}
-                <p style={{ fontSize: '18px' }} >Our people understand the importance of building relationships. Our teams hand-select the best candidates using our regularly updated in-house training
+                <p style={{ fontSize: '18px' }} >Our people understand the importance of building relationships. They are able to hand-select the best candidates using our regularly updated in-house training
               </p>
               </div>
             </div>
             <span className="mt-5 lineheight1-5" style={{ textAlign: 'justify', fontSize: '1.5rem' }}>
-              Plans are devised, to deliver you hand-selected candidates within 24 hours. Examples of some of the technologies we work with:
+              Plans are devised to deliver you hand-selected candidates within 24 hours. Examples of some of the technologies we work with:
               </span>
             <ul>
               <div className="font-li" >

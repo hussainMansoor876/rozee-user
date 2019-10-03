@@ -81,7 +81,7 @@ class ApplyJob extends Component {
         return (
             <div className="site-wrap">
                 {/* <div style={{ height: '113px' }} /> */}
-                <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/hero_2.jpg")' }}>
+                <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/aboutus1.jpg")' }}>
                     <div className="container text-center">
                         <h2 className="mb-0">{jobTitle}</h2>
                         <p className="mb-0 unit-6"><a>Home</a> <span className="sep">&gt;</span>{jobTitle}<span></span></p>
@@ -139,7 +139,7 @@ class ApplyJob extends Component {
                                     </form>) :
                                         <p className="mt-5">
                                             <a style={{ color: 'white' }} className="btn btn-primary  py-2 px-4" onClick={() => this.setState({ isApplying: true })} >
-                                                Apply Job
+                                                Apply to this job
                                             </a>
                                         </p>}
                                 </div>

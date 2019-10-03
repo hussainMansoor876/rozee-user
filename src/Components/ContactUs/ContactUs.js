@@ -3,6 +3,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 class ContactUs extends Component {
+  componentWillMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     return (
       <div className="site-wrap">
@@ -39,7 +43,7 @@ class ContactUs extends Component {
                   <div className="row form-group">
                     <div className="col-md-12">
                       <label className="font-weight-bold" htmlFor="message">Message</label>
-                      <textarea name="message" id="message" cols={30} rows={5} className="form-control" placeholder="Say hello to us" defaultValue={""} />
+                      <textarea name="message" id="message" cols={30} rows={5} className="form-control" placeholder="Add message" defaultValue={""} />
                     </div>
                   </div>
                   <div className="row form-group">
@@ -51,9 +55,9 @@ class ContactUs extends Component {
               </div>
               <div className="col-lg-4">
                 <div className="p-4 mb-3 bg-white">
-                  <h3 className="h5 text-black mb-3">Contact Info</h3>
+                  <h3 className="h5 text-black mb-3">Contact Information</h3>
                   <p className="mb-0 font-weight-bold">Address</p>
-                  <p className="mb-4">218 Tollgate Road London E6 5YA</p>
+                  <p className="mb-4">218 Tollgate Road, London, E6 5YA</p>
                   <p className="mb-0 font-weight-bold">Phone</p>
                   <p className="mb-4"><a href="#">0207 473 5838</a></p>
                   <p className="mb-0 font-weight-bold">Email Address</p>

@@ -24,6 +24,10 @@ class SearchJob extends Component {
         this.props.getJobs();
     }
 
+    componentWillMount() {
+        window.scrollTo(0, 0)
+    }
+
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.isError && nextProps.errorMessage.length > 1) {
@@ -80,7 +84,7 @@ class SearchJob extends Component {
                     <div className="container">
                         <div className="row align-items-center">
                             <div className=" col-md-12" data-aos="fade">
-                                <h1>Find Job</h1>
+                                <h1>Find a job</h1>
 
                                 <form onSubmit={this.handleSubmit}>
                                     <div className="row mb-3">
@@ -93,6 +97,8 @@ class SearchJob extends Component {
                                                         value={search.jobTitle}
                                                         onChange={this.handleChange}
                                                         className="mr-3 form-control border-0 px-4"
+                                                        placeholder="Search a job"
+
                                                     />
                                                 </div>
                                                 <div className="col-md-6 mb-3 mb-md-0">
@@ -112,7 +118,7 @@ class SearchJob extends Component {
                                             </div>
                                         </div>
                                         <div className="col-md-3">
-                                            <input style={{ height: '60px' }} type="submit" className="btn btn-search btn-primary btn-block" defaultValue="Search" />
+                                            <button style={{ height: '60px' }} type="submit" className="btn btn-search btn-primary btn-block" defaultValue="Search" >Search</button>
                                         </div>
 
                                     </div>

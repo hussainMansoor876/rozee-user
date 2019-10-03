@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 
 
 class About extends Component {
+  componentWillMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
 
     return (
@@ -28,7 +32,7 @@ class About extends Component {
                 <div className="text-left mb-5 section-heading">
                   <h2>About Us</h2>
                 </div>
-                <p className="mb-4 h5 font-italic lineheight1-5" style={{ fontWeight: 'lighter'}}>247 IT International is an expert-level IT recruitment company motivated by the rapid global growth of the technology based industry. We specialise in the placement of IT based roles to top organisations across the world, from start-ups to blue-chip companies.
+                <p className="mb-4 h5 font-italic lineheight1-5" style={{ fontWeight: 'lighter' }}>247 IT International is an expert-level IT recruitment company motivated by the rapid global growth of the technology based industry. We specialise in the placement of IT based roles to top organisations across the world, from start-ups to blue-chip companies.
                 </p>
               </div>
             </div>
@@ -48,7 +52,7 @@ class About extends Component {
                     </li>
                     <br />
                     <li>
-                      Our credo is to introduce to our clients a selection of IT professionals within a very short time, who not only meet your requirements profiles, but exceed it.
+                      Our credo is to introduce to our clients a selection of IT professionals within a very short time, who not only meet requirements profiles, but exceed it.
                     </li>
                     <br />
                     <li>

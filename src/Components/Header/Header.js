@@ -28,7 +28,7 @@ class Header extends Component {
                                             <div className="container">
                                                 <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" className="site-menu-toggle js-menu-toggle text-black"><span className="icon-menu h3" /></a></div>
                                                 <ul className="site-menu js-clone-nav d-none d-lg-block">
-                                                    <li className="border border-black text-warning py-2 px-4 rounded mr-2" ><span className="icon-search mr-3" /><Link to="/searchJob">Search Jobs</Link></li>
+                                                    {/* <li className="border border-black text-warning py-2 px-4 rounded mr-2" ><span className="icon-search mr-3" /><Link to="/searchJob">Search Jobs</Link></li> */}
                                                     {/* <li><Link to="/contactUs" >Contact</Link></li> */}
 
                                                     <li className="bg-primary text-white text-white py-2 px-3 rounded  has-children">

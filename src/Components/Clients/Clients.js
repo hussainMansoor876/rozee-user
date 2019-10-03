@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 class Clients extends Component {
+
+  componentWillMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     return (
       <div className="site-wrap">
@@ -21,8 +26,8 @@ class Clients extends Component {
                   <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
                     As an Organisation that depends upon technology based professionals such as SAP, Oracle, IT Infrastructure,
                      or cyber security. Reviewing stacks of resumes and not finding exactly who you need can be exhausting,
-                      or interviewing candidates that have SAP experience, but don't understand how the technology aligns with the Organisation’s objectives,
-                       perhaps they perform great during the interview but in practice their skills fall short of expectations or they meet your expectations
+                      or interviewing candidates that have SAP experience, but don't understand how the technology aligns with the Organisation’s objectives.
+                       Perhaps they perform great during the interview but in practice their skills fall short of expectations, or they meet your expectations
                        but leave during a critical phase of the project. What all these scenarios have in common needlessly cost Organisations time and money and
                         in today's highly competitive business climate,
                      Companies can't afford to waste millions and hours every year by not hiring the right professionals and need a staffing partner who understands this.
@@ -75,9 +80,9 @@ class Clients extends Component {
                 <p className="mb-4 h5 lineheight1-5" style={{ textAlign: 'center' }}>
                   With over 100,000 professionals in our network and years of experience,
                  we have the resources and expertise to connect you with exceptional individuals
-                 who are ready to start making an impact right away whether you need 15 or 50,
-                at 247 IT we offer flexible efficient and collaborative solutions to your technology based hiring
-               requirements with our focus on you we are more than just a vendor we are a partner our Clients.
+                 who are ready to start making an impact right away whether you need 15 or 50.
+                 At 247 IT, we offer flexible, efficient and collaborative solutions to your technoglogy based hiring requirements
+                 with our focus on you. We are more than just a vendor, we are a partner of our Clients.
                   </p>
               </div>
             </div>

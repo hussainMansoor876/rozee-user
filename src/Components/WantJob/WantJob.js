@@ -19,6 +19,11 @@ class WantJob extends Component {
     allJobs: []
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0)
+  }
+
+
   componentDidMount() {
     this.setState({ loading: true })
     this.props.getJobs();
@@ -55,7 +60,7 @@ class WantJob extends Component {
         <div className="unit-5 overlay" style={{ backgroundImage: 'url("images/aboutus1.jpg")' }}>
           <div className="container text-center">
             <h2 className="mb-0">Find Jobs</h2>
-            <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>Want Job</span></p>
+            <p className="mb-0 unit-6"><Link to="/">Home</Link> <span className="sep">&gt;</span> <span>Available jobs</span></p>
           </div>
         </div>
 
@@ -63,7 +68,7 @@ class WantJob extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay={100}>
-                <h2 className="mb-5 h3">All jobs for you</h2>
+                <h2 className="mb-5 h3">Available jobs</h2>
                 <Skeleton active loading={loading}>
                   <div className="rounded border jobs-wrap">
 

@@ -14,7 +14,7 @@ class HomeHeader extends Component {
         INNER_WIDTH: window.innerWidth
     }
 
-componentDidMount() {
+    componentDidMount() {
         window.addEventListener('resize', () => {
             var newWidth = window.innerWidth;
             this.setState({ INNER_WIDTH: newWidth })
@@ -65,7 +65,7 @@ componentDidMount() {
                                                     <div className="container">
                                                         <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" className="site-menu-toggle js-menu-toggle text-black"><span className="icon-menu h3" /></a></div>
                                                         <ul className="site-menu js-clone-nav d-none d-lg-block">
-                                                            <li className="border border-dark text-warning py-2 px-4 rounded mr-2" style={{ borderColor: 'black', backgroundColor: 'white' }}><Link to="/searchJob">Search Jobs</Link></li>
+                                                            {/* <li className="border border-dark text-warning py-2 px-4 rounded mr-2" style={{ borderColor: 'black', backgroundColor: 'white' }}><Link to="/searchJob">Search Jobs</Link></li> */}
                                                             <li className="bg-primary text-white text-white py-2 px-3 rounded  has-children mt-3">
                                                                 <a style={{ color: 'white' }}><span className="icon-list mr-3" />Menu</a>
                                                                 <ul className="dropdown arrow-top" style={{ width: '250px' }}>
@@ -75,7 +75,7 @@ componentDidMount() {
                                                                     <li><Link style={{ color: 'white' }} to="/about" >About us</Link></li>
                                                                     <li><Link style={{ color: 'white' }} to="/whyChooseUs" >Why choose us</Link></li>
                                                                     <li><Link style={{ color: 'white' }} to="/clients" >Clients</Link></li>
-                                                                    <li><Link style={{ color: 'white' }} to="/servicesforclients" >Client Services</Link></li>
+                                                                    <li><Link style={{ color: 'white' }} to="/servicesforclients" >Client services</Link></li>
 
                                                                     <li><Link style={{ color: 'white' }} to="/servicesforcandidates" >Candidate</Link></li>
                                                                     <li><Link style={{ color: 'white' }} to="/searchJob" >Job search</Link></li>
@@ -121,7 +121,7 @@ componentDidMount() {
                                                     <div className="container-fluid">
                                                         <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" className="site-menu-toggle js-menu-toggle text-black"><span className="icon-menu h3" /></a></div>
                                                         <ul className="site-menu js-clone-nav d-none d-lg-block">
-                                                            <li className="border border-dark text-warning py-2 px-4 rounded mr-2" style={{ borderColor: 'black', backgroundColor: 'white' }}><span className="icon-search mr-3" /><Link to="/searchJob">Search Jobs</Link></li>
+                                                            {/* <li className="border border-dark text-warning py-2 px-4 rounded mr-2" style={{ borderColor: 'black', backgroundColor: 'white' }}><span className="icon-search mr-3" /><Link to="/searchJob">Search Jobs</Link></li> */}
                                                             <li className="bg-primary text-white text-white py-2 px-3 rounded">
                                                                 <a style={{ color: 'white' }} onClick={this.showDrawer} ><span className="icon-list mr-3" />Menu</a>
                                                                 <ul className="dropdown arrow-top">
@@ -136,7 +136,7 @@ componentDidMount() {
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/about" >About us</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/whyChooseUs" >Why choose us</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/clients" >Clients</Link></li>
-                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/servicesforclients" >Client Services</Link></li>
+                                                                            <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/servicesforclients" >Client services</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/servicesforcandidates" >Candidate</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/searchJob" >Job search</Link></li>
                                                                             <li style={{ listStyleType: 'none', padding: '10px', borderBottom: '1px solid grey' }} ><Link onClick={this.onClose} className="list-view class2" to="/wantJob" >Available jobs</Link></li>
