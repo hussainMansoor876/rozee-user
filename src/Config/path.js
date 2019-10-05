@@ -10,7 +10,7 @@ class Path {
 
     static UPLOAD_CV = Path.BASE_URL + '/cv/upload'
 
-
+    static CONTACT_US = Path.BASE_URL + '/contactUs'
 
 }
 

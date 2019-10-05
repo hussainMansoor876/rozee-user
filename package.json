@@ -18,7 +18,8 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "sweetalert": "^2.1.2"
   },
   "scripts": {
     "start": "node clientserver.js",

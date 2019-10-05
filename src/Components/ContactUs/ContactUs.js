@@ -1,13 +1,58 @@
 /*eslint-disable */
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
+import path from '../../Config/path';
+import swal from 'sweetalert';
 
 class ContactUs extends Component {
+
+  state = {
+    fullname: '',
+    email: '',
+    phone: '',
+    textMessage: ''
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name] : event.target.value
+    })
+  }
+
+  handleSubmit = (event) => {
+    const {fullname, email, phone, textMessage} = this.state
+  event.preventDefault()
+  axios.post(path.CONTACT_US , {
+    name: fullname,
+    email,
+    phone,
+    message: textMessage
+    
+  }).then(res => {
+      if(res.data.success){
+        swal("success",res.data.message, "success")
+        this.setState({
+        fullname: '',
+        phone: '',
+        email: '',
+        textMessage: ''
+        })
+        
+    }
+
+  }).catch(err => {
+    console.log(err)
+  })
+  }
+
+
   componentWillMount() {
     window.scrollTo(0, 0)
   }
 
   render() {
+    const {fullname, email, phone, textMessage} = this.state
     return (
       <div className="site-wrap">
         {/* <div style={{height: '113px'}} /> */}
@@ -21,29 +66,32 @@ class ContactUs extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 col-lg-8 mb-5">
-                <form action="#" className="p-5 bg-white">
+                <form onSubmit={this.handleSubmit} className="p-5 bg-white">
                   <div className="row form-group">
                     <div className="col-md-12 mb-3 mb-md-0">
                       <label className="font-weight-bold" htmlFor="fullname">Full Name</label>
-                      <input type="text" id="fullname" className="form-control" placeholder="Full Name" />
+                      <input type="text" id="fullname" name="fullname" maxLength="15" onChange={this.handleChange} required className="form-control" placeholder="Full Name" value={fullname} />
                     </div>
                   </div>
                   <div className="row form-group">
                     <div className="col-md-12">
                       <label className="font-weight-bold" htmlFor="email">Email</label>
-                      <input type="email" id="email" className="form-control" placeholder="Email Address" />
+                      <input type="email"  name="email" value={email} onChange={this.handleChange}  required className="form-control" placeholder="Email Address" />
                     </div>
                   </div>
                   <div className="row form-group">
                     <div className="col-md-12 mb-3 mb-md-0">
                       <label className="font-weight-bold" htmlFor="phone">Phone</label>
-                      <input type="text" id="phone" className="form-control" placeholder="Phone #" />
+                      <input 
+                      type="number"
+                      value={phone}
+                       id="phone" name="phone" onChange={this.handleChange} required className="form-control" placeholder="Phone #" />
                     </div>
                   </div>
                   <div className="row form-group">
                     <div className="col-md-12">
-                      <label className="font-weight-bold" htmlFor="message">Message</label>
-                      <textarea name="message" id="message" cols={30} rows={5} className="form-control" placeholder="Add message" defaultValue={""} />
+                      <label className="font-weight-bold"  htmlFor="message">Message</label>
+                      <textarea name="textMessage" value={textMessage} onChange={this.handleChange}  required cols={30} rows={5} className="form-control" placeholder="Add message" defaultValue={""} />
                     </div>
                   </div>
                   <div className="row form-group">
