@@ -22,7 +22,7 @@ class Footer extends Component {
                             <h3 className="footer-heading mb-4 text-white">Contact us</h3>
                             <p>0207 473 5838</p>
                             <p>info@247itinternational.com</p>
-                            <p>218 Tollgate Road, London, E6 5YA</p>
+                        {/* <p>218 Tollgate Road, London, E6 5YA</p> */}
                             {/* <p><Link to="/contactUs" className="btn btn-primary pill text-white px-4">Contact Us</Link></p> */}
 
                         </div>

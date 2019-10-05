@@ -28,7 +28,7 @@ class WhyChooseUs extends Component {
                                 {/* <span className="flaticon-worker display-3 mb-3 d-block text-primary" /> */}
                                 {/* <h2 className="h4">More Jobs Every Day</h2> */}
                                 <p style={{ paddingTop: 20, paddingBottom: 20, fontSize: 20 }}>
-                                    Our teams specialize within their technological and geographical fields, allowing them to work together in teams to fulfil client’s requirements, even for the most niche and in-demand skills.
+                                    Our teams specialize within their technological and geographical fields, allowing them to work together to fulfil client’s requirements, even for the most niche and in-demand skills.
                                 </p>
                             </div>
                             <div className="text-center p-4 item" data-aos="fade" style={{ width: '100%' }}>

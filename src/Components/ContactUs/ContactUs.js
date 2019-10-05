@@ -56,8 +56,8 @@ class ContactUs extends Component {
               <div className="col-lg-4">
                 <div className="p-4 mb-3 bg-white">
                   <h3 className="h5 text-black mb-3">Contact Information</h3>
-                  <p className="mb-0 font-weight-bold">Address</p>
-                  <p className="mb-4">218 Tollgate Road, London, E6 5YA</p>
+                  {/* <p className="mb-0 font-weight-bold">Address</p> */}
+                  {/* <p className="mb-4">218 Tollgate Road, London, E6 5YA</p> */}
                   <p className="mb-0 font-weight-bold">Phone</p>
                   <p className="mb-4"><a href="#">0207 473 5838</a></p>
                   <p className="mb-0 font-weight-bold">Email Address</p>
@@ -65,7 +65,7 @@ class ContactUs extends Component {
                 </div>
                 {/* <div className="p-4 mb-3 bg-white">
                   <h3 className="h5 text-black mb-3">More Info</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro ]ollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
                   <p><a href="#" className="btn btn-primary px-4 py-2 text-white pill">Learn More</a></p>
                 </div> */}
               </div>

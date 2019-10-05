@@ -139,7 +139,7 @@ class ApplyJob extends Component {
                                     </form>) :
                                         <p className="mt-5">
                                             <a style={{ color: 'white' }} className="btn btn-primary  py-2 px-4" onClick={() => this.setState({ isApplying: true })} >
-                                                Apply to this job
+                                                Apply for this job
                                             </a>
                                         </p>}
                                 </div>

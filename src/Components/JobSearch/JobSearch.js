@@ -95,7 +95,7 @@ class JobSearch extends React.Component {
                                             <br /> {job.jobDescription}
                                         </React.Fragment>)}
                                     />
-                                    <button style={{ float: "left", }} className="btn btn-primary" onClick={() => this.handleApplyJob(job)}>Apply to this job</button>
+                                    <button style={{ float: "left", }} className="btn btn-primary" onClick={() => this.handleApplyJob(job)}>Apply for this job</button>
                                 </Col>
                             </Row>
                             <Divider style={{ height: 3, backgroundColor: '#44444' }} />
