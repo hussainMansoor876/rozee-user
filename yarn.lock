@@ -3803,6 +3803,11 @@ draft-js@^0.10.0, draft-js@~0.10.0:
     immutable "~3.7.4"
     object-assign "^4.1.0"
 
+draft.js@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/draft.js/-/draft.js-0.2.0.tgz#f01a459522b086c058080ef51ef2bcbbad0849e2"
+  integrity sha1-8BpFlSKwhsBYCA71HvK8u60ISeI=
+
 duplexer@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
