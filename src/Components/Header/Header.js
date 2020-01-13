@@ -24,7 +24,7 @@ class Header extends Component {
                                         <img className="mb-0" height="70px" width="50px" src={logo} alt="company logo" />
                                     </div>
                                     <div className="col-10">
-                                        <nav className="site-navigation text-right" role="navigation">
+                                        {/* <nav className="site-navigation text-right" role="navigation">
                                             <div className="container">
                                                 <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" className="site-menu-toggle js-menu-toggle text-black"><span className="icon-menu h3" /></a></div>
                                                 <ul className="site-menu js-clone-nav d-none d-lg-block">
@@ -47,7 +47,7 @@ class Header extends Component {
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </nav>
+                                        </nav> */}
                                     </div>
                                 </div>
                             </div>
